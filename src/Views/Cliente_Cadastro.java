@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.gabenricks_HeC;
+package Views;
 
 /**
  *
@@ -30,7 +30,6 @@ public class Cliente_Cadastro extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        dateChooserDialog1 = new datechooser.beans.DateChooserDialog();
         DesktopMain = new javax.swing.JDesktopPane();
         lblNome = new javax.swing.JLabel();
         btnNomeCli = new javax.swing.JTextField();
@@ -58,13 +57,6 @@ public class Cliente_Cadastro extends javax.swing.JInternalFrame {
         AtxtComplemento = new javax.swing.JTextArea();
         lblInfComplement = new javax.swing.JLabel();
         txtCEP = new javax.swing.JFormattedTextField();
-        dateChooserCombo1 = new datechooser.beans.DateChooserCombo();
-
-        dateChooserDialog1.addCommitListener(new datechooser.events.CommitListener() {
-            public void onCommit(datechooser.events.CommitEvent evt) {
-                dateChooserDialog1OnCommit(evt);
-            }
-        });
 
         setBorder(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -220,7 +212,6 @@ public class Cliente_Cadastro extends javax.swing.JInternalFrame {
         DesktopMain.setLayer(AtxtComplemento, javax.swing.JLayeredPane.DEFAULT_LAYER);
         DesktopMain.setLayer(lblInfComplement, javax.swing.JLayeredPane.DEFAULT_LAYER);
         DesktopMain.setLayer(txtCEP, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        DesktopMain.setLayer(dateChooserCombo1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout DesktopMainLayout = new javax.swing.GroupLayout(DesktopMain);
         DesktopMain.setLayout(DesktopMainLayout);
@@ -249,8 +240,7 @@ public class Cliente_Cadastro extends javax.swing.JInternalFrame {
                                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DesktopMainLayout.createSequentialGroup()
                                                     .addGroup(DesktopMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addComponent(lblEmail)
-                                                        .addComponent(lblDataNacimento, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(dateChooserCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addComponent(lblDataNacimento, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                     .addGap(21, 21, 21)
                                                     .addGroup(DesktopMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                         .addComponent(txtCPF, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
@@ -307,11 +297,9 @@ public class Cliente_Cadastro extends javax.swing.JInternalFrame {
                     .addComponent(lblCPF)
                     .addComponent(lblFone))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(DesktopMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(DesktopMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtFone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(dateChooserCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(DesktopMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtFone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(DesktopMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -409,8 +397,6 @@ public class Cliente_Cadastro extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> CboEndereco;
     private javax.swing.JDesktopPane DesktopMain;
     private javax.swing.JTextField btnNomeCli;
-    private datechooser.beans.DateChooserCombo dateChooserCombo1;
-    private datechooser.beans.DateChooserDialog dateChooserDialog1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel lblCEP;
     private javax.swing.JLabel lblCPF;

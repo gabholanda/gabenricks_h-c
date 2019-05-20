@@ -29,7 +29,7 @@
     <Property name="visible" type="boolean" value="true"/>
   </Properties>
   <SyntheticProperties>
-    <SyntheticProperty name="formSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,40,0,0,3,114"/>
+    <SyntheticProperty name="formSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,40,0,0,3,84"/>
     <SyntheticProperty name="formPosition" type="java.awt.Point" value="-84,-19,0,5,115,114,0,14,106,97,118,97,46,97,119,116,46,80,111,105,110,116,-74,-60,-118,114,52,126,-56,38,2,0,2,73,0,1,120,73,0,1,121,120,112,0,0,0,0,0,0,0,0"/>
     <SyntheticProperty name="formSizePolicy" type="int" value="0"/>
     <SyntheticProperty name="generatePosition" type="boolean" value="true"/>
@@ -50,7 +50,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="DesktopMain" alignment="1" pref="882" max="32767" attributes="0"/>
+          <Component id="DesktopMain" alignment="1" pref="852" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -77,400 +77,446 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="btnNomeCli" alignment="0" max="32767" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="lblNome" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="lblEndereco" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Component id="CboEndereco" min="-2" pref="69" max="-2" attributes="0"/>
-                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="txtEndereco" max="32767" attributes="0"/>
-                                                  </Group>
-                                                  <Component id="txtEmail" alignment="0" max="32767" attributes="0"/>
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="lblEmail" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="lblDataNacimento" alignment="0" pref="108" max="32767" attributes="0"/>
-                                                          <Component id="dateChooserCombo1" alignment="0" pref="0" max="32767" attributes="0"/>
-                                                      </Group>
-                                                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="txtCPF" pref="324" max="32767" attributes="0"/>
-                                                          <Component id="lblCPF" max="32767" attributes="0"/>
-                                                      </Group>
-                                                  </Group>
-                                              </Group>
-                                          </Group>
-                                          <EmptySpace pref="57" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="lblComplemento" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="lblCidade" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txtFone" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="lblCodFidelidade" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txtCodFidelidade" alignment="0" max="32767" attributes="0"/>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="lblNumero" min="-2" pref="82" max="-2" attributes="0"/>
-                                              <Component id="jFormattedTextField1" min="-2" pref="82" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <Component id="lblCEP" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Component id="txtCEP" max="32767" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                          <Component id="lblEstado" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jComboBox2" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="lblFone" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="lblInfComplement" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="1298" pref="711" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="AtxtComplemento" min="-2" pref="385" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="298" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="txtComplemento" max="32767" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txtCidade" min="-2" pref="254" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="-2" pref="169" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                  <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              </Group>
+              <Component id="jPanel1" alignment="1" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
+                  <Component id="jPanel1" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lblNome" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btnNomeCli" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblDataNacimento" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblCPF" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblFone" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtCPF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtFone" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="dateChooserCombo1" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblEmail" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
-                      <Component id="lblCodFidelidade" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txtEmail" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtCodFidelidade" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lblNumero" alignment="0" min="-2" pref="14" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblEndereco" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
-                          <Component id="lblCEP" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="CboEndereco" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtEndereco" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtCEP" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jFormattedTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblComplemento" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
-                      <Component id="lblCidade" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
-                      <Component id="lblEstado" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txtComplemento" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtCidade" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jComboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="lblInfComplement" min="-2" pref="14" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="AtxtComplemento" min="-2" pref="124" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="32" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblNome">
+        <Container class="javax.swing.JPanel" name="jPanel1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Nome"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="btnNomeCli">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNomeCliActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblDataNacimento">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Data de nascimento"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblCPF">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="CPF"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblFone">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Telefone"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblEmail">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="E-mail"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblCodFidelidade">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="C&#xf3;digo de fidelidade"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JFormattedTextField" name="txtCPF">
-          <Properties>
-            <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-              <Format format="###.###.###-##" subtype="-1" type="5"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder title="Cadastro de Cliente"/>
+              </Border>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="f0" green="f0" red="f0" type="rgb"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCPFActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JFormattedTextField" name="txtFone">
-          <Properties>
-            <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-              <Format format="(###)####-####" subtype="-1" type="5"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txtEmail">
-          <Properties>
-            <Property name="toolTipText" type="java.lang.String" value="Ex.: Senac@senac.edu.br"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEmailActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txtCodFidelidade">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCodFidelidadeActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblEndereco">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Endere&#xe7;o"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblNumero">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="N&#xfa;mero"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblCEP">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="CEP"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblComplemento">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Complemento"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblCidade">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Cidade"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblEstado">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Estado"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JComboBox" name="CboEndereco">
-          <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="2">
-                <StringItem index="0" value="Rua"/>
-                <StringItem index="1" value="Avenida"/>
-              </StringArray>
-            </Property>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-          </AuxValues>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txtEndereco">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEnderecoActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txtComplemento">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtComplementoActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txtCidade">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCidadeActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBox2">
-          <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="27">
-                <StringItem index="0" value="AC"/>
-                <StringItem index="1" value="AL"/>
-                <StringItem index="2" value="AM"/>
-                <StringItem index="3" value="AP"/>
-                <StringItem index="4" value="BA"/>
-                <StringItem index="5" value="CE"/>
-                <StringItem index="6" value="DF"/>
-                <StringItem index="7" value="ES"/>
-                <StringItem index="8" value="GO"/>
-                <StringItem index="9" value="MA"/>
-                <StringItem index="10" value="MT"/>
-                <StringItem index="11" value="MS"/>
-                <StringItem index="12" value="MG"/>
-                <StringItem index="13" value="PA"/>
-                <StringItem index="14" value="PB"/>
-                <StringItem index="15" value="PR"/>
-                <StringItem index="16" value="PE"/>
-                <StringItem index="17" value="PI"/>
-                <StringItem index="18" value="RJ"/>
-                <StringItem index="19" value="RN"/>
-                <StringItem index="20" value="RS"/>
-                <StringItem index="21" value="RO"/>
-                <StringItem index="22" value="RR"/>
-                <StringItem index="23" value="SC"/>
-                <StringItem index="24" value="SP"/>
-                <StringItem index="25" value="SE"/>
-                <StringItem index="26" value="TO"/>
-              </StringArray>
-            </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Selecione seu Estado."/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox2ActionPerformed"/>
-          </Events>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-          </AuxValues>
-        </Component>
-        <Component class="javax.swing.JTextArea" name="AtxtComplemento">
-          <Properties>
-            <Property name="columns" type="int" value="20"/>
-            <Property name="rows" type="int" value="5"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblInfComplement">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Informa&#xe7;&#xf5;es complementares"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JFormattedTextField" name="txtCEP">
-          <Properties>
-            <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-              <Format format="######-###" subtype="-1" type="5"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField1">
-          <Properties>
-            <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
-              <Format format="#0" subtype="-1" type="0"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="datechooser.beans.DateChooserCombo" name="dateChooserCombo1">
-          <Properties>
-            <Property name="dch_weekDayStyle" type="datechooser.view.WeekDaysStyle" editor="datechooser.beans.editor.WeekDaysStyleEditor">
-              <SerializedValue value="-84,-19,0,5,126,114,0,30,100,97,116,101,99,104,111,111,115,101,114,46,118,105,101,119,46,87,101,101,107,68,97,121,115,83,116,121,108,101,0,0,0,0,0,0,0,0,18,0,0,120,114,0,14,106,97,118,97,46,108,97,110,103,46,69,110,117,109,0,0,0,0,0,0,0,0,18,0,0,120,112,116,0,5,83,72,79,82,84"/>
-            </Property>
-            <Property name="dch_defaultDates" type="datechooser.model.multiple.PeriodSet" editor="datechooser.beans.editor.dates.PeriodsEditor">
-              <SerializedValue value="-84,-19,0,5,115,114,0,36,100,97,116,101,99,104,111,111,115,101,114,46,109,111,100,101,108,46,109,117,108,116,105,112,108,101,46,80,101,114,105,111,100,83,101,116,-104,-44,-96,42,-91,51,-90,42,2,0,3,76,0,4,100,97,116,97,116,0,22,76,106,97,118,97,47,117,116,105,108,47,76,105,110,107,101,100,76,105,115,116,59,76,0,9,108,97,115,116,65,100,100,101,100,116,0,35,76,100,97,116,101,99,104,111,111,115,101,114,47,109,111,100,101,108,47,109,117,108,116,105,112,108,101,47,80,101,114,105,111,100,59,76,0,10,112,101,114,105,111,100,67,97,115,104,113,0,126,0,2,120,112,115,114,0,20,106,97,118,97,46,117,116,105,108,46,76,105,110,107,101,100,76,105,115,116,12,41,83,93,74,96,-120,34,3,0,0,120,112,119,4,0,0,0,1,115,114,0,33,100,97,116,101,99,104,111,111,115,101,114,46,109,111,100,101,108,46,109,117,108,116,105,112,108,101,46,80,101,114,105,111,100,29,77,-123,76,95,4,43,-93,2,0,2,76,0,7,101,110,100,68,97,116,101,116,0,20,76,106,97,118,97,47,117,116,105,108,47,67,97,108,101,110,100,97,114,59,76,0,9,115,116,97,114,116,68,97,116,101,113,0,126,0,7,120,112,115,114,0,27,106,97,118,97,46,117,116,105,108,46,71,114,101,103,111,114,105,97,110,67,97,108,101,110,100,97,114,-113,61,-41,-42,-27,-80,-48,-63,2,0,1,74,0,16,103,114,101,103,111,114,105,97,110,67,117,116,111,118,101,114,120,114,0,18,106,97,118,97,46,117,116,105,108,46,67,97,108,101,110,100,97,114,-26,-22,77,30,-56,-36,91,-114,3,0,11,90,0,12,97,114,101,70,105,101,108,100,115,83,101,116,73,0,14,102,105,114,115,116,68,97,121,79,102,87,101,101,107,90,0,9,105,115,84,105,109,101,83,101,116,90,0,7,108,101,110,105,101,110,116,73,0,22,109,105,110,105,109,97,108,68,97,121,115,73,110,70,105,114,115,116,87,101,101,107,73,0,9,110,101,120,116,83,116,97,109,112,73,0,21,115,101,114,105,97,108,86,101,114,115,105,111,110,79,110,83,116,114,101,97,109,74,0,4,116,105,109,101,91,0,6,102,105,101,108,100,115,116,0,2,91,73,91,0,5,105,115,83,101,116,116,0,2,91,90,76,0,4,122,111,110,101,116,0,20,76,106,97,118,97,47,117,116,105,108,47,84,105,109,101,90,111,110,101,59,120,112,1,0,0,0,1,1,1,0,0,0,1,0,0,0,2,0,0,0,1,0,0,1,106,-66,1,40,33,117,114,0,2,91,73,77,-70,96,38,118,-22,-78,-91,2,0,0,120,112,0,0,0,17,0,0,0,1,0,0,7,-29,0,0,0,4,0,0,0,20,0,0,0,3,0,0,0,15,0,0,0,-121,0,0,0,4,0,0,0,3,0,0,0,1,0,0,0,9,0,0,0,21,0,0,0,18,0,0,0,28,0,0,0,1,-1,91,52,-128,0,0,0,0,117,114,0,2,91,90,87,-113,32,57,20,-72,93,-30,2,0,0,120,112,0,0,0,17,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,115,114,0,24,106,97,118,97,46,117,116,105,108,46,83,105,109,112,108,101,84,105,109,101,90,111,110,101,-6,103,93,96,-47,94,-11,-90,3,0,18,73,0,10,100,115,116,83,97,118,105,110,103,115,73,0,6,101,110,100,68,97,121,73,0,12,101,110,100,68,97,121,79,102,87,101,101,107,73,0,7,101,110,100,77,111,100,101,73,0,8,101,110,100,77,111,110,116,104,73,0,7,101,110,100,84,105,109,101,73,0,11,101,110,100,84,105,109,101,77,111,100,101,73,0,9,114,97,119,79,102,102,115,101,116,73,0,21,115,101,114,105,97,108,86,101,114,115,105,111,110,79,110,83,116,114,101,97,109,73,0,8,115,116,97,114,116,68,97,121,73,0,14,115,116,97,114,116,68,97,121,79,102,87,101,101,107,73,0,9,115,116,97,114,116,77,111,100,101,73,0,10,115,116,97,114,116,77,111,110,116,104,73,0,9,115,116,97,114,116,84,105,109,101,73,0,13,115,116,97,114,116,84,105,109,101,77,111,100,101,73,0,9,115,116,97,114,116,89,101,97,114,90,0,11,117,115,101,68,97,121,108,105,103,104,116,91,0,11,109,111,110,116,104,76,101,110,103,116,104,116,0,2,91,66,120,114,0,18,106,97,118,97,46,117,116,105,108,46,84,105,109,101,90,111,110,101,49,-77,-23,-11,119,68,-84,-95,2,0,1,76,0,2,73,68,116,0,18,76,106,97,118,97,47,108,97,110,103,47,83,116,114,105,110,103,59,120,112,116,0,17,65,109,101,114,105,99,97,47,83,97,111,95,80,97,117,108,111,0,54,-18,-128,0,0,0,3,0,0,0,1,0,0,0,3,0,0,0,1,0,0,0,0,0,0,0,0,-1,91,52,-128,0,0,0,2,0,0,0,1,0,0,0,1,0,0,0,3,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,1,117,114,0,2,91,66,-84,-13,23,-8,6,8,84,-32,2,0,0,120,112,0,0,0,12,31,28,31,30,31,30,31,31,30,31,30,31,119,10,0,0,0,6,1,1,15,1,0,0,117,113,0,126,0,15,0,0,0,2,0,0,0,0,0,0,0,0,120,115,114,0,26,115,117,110,46,117,116,105,108,46,99,97,108,101,110,100,97,114,46,90,111,110,101,73,110,102,111,36,-47,-45,-50,0,29,113,-101,2,0,8,73,0,8,99,104,101,99,107,115,117,109,73,0,10,100,115,116,83,97,118,105,110,103,115,73,0,9,114,97,119,79,102,102,115,101,116,73,0,13,114,97,119,79,102,102,115,101,116,68,105,102,102,90,0,19,119,105,108,108,71,77,84,79,102,102,115,101,116,67,104,97,110,103,101,91,0,7,111,102,102,115,101,116,115,113,0,126,0,11,91,0,20,115,105,109,112,108,101,84,105,109,101,90,111,110,101,80,97,114,97,109,115,113,0,126,0,11,91,0,11,116,114,97,110,115,105,116,105,111,110,115,116,0,2,91,74,120,113,0,126,0,21,113,0,126,0,24,-16,-33,59,-31,0,54,-18,-128,-1,91,52,-128,0,0,0,0,0,117,113,0,126,0,15,0,0,0,4,-1,91,52,-128,-1,85,72,-32,-1,-110,35,0,0,54,-18,-128,117,113,0,126,0,15,0,0,0,10,0,0,0,10,0,0,0,1,-1,-1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,15,-1,-1,-1,-1,0,0,0,0,0,0,0,0,117,114,0,2,91,74,120,32,4,-75,18,-79,117,-109,2,0,0,120,112,0,0,0,-127,-1,-33,-38,-32,29,-64,0,1,-1,-26,72,-99,0,-14,0,0,-1,-18,111,-69,-119,48,0,50,-1,-18,-87,-44,71,16,0,0,-1,-18,-27,99,61,-72,0,50,-1,-17,31,79,89,-48,0,0,-1,-10,-58,-42,-122,-72,0,50,-1,-10,-14,-100,-108,-72,0,0,-1,-9,60,81,-103,120,0,50,-1,-9,99,64,66,80,0,0,-1,-9,-79,-52,-84,56,0,50,-1,-9,-39,13,-70,-48,0,0,-1,-8,39,-102,36,-72,0,50,-1,-8,68,-114,123,80,0,0,-1,-3,39,-5,62,56,0,50,-1,-3,81,-49,122,-48,0,0,-1,-3,-67,-8,117,-72,0,50,-1,-3,-48,-14,122,16,0,0,-1,-2,31,-47,73,-72,0,50,-1,-2,60,-59,-96,80,0,0,-1,-2,-117,-92,111,-8,0,50,-1,-2,-78,64,-77,16,0,0,-1,-1,1,31,-126,-72,0,50,-1,-1,40,14,43,-112,0,0,0,7,69,-75,54,-72,0,50,0,7,112,-128,-92,-112,0,0,0,7,-72,-99,27,120,0,50,0,7,-36,-90,48,-112,0,0,0,8,46,24,46,56,0,50,0,8,79,-32,123,16,0,0,0,8,-95,0,18,-8,0,50,0,8,-62,-56,95,-48,0,0,0,9,22,40,-65,-8,0,50,0,9,60,114,-99,80,0,0,0,9,-115,-110,53,56,0,50,0,9,-77,-36,18,-112,0,0,0,10,2,-70,-30,56,0,50,0,10,38,-61,-9,80,0,0,0,10,122,36,87,120,0,50,0,10,-103,-85,-36,16,0,0,0,10,-19,12,60,56,0,50,0,11,21,-106,-31,-48,0,0,0,11,98,52,-23,56,0,50,0,11,-118,-65,-114,-48,0,0,0,11,-41,93,-106,56,0,50,0,11,-3,-89,115,-112,0,0,0,12,74,69,122,-8,0,50,0,12,117,16,-24,-48,0,0,0,12,-65,-64,-115,-72,0,50,0,12,-18,-69,38,80,0,0,0,13,54,-41,-99,56,0,50,0,13,97,-93,11,16,0,0,0,13,-87,-65,-127,-8,0,50,0,13,-39,12,-128,80,0,0,0,14,33,40,-9,56,0,50,0,14,75,-12,101,16,0,0,0,14,-104,-110,108,120,0,50,0,14,-63,29,18,16,0,0,0,15,20,125,114,56,0,50,0,15,54,69,-65,16,0,0,0,15,-123,36,-114,-72,0,50,0,15,-85,110,108,16,0,0,0,15,-1,115,-105,-72,0,50,0,16,34,-41,-31,80,0,0,0,16,111,117,-24,-72,0,50,0,16,-104,0,-114,80,0,0,0,16,-21,96,-18,120,0,50,0,17,15,106,3,-112,0,0,0,17,89,-57,66,-72,0,50,0,17,-126,81,-24,80,0,0,0,17,-47,48,-73,-8,0,50,0,17,-9,122,-107,80,0,0,0,18,70,89,100,-8,0,50,0,18,110,-28,10,-112,0,0,0,18,-69,-126,17,-8,0,50,0,18,-28,12,-73,-112,0,0,0,19,48,-86,-66,-8,0,50,0,19,91,118,44,-48,0,0,0,19,-88,20,52,56,0,50,0,19,-50,94,17,-112,0,0,0,20,29,60,-31,56,0,50,0,20,67,-122,-66,-112,0,0,0,20,-110,101,-114,56,0,50,0,20,-70,-16,51,-48,0,0,0,21,7,-114,59,56,0,50,0,21,48,24,-32,-48,0,0,0,21,124,-74,-24,56,0,50,0,21,-91,65,-115,-48,0,0,0,21,-15,-33,-107,56,0,50,0,22,26,106,58,-48,0,0,0,22,109,-54,-102,-8,0,50,0,22,-113,-110,-25,-48,0,0,0,22,-30,-13,71,-8,0,50,0,23,4,-69,-108,-48,0,0,0,23,88,27,-12,-8,0,50,0,23,124,37,10,16,0,0,0,23,-49,-123,106,56,0,50,0,23,-15,77,-73,16,0,0,0,24,68,-82,23,56,0,50,0,24,104,-73,44,80,0,0,0,24,-71,-42,-60,56,0,50,0,24,-37,-97,17,16,0,0,0,25,46,-1,113,56,0,50,0,25,80,-57,-66,16,0,0,0,25,-92,40,30,56,0,50,0,25,-56,49,51,80,0,0,0,26,25,80,-53,56,0,50,0,26,61,89,-32,80,0,0,0,26,-112,-70,64,120,0,50,0,26,-78,-126,-115,80,0,0,0,27,5,-30,-19,120,0,50,0,27,39,-85,58,80,0,0,0,27,123,11,-102,120,0,50,0,27,-100,-45,-25,80,0,0,0,27,-16,52,71,120,0,50,0,28,17,-4,-108,80,0,0,0,28,101,92,-12,120,0,50,0,28,-121,37,65,80,0,0,0,28,-36,-58,105,-72,0,50,0,28,-2,-114,-74,-112,0,0,0,29,81,-17,22,-72,0,50,0,29,117,-8,43,-48,0,0,0,29,-57,23,-61,-72,0,50,0,29,-24,-32,16,-112,0,0,0,30,60,64,112,-72,0,50,0,30,94,8,-67,-112,0,0,0,30,-79,105,29,-72,0,50,0,30,-43,114,50,-48,0,0,0,31,38,-111,-54,-72,0,50,120,-1,-1,-12,-30,-7,100,-84,0,115,113,0,126,0,9,1,0,0,0,1,1,1,0,0,0,1,0,0,0,2,0,0,0,1,0,0,1,106,-66,1,40,33,117,113,0,126,0,15,0,0,0,17,0,0,0,1,0,0,7,-29,0,0,0,4,0,0,0,20,0,0,0,3,0,0,0,15,0,0,0,-121,0,0,0,4,0,0,0,3,0,0,0,1,0,0,0,9,0,0,0,21,0,0,0,18,0,0,0,28,0,0,0,1,-1,91,52,-128,0,0,0,0,117,113,0,126,0,17,0,0,0,17,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,115,113,0,126,0,19,113,0,126,0,24,0,54,-18,-128,0,0,0,3,0,0,0,1,0,0,0,3,0,0,0,1,0,0,0,0,0,0,0,0,-1,91,52,-128,0,0,0,2,0,0,0,1,0,0,0,1,0,0,0,3,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,1,113,0,126,0,26,119,10,0,0,0,6,1,1,15,1,0,0,117,113,0,126,0,15,0,0,0,2,0,0,0,0,0,0,0,0,120,115,113,0,126,0,28,113,0,126,0,24,-16,-33,59,-31,0,54,-18,-128,-1,91,52,-128,0,0,0,0,0,113,0,126,0,31,113,0,126,0,32,113,0,126,0,34,120,-1,-1,-12,-30,-7,100,-84,0,120,112,112"/>
-            </Property>
-            <Property name="dch_navFont" type="java.awt.Font" editor="datechooser.beans.editor.font.SimpleFontEditor">
-              <SerializedValue value="-84,-19,0,5,115,114,0,13,106,97,118,97,46,97,119,116,46,70,111,110,116,-59,-95,53,-26,-52,-34,86,115,3,0,6,73,0,25,102,111,110,116,83,101,114,105,97,108,105,122,101,100,68,97,116,97,86,101,114,115,105,111,110,70,0,9,112,111,105,110,116,83,105,122,101,73,0,4,115,105,122,101,73,0,5,115,116,121,108,101,76,0,20,102,82,101,113,117,101,115,116,101,100,65,116,116,114,105,98,117,116,101,115,116,0,21,76,106,97,118,97,47,117,116,105,108,47,72,97,115,104,116,97,98,108,101,59,76,0,4,110,97,109,101,116,0,18,76,106,97,118,97,47,108,97,110,103,47,83,116,114,105,110,103,59,120,112,0,0,0,1,64,-32,0,0,0,0,0,7,0,0,0,0,112,116,0,5,83,101,114,105,102,120"/>
-            </Property>
-            <Property name="dch_behavior" type="datechooser.model.multiple.MultyModelBehavior" editor="datechooser.beans.editor.ModelBehaviorEditor">
-              <SerializedValue value="-84,-19,0,5,126,114,0,45,100,97,116,101,99,104,111,111,115,101,114,46,109,111,100,101,108,46,109,117,108,116,105,112,108,101,46,77,117,108,116,121,77,111,100,101,108,66,101,104,97,118,105,111,114,0,0,0,0,0,0,0,0,18,0,0,120,114,0,14,106,97,118,97,46,108,97,110,103,46,69,110,117,109,0,0,0,0,0,0,0,0,18,0,0,120,112,116,0,13,83,69,76,69,67,84,95,80,69,82,73,79,68"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="onCommit" listener="datechooser.events.CommitListener" parameters="datechooser.events.CommitEvent" handler="dateChooserCombo1OnCommit"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jButton1"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jButton2"/>
-          </Properties>
-        </Component>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace pref="102" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="lblEmail" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblDataNacimento" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="dateChooserCombo1" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="33" pref="33" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="lblCPF" pref="107" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="490" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="txtCPF" min="-2" pref="190" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblEndereco" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblComplemento" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtComplemento" alignment="0" min="-2" pref="394" max="-2" attributes="0"/>
+                                  <Component id="lblNome" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="txtEmail" alignment="0" max="32767" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="CboEndereco" min="-2" pref="69" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="txtEndereco" min="-2" pref="315" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="lblNumero" min="-2" pref="82" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="lblCEP" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Component id="txtFone" max="32767" attributes="0"/>
+                                          <Component id="txtCodFidelidade" max="32767" attributes="0"/>
+                                          <Component id="lblFone" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="lblCodFidelidade" alignment="0" max="32767" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jFormattedTextField1" min="-2" pref="82" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="txtCEP" min="-2" pref="122" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Component id="btnNomeCli" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="442" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="txtCidade" alignment="0" min="-2" pref="82" max="-2" attributes="0"/>
+                                          <Component id="lblCidade" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="lblEstado" max="32767" attributes="0"/>
+                                          <Component id="jComboBox2" pref="97" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                                              <Component id="btnCadastrar" linkSize="5" min="-2" pref="85" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
+                                              <Component id="btnConsultar" linkSize="5" min="-2" pref="85" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="lblInfComplement" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                                      <Component id="btnAlterar" linkSize="5" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                                      <Component id="jButton2" linkSize="5" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblNome" linkSize="2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnNomeCli" linkSize="1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblDataNacimento" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCPF" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblFone" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="txtCPF" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtFone" linkSize="1" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="dateChooserCombo1" linkSize="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblEmail" linkSize="2" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
+                          <Component id="lblCodFidelidade" linkSize="2" alignment="0" min="-2" pref="14" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtEmail" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtCodFidelidade" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblEndereco" linkSize="2" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
+                          <Component id="lblCEP" linkSize="2" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
+                          <Component id="lblNumero" linkSize="2" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="CboEndereco" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtEndereco" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtCEP" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jFormattedTextField1" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblComplemento" linkSize="2" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
+                          <Component id="lblCidade" linkSize="2" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
+                          <Component id="lblEstado" linkSize="2" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtComplemento" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtCidade" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBox2" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="lblInfComplement" linkSize="2" min="-2" pref="14" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="100" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="btnCadastrar" linkSize="3" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                          <Component id="btnConsultar" linkSize="3" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jButton2" linkSize="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAlterar" linkSize="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="lblInfComplement">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Informa&#xe7;&#xf5;es complementares"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblCEP">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="CEP"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="btnNomeCli">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNomeCliActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField1">
+              <Properties>
+                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
+                  <Format format="#0" subtype="-1" type="0"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton2">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/br/com/gabenricks_HeC/Views/Icones/delete.png"/>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" value="Excluir Cliente"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtEmail">
+              <Properties>
+                <Property name="toolTipText" type="java.lang.String" value="Ex.: Senac@senac.edu.br"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEmailActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblEmail">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="E-mail"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtComplemento">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtComplementoActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblCodFidelidade">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="C&#xf3;digo de fidelidade"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtCidade">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCidadeActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblEndereco">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Endere&#xe7;o"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JFormattedTextField" name="txtCEP">
+              <Properties>
+                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                  <Format format="######-###" subtype="-1" type="5"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblNome">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nome"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JFormattedTextField" name="txtFone">
+              <Properties>
+                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                  <Format format="(###)####-####" subtype="-1" type="5"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtEndereco">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEnderecoActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblEstado">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Estado"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblNumero">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="N&#xfa;mero"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="jComboBox2">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="27">
+                    <StringItem index="0" value="AC"/>
+                    <StringItem index="1" value="AL"/>
+                    <StringItem index="2" value="AM"/>
+                    <StringItem index="3" value="AP"/>
+                    <StringItem index="4" value="BA"/>
+                    <StringItem index="5" value="CE"/>
+                    <StringItem index="6" value="DF"/>
+                    <StringItem index="7" value="ES"/>
+                    <StringItem index="8" value="GO"/>
+                    <StringItem index="9" value="MA"/>
+                    <StringItem index="10" value="MT"/>
+                    <StringItem index="11" value="MS"/>
+                    <StringItem index="12" value="MG"/>
+                    <StringItem index="13" value="PA"/>
+                    <StringItem index="14" value="PB"/>
+                    <StringItem index="15" value="PR"/>
+                    <StringItem index="16" value="PE"/>
+                    <StringItem index="17" value="PI"/>
+                    <StringItem index="18" value="RJ"/>
+                    <StringItem index="19" value="RN"/>
+                    <StringItem index="20" value="RS"/>
+                    <StringItem index="21" value="RO"/>
+                    <StringItem index="22" value="RR"/>
+                    <StringItem index="23" value="SC"/>
+                    <StringItem index="24" value="SP"/>
+                    <StringItem index="25" value="SE"/>
+                    <StringItem index="26" value="TO"/>
+                  </StringArray>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" value="Selecione seu Estado."/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox2ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnCadastrar">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/br/com/gabenricks_HeC/Views/Icones/create.png"/>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" value="Cadastrar Cliente"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="CboEndereco">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Rua"/>
+                    <StringItem index="1" value="Avenida"/>
+                    <StringItem index="2" value="Travessa"/>
+                    <StringItem index="3" value="Aeroporto"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblDataNacimento">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Data de nascimento"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblFone">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Telefone"/>
+              </Properties>
+            </Component>
+            <Component class="datechooser.beans.DateChooserCombo" name="dateChooserCombo1">
+              <Properties>
+                <Property name="dch_weekDayStyle" type="datechooser.view.WeekDaysStyle" editor="datechooser.beans.editor.WeekDaysStyleEditor">
+                  <SerializedValue value="-84,-19,0,5,126,114,0,30,100,97,116,101,99,104,111,111,115,101,114,46,118,105,101,119,46,87,101,101,107,68,97,121,115,83,116,121,108,101,0,0,0,0,0,0,0,0,18,0,0,120,114,0,14,106,97,118,97,46,108,97,110,103,46,69,110,117,109,0,0,0,0,0,0,0,0,18,0,0,120,112,116,0,5,83,72,79,82,84"/>
+                </Property>
+                <Property name="dch_defaultDates" type="datechooser.model.multiple.PeriodSet" editor="datechooser.beans.editor.dates.PeriodsEditor">
+                  <SerializedValue value="-84,-19,0,5,115,114,0,36,100,97,116,101,99,104,111,111,115,101,114,46,109,111,100,101,108,46,109,117,108,116,105,112,108,101,46,80,101,114,105,111,100,83,101,116,-104,-44,-96,42,-91,51,-90,42,2,0,3,76,0,4,100,97,116,97,116,0,22,76,106,97,118,97,47,117,116,105,108,47,76,105,110,107,101,100,76,105,115,116,59,76,0,9,108,97,115,116,65,100,100,101,100,116,0,35,76,100,97,116,101,99,104,111,111,115,101,114,47,109,111,100,101,108,47,109,117,108,116,105,112,108,101,47,80,101,114,105,111,100,59,76,0,10,112,101,114,105,111,100,67,97,115,104,113,0,126,0,2,120,112,115,114,0,20,106,97,118,97,46,117,116,105,108,46,76,105,110,107,101,100,76,105,115,116,12,41,83,93,74,96,-120,34,3,0,0,120,112,119,4,0,0,0,1,115,114,0,33,100,97,116,101,99,104,111,111,115,101,114,46,109,111,100,101,108,46,109,117,108,116,105,112,108,101,46,80,101,114,105,111,100,29,77,-123,76,95,4,43,-93,2,0,2,76,0,7,101,110,100,68,97,116,101,116,0,20,76,106,97,118,97,47,117,116,105,108,47,67,97,108,101,110,100,97,114,59,76,0,9,115,116,97,114,116,68,97,116,101,113,0,126,0,7,120,112,115,114,0,27,106,97,118,97,46,117,116,105,108,46,71,114,101,103,111,114,105,97,110,67,97,108,101,110,100,97,114,-113,61,-41,-42,-27,-80,-48,-63,2,0,1,74,0,16,103,114,101,103,111,114,105,97,110,67,117,116,111,118,101,114,120,114,0,18,106,97,118,97,46,117,116,105,108,46,67,97,108,101,110,100,97,114,-26,-22,77,30,-56,-36,91,-114,3,0,11,90,0,12,97,114,101,70,105,101,108,100,115,83,101,116,73,0,14,102,105,114,115,116,68,97,121,79,102,87,101,101,107,90,0,9,105,115,84,105,109,101,83,101,116,90,0,7,108,101,110,105,101,110,116,73,0,22,109,105,110,105,109,97,108,68,97,121,115,73,110,70,105,114,115,116,87,101,101,107,73,0,9,110,101,120,116,83,116,97,109,112,73,0,21,115,101,114,105,97,108,86,101,114,115,105,111,110,79,110,83,116,114,101,97,109,74,0,4,116,105,109,101,91,0,6,102,105,101,108,100,115,116,0,2,91,73,91,0,5,105,115,83,101,116,116,0,2,91,90,76,0,4,122,111,110,101,116,0,20,76,106,97,118,97,47,117,116,105,108,47,84,105,109,101,90,111,110,101,59,120,112,1,0,0,0,1,1,1,0,0,0,1,0,0,0,2,0,0,0,1,0,0,1,106,-66,1,40,33,117,114,0,2,91,73,77,-70,96,38,118,-22,-78,-91,2,0,0,120,112,0,0,0,17,0,0,0,1,0,0,7,-29,0,0,0,4,0,0,0,20,0,0,0,3,0,0,0,15,0,0,0,-121,0,0,0,4,0,0,0,3,0,0,0,1,0,0,0,9,0,0,0,21,0,0,0,18,0,0,0,28,0,0,0,1,-1,91,52,-128,0,0,0,0,117,114,0,2,91,90,87,-113,32,57,20,-72,93,-30,2,0,0,120,112,0,0,0,17,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,115,114,0,24,106,97,118,97,46,117,116,105,108,46,83,105,109,112,108,101,84,105,109,101,90,111,110,101,-6,103,93,96,-47,94,-11,-90,3,0,18,73,0,10,100,115,116,83,97,118,105,110,103,115,73,0,6,101,110,100,68,97,121,73,0,12,101,110,100,68,97,121,79,102,87,101,101,107,73,0,7,101,110,100,77,111,100,101,73,0,8,101,110,100,77,111,110,116,104,73,0,7,101,110,100,84,105,109,101,73,0,11,101,110,100,84,105,109,101,77,111,100,101,73,0,9,114,97,119,79,102,102,115,101,116,73,0,21,115,101,114,105,97,108,86,101,114,115,105,111,110,79,110,83,116,114,101,97,109,73,0,8,115,116,97,114,116,68,97,121,73,0,14,115,116,97,114,116,68,97,121,79,102,87,101,101,107,73,0,9,115,116,97,114,116,77,111,100,101,73,0,10,115,116,97,114,116,77,111,110,116,104,73,0,9,115,116,97,114,116,84,105,109,101,73,0,13,115,116,97,114,116,84,105,109,101,77,111,100,101,73,0,9,115,116,97,114,116,89,101,97,114,90,0,11,117,115,101,68,97,121,108,105,103,104,116,91,0,11,109,111,110,116,104,76,101,110,103,116,104,116,0,2,91,66,120,114,0,18,106,97,118,97,46,117,116,105,108,46,84,105,109,101,90,111,110,101,49,-77,-23,-11,119,68,-84,-95,2,0,1,76,0,2,73,68,116,0,18,76,106,97,118,97,47,108,97,110,103,47,83,116,114,105,110,103,59,120,112,116,0,17,65,109,101,114,105,99,97,47,83,97,111,95,80,97,117,108,111,0,54,-18,-128,0,0,0,3,0,0,0,1,0,0,0,3,0,0,0,1,0,0,0,0,0,0,0,0,-1,91,52,-128,0,0,0,2,0,0,0,1,0,0,0,1,0,0,0,3,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,1,117,114,0,2,91,66,-84,-13,23,-8,6,8,84,-32,2,0,0,120,112,0,0,0,12,31,28,31,30,31,30,31,31,30,31,30,31,119,10,0,0,0,6,1,1,15,1,0,0,117,113,0,126,0,15,0,0,0,2,0,0,0,0,0,0,0,0,120,115,114,0,26,115,117,110,46,117,116,105,108,46,99,97,108,101,110,100,97,114,46,90,111,110,101,73,110,102,111,36,-47,-45,-50,0,29,113,-101,2,0,8,73,0,8,99,104,101,99,107,115,117,109,73,0,10,100,115,116,83,97,118,105,110,103,115,73,0,9,114,97,119,79,102,102,115,101,116,73,0,13,114,97,119,79,102,102,115,101,116,68,105,102,102,90,0,19,119,105,108,108,71,77,84,79,102,102,115,101,116,67,104,97,110,103,101,91,0,7,111,102,102,115,101,116,115,113,0,126,0,11,91,0,20,115,105,109,112,108,101,84,105,109,101,90,111,110,101,80,97,114,97,109,115,113,0,126,0,11,91,0,11,116,114,97,110,115,105,116,105,111,110,115,116,0,2,91,74,120,113,0,126,0,21,113,0,126,0,24,-16,-33,59,-31,0,54,-18,-128,-1,91,52,-128,0,0,0,0,0,117,113,0,126,0,15,0,0,0,4,-1,91,52,-128,-1,85,72,-32,-1,-110,35,0,0,54,-18,-128,117,113,0,126,0,15,0,0,0,10,0,0,0,10,0,0,0,1,-1,-1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,15,-1,-1,-1,-1,0,0,0,0,0,0,0,0,117,114,0,2,91,74,120,32,4,-75,18,-79,117,-109,2,0,0,120,112,0,0,0,-127,-1,-33,-38,-32,29,-64,0,1,-1,-26,72,-99,0,-14,0,0,-1,-18,111,-69,-119,48,0,50,-1,-18,-87,-44,71,16,0,0,-1,-18,-27,99,61,-72,0,50,-1,-17,31,79,89,-48,0,0,-1,-10,-58,-42,-122,-72,0,50,-1,-10,-14,-100,-108,-72,0,0,-1,-9,60,81,-103,120,0,50,-1,-9,99,64,66,80,0,0,-1,-9,-79,-52,-84,56,0,50,-1,-9,-39,13,-70,-48,0,0,-1,-8,39,-102,36,-72,0,50,-1,-8,68,-114,123,80,0,0,-1,-3,39,-5,62,56,0,50,-1,-3,81,-49,122,-48,0,0,-1,-3,-67,-8,117,-72,0,50,-1,-3,-48,-14,122,16,0,0,-1,-2,31,-47,73,-72,0,50,-1,-2,60,-59,-96,80,0,0,-1,-2,-117,-92,111,-8,0,50,-1,-2,-78,64,-77,16,0,0,-1,-1,1,31,-126,-72,0,50,-1,-1,40,14,43,-112,0,0,0,7,69,-75,54,-72,0,50,0,7,112,-128,-92,-112,0,0,0,7,-72,-99,27,120,0,50,0,7,-36,-90,48,-112,0,0,0,8,46,24,46,56,0,50,0,8,79,-32,123,16,0,0,0,8,-95,0,18,-8,0,50,0,8,-62,-56,95,-48,0,0,0,9,22,40,-65,-8,0,50,0,9,60,114,-99,80,0,0,0,9,-115,-110,53,56,0,50,0,9,-77,-36,18,-112,0,0,0,10,2,-70,-30,56,0,50,0,10,38,-61,-9,80,0,0,0,10,122,36,87,120,0,50,0,10,-103,-85,-36,16,0,0,0,10,-19,12,60,56,0,50,0,11,21,-106,-31,-48,0,0,0,11,98,52,-23,56,0,50,0,11,-118,-65,-114,-48,0,0,0,11,-41,93,-106,56,0,50,0,11,-3,-89,115,-112,0,0,0,12,74,69,122,-8,0,50,0,12,117,16,-24,-48,0,0,0,12,-65,-64,-115,-72,0,50,0,12,-18,-69,38,80,0,0,0,13,54,-41,-99,56,0,50,0,13,97,-93,11,16,0,0,0,13,-87,-65,-127,-8,0,50,0,13,-39,12,-128,80,0,0,0,14,33,40,-9,56,0,50,0,14,75,-12,101,16,0,0,0,14,-104,-110,108,120,0,50,0,14,-63,29,18,16,0,0,0,15,20,125,114,56,0,50,0,15,54,69,-65,16,0,0,0,15,-123,36,-114,-72,0,50,0,15,-85,110,108,16,0,0,0,15,-1,115,-105,-72,0,50,0,16,34,-41,-31,80,0,0,0,16,111,117,-24,-72,0,50,0,16,-104,0,-114,80,0,0,0,16,-21,96,-18,120,0,50,0,17,15,106,3,-112,0,0,0,17,89,-57,66,-72,0,50,0,17,-126,81,-24,80,0,0,0,17,-47,48,-73,-8,0,50,0,17,-9,122,-107,80,0,0,0,18,70,89,100,-8,0,50,0,18,110,-28,10,-112,0,0,0,18,-69,-126,17,-8,0,50,0,18,-28,12,-73,-112,0,0,0,19,48,-86,-66,-8,0,50,0,19,91,118,44,-48,0,0,0,19,-88,20,52,56,0,50,0,19,-50,94,17,-112,0,0,0,20,29,60,-31,56,0,50,0,20,67,-122,-66,-112,0,0,0,20,-110,101,-114,56,0,50,0,20,-70,-16,51,-48,0,0,0,21,7,-114,59,56,0,50,0,21,48,24,-32,-48,0,0,0,21,124,-74,-24,56,0,50,0,21,-91,65,-115,-48,0,0,0,21,-15,-33,-107,56,0,50,0,22,26,106,58,-48,0,0,0,22,109,-54,-102,-8,0,50,0,22,-113,-110,-25,-48,0,0,0,22,-30,-13,71,-8,0,50,0,23,4,-69,-108,-48,0,0,0,23,88,27,-12,-8,0,50,0,23,124,37,10,16,0,0,0,23,-49,-123,106,56,0,50,0,23,-15,77,-73,16,0,0,0,24,68,-82,23,56,0,50,0,24,104,-73,44,80,0,0,0,24,-71,-42,-60,56,0,50,0,24,-37,-97,17,16,0,0,0,25,46,-1,113,56,0,50,0,25,80,-57,-66,16,0,0,0,25,-92,40,30,56,0,50,0,25,-56,49,51,80,0,0,0,26,25,80,-53,56,0,50,0,26,61,89,-32,80,0,0,0,26,-112,-70,64,120,0,50,0,26,-78,-126,-115,80,0,0,0,27,5,-30,-19,120,0,50,0,27,39,-85,58,80,0,0,0,27,123,11,-102,120,0,50,0,27,-100,-45,-25,80,0,0,0,27,-16,52,71,120,0,50,0,28,17,-4,-108,80,0,0,0,28,101,92,-12,120,0,50,0,28,-121,37,65,80,0,0,0,28,-36,-58,105,-72,0,50,0,28,-2,-114,-74,-112,0,0,0,29,81,-17,22,-72,0,50,0,29,117,-8,43,-48,0,0,0,29,-57,23,-61,-72,0,50,0,29,-24,-32,16,-112,0,0,0,30,60,64,112,-72,0,50,0,30,94,8,-67,-112,0,0,0,30,-79,105,29,-72,0,50,0,30,-43,114,50,-48,0,0,0,31,38,-111,-54,-72,0,50,120,-1,-1,-12,-30,-7,100,-84,0,115,113,0,126,0,9,1,0,0,0,1,1,1,0,0,0,1,0,0,0,2,0,0,0,1,0,0,1,106,-66,1,40,33,117,113,0,126,0,15,0,0,0,17,0,0,0,1,0,0,7,-29,0,0,0,4,0,0,0,20,0,0,0,3,0,0,0,15,0,0,0,-121,0,0,0,4,0,0,0,3,0,0,0,1,0,0,0,9,0,0,0,21,0,0,0,18,0,0,0,28,0,0,0,1,-1,91,52,-128,0,0,0,0,117,113,0,126,0,17,0,0,0,17,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,115,113,0,126,0,19,113,0,126,0,24,0,54,-18,-128,0,0,0,3,0,0,0,1,0,0,0,3,0,0,0,1,0,0,0,0,0,0,0,0,-1,91,52,-128,0,0,0,2,0,0,0,1,0,0,0,1,0,0,0,3,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,1,113,0,126,0,26,119,10,0,0,0,6,1,1,15,1,0,0,117,113,0,126,0,15,0,0,0,2,0,0,0,0,0,0,0,0,120,115,113,0,126,0,28,113,0,126,0,24,-16,-33,59,-31,0,54,-18,-128,-1,91,52,-128,0,0,0,0,0,113,0,126,0,31,113,0,126,0,32,113,0,126,0,34,120,-1,-1,-12,-30,-7,100,-84,0,120,112,112"/>
+                </Property>
+                <Property name="dch_navFont" type="java.awt.Font" editor="datechooser.beans.editor.font.SimpleFontEditor">
+                  <SerializedValue value="-84,-19,0,5,115,114,0,13,106,97,118,97,46,97,119,116,46,70,111,110,116,-59,-95,53,-26,-52,-34,86,115,3,0,6,73,0,25,102,111,110,116,83,101,114,105,97,108,105,122,101,100,68,97,116,97,86,101,114,115,105,111,110,70,0,9,112,111,105,110,116,83,105,122,101,73,0,4,115,105,122,101,73,0,5,115,116,121,108,101,76,0,20,102,82,101,113,117,101,115,116,101,100,65,116,116,114,105,98,117,116,101,115,116,0,21,76,106,97,118,97,47,117,116,105,108,47,72,97,115,104,116,97,98,108,101,59,76,0,4,110,97,109,101,116,0,18,76,106,97,118,97,47,108,97,110,103,47,83,116,114,105,110,103,59,120,112,0,0,0,1,64,-32,0,0,0,0,0,7,0,0,0,0,112,116,0,5,83,101,114,105,102,120"/>
+                </Property>
+                <Property name="dch_behavior" type="datechooser.model.multiple.MultyModelBehavior" editor="datechooser.beans.editor.ModelBehaviorEditor">
+                  <SerializedValue value="-84,-19,0,5,126,114,0,45,100,97,116,101,99,104,111,111,115,101,114,46,109,111,100,101,108,46,109,117,108,116,105,112,108,101,46,77,117,108,116,121,77,111,100,101,108,66,101,104,97,118,105,111,114,0,0,0,0,0,0,0,0,18,0,0,120,114,0,14,106,97,118,97,46,108,97,110,103,46,69,110,117,109,0,0,0,0,0,0,0,0,18,0,0,120,112,116,0,13,83,69,76,69,67,84,95,80,69,82,73,79,68"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="onCommit" listener="datechooser.events.CommitListener" parameters="datechooser.events.CommitEvent" handler="dateChooserCombo1OnCommit"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtCodFidelidade">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCodFidelidadeActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblCPF">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="CPF"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JFormattedTextField" name="txtCPF">
+              <Properties>
+                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                  <Format format="###.###.###-##" subtype="-1" type="5"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCPFActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblCidade">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cidade"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblComplemento">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Complemento"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnConsultar">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/br/com/gabenricks_HeC/Views/Icones/read.png"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnAlterar">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/br/com/gabenricks_HeC/Views/Icones/read.png"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="AtxtComplemento">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
   </SubComponents>

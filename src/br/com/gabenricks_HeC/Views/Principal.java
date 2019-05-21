@@ -168,8 +168,15 @@ public class Principal extends javax.swing.JFrame {
         //Cadastro.setVisible(false);
         Desktop.removeAll();
         Produto Produto  = new Produto();
+        ((BasicInternalFrameUI)Produto.getUI()).setNorthPane(null);
         Produto.setVisible(true);
         Desktop.add(Produto);
+        try {
+            //comando para maximizar a tela JInternalFrame
+            Produto.setMaximum(true);
+        } catch (PropertyVetoException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+        }
         // repaint para dar um refresh na tela
         this.repaint();
         

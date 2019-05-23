@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+<<<<<<< HEAD
+=======
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/E:/patrick/faculdade/PI/gabenricks_h-c/src/br/com/gabenricks_HeC/Sobre.java</file>
@@ -9,4 +11,5 @@
             <file>file:/E:/patrick/faculdade/PI/gabenricks_h-c/src/br/com/gabenricks_HeC/Produto.java</file>
         </group>
     </open-files>
+>>>>>>> 8245da4889444b2fd63ccbc51b161d41125fc3a9
 </project-private>

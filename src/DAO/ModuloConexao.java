@@ -19,12 +19,6 @@ public class ModuloConexao {
         java.sql.Connection conexao = null;
         // A linha abaixo "chama" o driver
         String driver = "com.mysql.jdbc.Driver";
-        // Armazenando informações referente ao banco
-        /*
-        linha abaixo usada para conexão sem SSL(chave de segurança) "fazer uma aplicação futura
-        String url="jdbc:mysql://pesqcont.dyndns.org:3306/pesqueira_advogados?useTimezone=true&serverTimezone=UTC&useSSL=false";
-         
-        */
         String url = "jdbc:mysql://pesqcont.dyndns.org:63306/gabenricks?useTimezone=true&serverTimezone=UTC&useSSL=false";
         String user = "PI";
         String password = "gabenricks";
@@ -34,11 +28,15 @@ public class ModuloConexao {
             conexao = DriverManager.getConnection(url, user, password);
 
             return conexao;
+        } catch (com.mysql.jdbc.exceptions.jdbc4.CommunicationsException ErroConexao) {
+            JOptionPane.showMessageDialog(null, "Erro de conexão com o Banco de dados.\n \n Favor verificar sua conexão com a internet e tentar novamente.","Problema de conexão",JOptionPane.ERROR_MESSAGE);
+            return null;
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
             System.out.println(e);
             return null;
         }
+        
 
     }
 

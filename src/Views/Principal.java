@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.gabenricks_HeC.Views;
+package Views;
 
 import java.beans.PropertyVetoException;
 import java.util.logging.Level;

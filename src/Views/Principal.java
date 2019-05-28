@@ -3,8 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Views;
+package br.com.gabenricks_HeC.Views;
 
+import java.beans.PropertyVetoException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 /**
@@ -147,11 +150,17 @@ public class Principal extends javax.swing.JFrame {
         Cliente_Cadastro Cadastro = new Cliente_Cadastro();
         ((BasicInternalFrameUI)Cadastro.getUI()).setNorthPane(null);
         Cadastro.setVisible(true);
+          //adiciona tela de cadastro 
         Desktop.add(Cadastro);
-        
-        
-        
-// TODO add your handling code here:
+        try {
+            //comando para maximizar a tela JInternalFrame
+            Cadastro.setMaximum(true);
+        } catch (PropertyVetoException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        // repaint para dar um refresh na tela
+        this.repaint();
+                
     }//GEN-LAST:event_btnClientesActionPerformed
 
     private void btnProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProdutoActionPerformed
@@ -159,8 +168,15 @@ public class Principal extends javax.swing.JFrame {
         //Cadastro.setVisible(false);
         Desktop.removeAll();
         Produto Produto  = new Produto();
+        ((BasicInternalFrameUI)Produto.getUI()).setNorthPane(null);
         Produto.setVisible(true);
         Desktop.add(Produto);
+        try {
+            //comando para maximizar a tela JInternalFrame
+            Produto.setMaximum(true);
+        } catch (PropertyVetoException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+        }
         // repaint para dar um refresh na tela
         this.repaint();
         

@@ -21,7 +21,7 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
-        
+
     }
 
     /**
@@ -146,13 +146,14 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void btnClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesActionPerformed
-        Desktop.removeAll();
-        Cliente_Cadastro Cadastro = new Cliente_Cadastro();
-        ((BasicInternalFrameUI)Cadastro.getUI()).setNorthPane(null);
-        Cadastro.setVisible(true);
-          //adiciona tela de cadastro 
-        Desktop.add(Cadastro);
+
         try {
+            Desktop.removeAll();
+            Cliente_Cadastro Cadastro = new Cliente_Cadastro();
+            ((BasicInternalFrameUI) Cadastro.getUI()).setNorthPane(null);
+            Cadastro.setVisible(true);
+            //adiciona tela de cadastro 
+            Desktop.add(Cadastro);
             //comando para maximizar a tela JInternalFrame
             Cadastro.setMaximum(true);
         } catch (PropertyVetoException ex) {
@@ -160,18 +161,19 @@ public class Principal extends javax.swing.JFrame {
         }
         // repaint para dar um refresh na tela
         this.repaint();
-                
+
     }//GEN-LAST:event_btnClientesActionPerformed
 
     private void btnProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProdutoActionPerformed
         //Cliente_Cadastro Cadastro = new Cliente_Cadastro();
         //Cadastro.setVisible(false);
-        Desktop.removeAll();
-        Produto Produto  = new Produto();
-        ((BasicInternalFrameUI)Produto.getUI()).setNorthPane(null);
-        Produto.setVisible(true);
-        Desktop.add(Produto);
+
         try {
+            Desktop.removeAll();
+            Produto Produto = new Produto();
+            ((BasicInternalFrameUI) Produto.getUI()).setNorthPane(null);
+            Produto.setVisible(true);
+            Desktop.add(Produto);
             //comando para maximizar a tela JInternalFrame
             Produto.setMaximum(true);
         } catch (PropertyVetoException ex) {
@@ -179,8 +181,7 @@ public class Principal extends javax.swing.JFrame {
         }
         // repaint para dar um refresh na tela
         this.repaint();
-        
-        
+
 // TODO add your handling code here:
     }//GEN-LAST:event_btnProdutoActionPerformed
 

@@ -20,6 +20,10 @@ public class Cliente {
     private String endereco;
     private String infoComplementar;
 
+    public Cliente() {
+
+    }
+
     public Cliente(String nome, int cpf, int codFidelidade) {
 
         this.nome = nome;
@@ -67,6 +71,10 @@ public class Cliente {
 
     public int getClienteId() {
         return clienteId;
+    }
+
+    public void setClienteId(int clienteId) {
+        this.clienteId = clienteId;
     }
 
     public String getNome() {

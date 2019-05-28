@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.gabenricks_HeC.Views;
+package Views;
 
 /**
  *
@@ -129,7 +129,6 @@ public class Produto extends javax.swing.JInternalFrame {
         btnDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icones/icon_delete_32.png"))); // NOI18N
         btnDelete.setToolTipText("Excluir Cliente");
         btnDelete.setMaximumSize(new java.awt.Dimension(48, 48));
-        btnDelete.setMinimumSize(new java.awt.Dimension(65, 41));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -139,7 +138,6 @@ public class Produto extends javax.swing.JInternalFrame {
                 .addContainerGap(65, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(74, 74, 74)
                         .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)

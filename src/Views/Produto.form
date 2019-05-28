@@ -77,7 +77,6 @@
                   <EmptySpace pref="65" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
                           <Component id="btnCadastrar" min="-2" pref="51" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
                           <Component id="btnDelete" min="-2" pref="51" max="-2" attributes="0"/>
@@ -359,9 +358,6 @@
             <Property name="toolTipText" type="java.lang.String" value="Excluir Cliente"/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[48, 48]"/>
-            </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[65, 41]"/>
             </Property>
           </Properties>
         </Component>

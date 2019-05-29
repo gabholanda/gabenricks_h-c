@@ -3,16 +3,17 @@
 <Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
   <Properties>
     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-      <Border info="null"/>
+      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+        <TitledBorder title="Cadastro Pedido"/>
+      </Border>
     </Property>
     <Property name="defaultCloseOperation" type="int" value="0"/>
     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="ff" green="ff" id="white" palette="1" red="ff" type="palette"/>
     </Property>
-    <Property name="maximizable" type="boolean" value="true"/>
     <Property name="title" type="java.lang.String" value="Cadastro de Cliente"/>
     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-      <Color id="Default Cursor"/>
+      <Color id="Cursor Padr&#xe3;o"/>
     </Property>
     <Property name="enabled" type="boolean" value="false"/>
     <Property name="frameIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -26,7 +27,7 @@
     <Property name="visible" type="boolean" value="true"/>
   </Properties>
   <SyntheticProperties>
-    <SyntheticProperty name="formSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,51,0,0,3,84"/>
+    <SyntheticProperty name="formSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,-32,0,0,3,84"/>
     <SyntheticProperty name="formPosition" type="java.awt.Point" value="-84,-19,0,5,115,114,0,14,106,97,118,97,46,97,119,116,46,80,111,105,110,116,-74,-60,-118,114,52,126,-56,38,2,0,2,73,0,1,120,73,0,1,121,120,112,0,0,0,0,0,0,0,0"/>
     <SyntheticProperty name="formSizePolicy" type="int" value="0"/>
     <SyntheticProperty name="generatePosition" type="boolean" value="true"/>
@@ -47,12 +48,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="DesktopMain" alignment="1" pref="852" max="32767" attributes="0"/>
+          <Component id="DesktopMain" alignment="1" pref="840" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="DesktopMain" alignment="1" pref="536" max="32767" attributes="0"/>
+          <Component id="DesktopMain" alignment="1" pref="446" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -79,7 +80,7 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jPanel1" alignment="0" pref="536" max="32767" attributes="0"/>
+              <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -101,95 +102,87 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace pref="105" max="32767" attributes="0"/>
+                      <EmptySpace pref="99" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblEndereco" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblNome" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnNomeCli" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="lblInfComplement" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="btnCadastrar" linkSize="5" min="-2" pref="85" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-                                      <Component id="btnConsultar" linkSize="5" min="-2" pref="85" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="btnAlterar" linkSize="5" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-                                  </Group>
+                          <Component id="txtEmailCli" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="lblEndereco" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblNome" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtNomeCli" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="btnCadastrar" linkSize="5" min="-2" pref="85" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                                  <Component id="btnConsultar" linkSize="5" min="-2" pref="85" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="btnAlterar" linkSize="5" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                                  <Component id="btnDelete" linkSize="5" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="btnDelete" linkSize="5" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="txtEmail" alignment="0" max="32767" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="CboEndereco" min="-2" pref="69" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="txtEndereco" min="-2" pref="315" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="lblEmail" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblDataNacimento" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="CboEnderecoCli" min="-2" pref="69" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="txtEnderecoCli" min="-2" pref="315" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <Component id="lblCPF" max="32767" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="lblEmail" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lblDataNacimento" pref="109" max="32767" attributes="0"/>
+                                                  <Component id="txtDataCli" alignment="0" pref="0" max="32767" attributes="0"/>
                                               </Group>
-                                              <Component id="txtCPF" min="-2" pref="190" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="lblCPF" max="32767" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Component id="txtCPFCli" min="-2" pref="190" max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
                                       </Group>
+                                      <Component id="txtComplementoCli" alignment="0" min="-2" pref="394" max="-2" attributes="0"/>
+                                      <Component id="lblComplemento" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="txtComplemento" alignment="0" min="-2" pref="394" max="-2" attributes="0"/>
-                                  <Component id="lblComplemento" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="txtFone" max="32767" attributes="0"/>
-                                  <Component id="txtCodFidelidade" max="32767" attributes="0"/>
-                                  <Component id="lblFone" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="lblCodFidelidade" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="lblCidade" pref="82" max="32767" attributes="0"/>
-                                              <Component id="txtCidade" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txtFoneCli" max="32767" attributes="0"/>
+                                      <Component id="lblFone" alignment="0" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                  <Component id="lblCidade" pref="82" max="32767" attributes="0"/>
+                                                  <Component id="txtCidadeCli" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Component id="txtNumeroCli" alignment="0" min="-2" pref="82" max="-2" attributes="0"/>
+                                              <Component id="lblNumero" alignment="0" min="-2" pref="82" max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="jFormattedTextField1" alignment="0" min="-2" pref="82" max="-2" attributes="0"/>
-                                          <Component id="lblNumero" alignment="0" min="-2" pref="82" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lblCEP" min="-2" pref="97" max="-2" attributes="0"/>
-                                          <Component id="txtCEP" min="-2" pref="97" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="lblEstado" max="32767" attributes="0"/>
-                                              <Component id="jComboBox2" pref="97" max="32767" attributes="0"/>
+                                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="lblCEP" min="-2" pref="97" max="-2" attributes="0"/>
+                                              <Component id="txtCEPCli" min="-2" pref="97" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="lblEstado" max="32767" attributes="0"/>
+                                                  <Component id="CboEstadoCli" pref="97" max="32767" attributes="0"/>
+                                              </Group>
                                           </Group>
                                       </Group>
                                   </Group>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="105" max="32767" attributes="0"/>
+                      <EmptySpace pref="99" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="12" max="32767" attributes="0"/>
                       <Component id="lblNome" linkSize="2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnNomeCli" linkSize="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtNomeCli" linkSize="1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lblDataNacimento" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -197,20 +190,17 @@
                           <Component id="lblFone" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtCPF" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtFone" linkSize="1" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtCPFCli" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtFoneCli" linkSize="1" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="txtDataCli" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblCodFidelidade" linkSize="2" alignment="0" min="-2" pref="14" max="-2" attributes="0"/>
-                          <Component id="lblEmail" linkSize="2" min="-2" pref="14" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="lblEmail" linkSize="2" min="-2" pref="14" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtEmail" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtCodFidelidade" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="txtEmailCli" linkSize="1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lblEndereco" linkSize="2" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
@@ -219,10 +209,10 @@
                       </Group>
                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="CboEndereco" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtEndereco" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtCEP" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jFormattedTextField1" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="CboEnderecoCli" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtEnderecoCli" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtCEPCli" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtNumeroCli" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -232,43 +222,34 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtComplemento" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtCidade" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBox2" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtComplementoCli" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtCidadeCli" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="CboEstadoCli" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="lblInfComplement" linkSize="2" min="-2" pref="14" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="btnCadastrar" linkSize="3" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
                           <Component id="btnConsultar" linkSize="3" alignment="0" max="32767" attributes="0"/>
                           <Component id="btnDelete" linkSize="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnAlterar" linkSize="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="40" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="lblInfComplement">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Informa&#xe7;&#xf5;es complementares"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JLabel" name="lblCEP">
               <Properties>
                 <Property name="text" type="java.lang.String" value="CEP"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="btnNomeCli">
+            <Component class="javax.swing.JTextField" name="txtNomeCli">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNomeCliActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNomeCliActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField1">
+            <Component class="javax.swing.JFormattedTextField" name="txtNumeroCli">
               <Properties>
                 <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
                   <Format format="#0" subtype="-1" type="0"/>
@@ -283,12 +264,12 @@
                 <Property name="toolTipText" type="java.lang.String" value="Excluir Cliente"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtEmail">
+            <Component class="javax.swing.JTextField" name="txtEmailCli">
               <Properties>
                 <Property name="toolTipText" type="java.lang.String" value="Ex.: Senac@senac.edu.br"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEmailActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEmailCliActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="lblEmail">
@@ -296,19 +277,14 @@
                 <Property name="text" type="java.lang.String" value="E-mail"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtComplemento">
+            <Component class="javax.swing.JTextField" name="txtComplementoCli">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtComplementoActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtComplementoCliActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblCodFidelidade">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="C&#xf3;digo de fidelidade"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtCidade">
+            <Component class="javax.swing.JTextField" name="txtCidadeCli">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCidadeActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCidadeCliActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="lblEndereco">
@@ -316,7 +292,7 @@
                 <Property name="text" type="java.lang.String" value="Endere&#xe7;o"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JFormattedTextField" name="txtCEP">
+            <Component class="javax.swing.JFormattedTextField" name="txtCEPCli">
               <Properties>
                 <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
                   <Format format="######-###" subtype="-1" type="5"/>
@@ -328,16 +304,16 @@
                 <Property name="text" type="java.lang.String" value="Nome"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JFormattedTextField" name="txtFone">
+            <Component class="javax.swing.JFormattedTextField" name="txtFoneCli">
               <Properties>
                 <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
                   <Format format="(###)####-####" subtype="-1" type="5"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtEndereco">
+            <Component class="javax.swing.JTextField" name="txtEnderecoCli">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEnderecoActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEnderecoCliActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="lblEstado">
@@ -350,7 +326,7 @@
                 <Property name="text" type="java.lang.String" value="N&#xfa;mero"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox2">
+            <Component class="javax.swing.JComboBox" name="CboEstadoCli">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="27">
@@ -386,7 +362,7 @@
                 <Property name="toolTipText" type="java.lang.String" value="Selecione seu Estado."/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CboEstadoCliActionPerformed"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -399,8 +375,14 @@
                 </Property>
                 <Property name="toolTipText" type="java.lang.String" value="Cadastrar Cliente"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCadastrarActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+              </AuxValues>
             </Component>
-            <Component class="javax.swing.JComboBox" name="CboEndereco">
+            <Component class="javax.swing.JComboBox" name="CboEnderecoCli">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
@@ -425,24 +407,19 @@
                 <Property name="text" type="java.lang.String" value="Telefone"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtCodFidelidade">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCodFidelidadeActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="lblCPF">
               <Properties>
                 <Property name="text" type="java.lang.String" value="CPF"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JFormattedTextField" name="txtCPF">
+            <Component class="javax.swing.JFormattedTextField" name="txtCPFCli">
               <Properties>
                 <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
                   <Format format="###.###.###-##" subtype="-1" type="5"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCPFActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCPFCliActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="lblCidade">
@@ -471,18 +448,11 @@
                 <Property name="toolTipText" type="java.lang.String" value="Alterar"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-              <SubComponents>
-                <Component class="javax.swing.JTextArea" name="AtxtComplemento">
-                  <Properties>
-                    <Property name="columns" type="int" value="20"/>
-                    <Property name="rows" type="int" value="5"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
+            <Component class="datechooser.beans.DateChooserCombo" name="txtDataCli">
+              <Properties>
+                <Property name="dch_combo_dateFormat" type="int" value="2"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
       </SubComponents>

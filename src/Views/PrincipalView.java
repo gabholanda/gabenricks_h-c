@@ -14,12 +14,12 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  *
  * @author marcus.hmoraes
  */
-public class Principal extends javax.swing.JFrame {
+public class PrincipalView extends javax.swing.JFrame {
 
     /**
      * Creates new form Principal
      */
-    public Principal() {
+    public PrincipalView() {
         initComponents();
 
     }
@@ -64,6 +64,11 @@ public class Principal extends javax.swing.JFrame {
         });
 
         btnPedidos.setText("Pedido");
+        btnPedidos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPedidosActionPerformed(evt);
+            }
+        });
 
         Desktop.setBackground(new java.awt.Color(240, 240, 240));
         Desktop.setForeground(new java.awt.Color(240, 240, 240));
@@ -146,18 +151,16 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void btnClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesActionPerformed
-
-        try {
+       try {
             Desktop.removeAll();
-            Cliente_Cadastro Cadastro = new Cliente_Cadastro();
+            ClientesView Cadastro = new ClientesView();
             ((BasicInternalFrameUI) Cadastro.getUI()).setNorthPane(null);
             Cadastro.setVisible(true);
-            //adiciona tela de cadastro 
             Desktop.add(Cadastro);
             //comando para maximizar a tela JInternalFrame
             Cadastro.setMaximum(true);
         } catch (PropertyVetoException ex) {
-            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PrincipalView.class.getName()).log(Level.SEVERE, null, ex);
         }
         // repaint para dar um refresh na tela
         this.repaint();
@@ -170,20 +173,36 @@ public class Principal extends javax.swing.JFrame {
 
         try {
             Desktop.removeAll();
-            Produto Produto = new Produto();
+            ProdutosView Produto = new ProdutosView();
             ((BasicInternalFrameUI) Produto.getUI()).setNorthPane(null);
             Produto.setVisible(true);
             Desktop.add(Produto);
             //comando para maximizar a tela JInternalFrame
             Produto.setMaximum(true);
         } catch (PropertyVetoException ex) {
-            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PrincipalView.class.getName()).log(Level.SEVERE, null, ex);
         }
         // repaint para dar um refresh na tela
         this.repaint();
 
 // TODO add your handling code here:
     }//GEN-LAST:event_btnProdutoActionPerformed
+
+    private void btnPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPedidosActionPerformed
+       try {
+            Desktop.removeAll();
+            PedidosView Pedido = new PedidosView();
+            ((BasicInternalFrameUI) Pedido.getUI()).setNorthPane(null);
+            Pedido.setVisible(true);
+            Desktop.add(Pedido);
+            //comando para maximizar a tela JInternalFrame
+            Pedido.setMaximum(true);
+        } catch (PropertyVetoException ex) {
+            Logger.getLogger(PrincipalView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        // repaint para dar um refresh na tela
+        this.repaint();
+    }//GEN-LAST:event_btnPedidosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -202,20 +221,21 @@ public class Principal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrincipalView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrincipalView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrincipalView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrincipalView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Principal().setVisible(true);
+                new PrincipalView().setVisible(true);
             }
         });
     }

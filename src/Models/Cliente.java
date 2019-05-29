@@ -24,41 +24,43 @@ public class Cliente {
 
     }
 
-    public Cliente(String nome, int cpf, int codFidelidade) {
+//    public Cliente(String nome, int cpf, int codFidelidade) {
+//
+//        this.nome = nome;
+//        this.cpf = cpf;
+//        this.codFidelidade = codFidelidade;
+//    }
+//
+//    public Cliente(String nome, int cpf, int telefone, int codFidelidade) {
+//
+//        this.nome = nome;
+//        this.cpf = cpf;
+//        this.telefone = telefone;
+//        this.codFidelidade = codFidelidade;
+//    }
+//
+//    public Cliente(String nome, int cpf, int telefone, int codFidelidade, String email) {
+//
+//        this.nome = nome;
+//        this.cpf = cpf;
+//        this.telefone = telefone;
+//        this.codFidelidade = codFidelidade;
+//        this.email = email;
+//    }
+//
+//    public Cliente(String nome, int cpf, int telefone, int codFidelidade, String email, String endereco) {
+//
+//        this.nome = nome;
+//        this.cpf = cpf;
+//        this.telefone = telefone;
+//        this.codFidelidade = codFidelidade;
+//        this.email = email;
+//        this.endereco = endereco;
+//    }
 
-        this.nome = nome;
-        this.cpf = cpf;
-        this.codFidelidade = codFidelidade;
-    }
-
-    public Cliente(String nome, int cpf, int telefone, int codFidelidade) {
-
-        this.nome = nome;
-        this.cpf = cpf;
-        this.telefone = telefone;
-        this.codFidelidade = codFidelidade;
-    }
-
-    public Cliente(String nome, int cpf, int telefone, int codFidelidade, String email) {
-
-        this.nome = nome;
-        this.cpf = cpf;
-        this.telefone = telefone;
-        this.codFidelidade = codFidelidade;
-        this.email = email;
-    }
-
-    public Cliente(String nome, int cpf, int telefone, int codFidelidade, String email, String endereco) {
-
-        this.nome = nome;
-        this.cpf = cpf;
-        this.telefone = telefone;
-        this.codFidelidade = codFidelidade;
-        this.email = email;
-        this.endereco = endereco;
-    }
-
-    public Cliente(int clienteId, String nome, int cpf, int telefone, int codFidelidade, String email, String endereco, String infoComplementar) {
+    public Cliente(int clienteId, String nome, int cpf, int telefone
+            , int codFidelidade, String email
+            , String endereco, String infoComplementar) {
         this.clienteId = clienteId;
         this.nome = nome;
         this.cpf = cpf;
@@ -109,7 +111,7 @@ public class Cliente {
         this.infoComplementar = infoComplementar;
     }
 
-    public int getCpf() {
+    public Integer getCpf() {
         return cpf;
     }
 
@@ -117,7 +119,7 @@ public class Cliente {
         this.cpf = cpf;
     }
 
-    public int getTelefone() {
+    public Integer getTelefone() {
         return telefone;
     }
 
@@ -125,7 +127,7 @@ public class Cliente {
         this.telefone = telefone;
     }
 
-    public int getCodFidelidade() {
+    public Integer getCodFidelidade() {
         return codFidelidade;
     }
 

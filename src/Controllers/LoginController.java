@@ -6,8 +6,8 @@
 package Controller;
 
 import DAO.ModuloConexao;
-import Views.Principal;
-import Views.TelaLogin;
+import Views.PrincipalView;
+import Views.TelaLoginView;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -47,7 +47,7 @@ public class LoginController {
             //se existir um usuário e senha correspondente
             if (rs.next()) {
                 //direcionamento para tela principal, apos o usuario ser aprovado
-                Principal TelaPrincipal = new Principal();
+                PrincipalView TelaPrincipal = new PrincipalView();
                 TelaPrincipal.setVisible(true);
 
                 return true;

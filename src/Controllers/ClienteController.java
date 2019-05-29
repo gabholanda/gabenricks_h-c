@@ -16,13 +16,13 @@ import java.util.ArrayList;
 public class ClienteController {
 
     //Salva com todas as informações preenchidas
-    public static boolean salvar(int clienteId, String nome, int cpf,
-            int telefone, int codFidelidade, String email,
-            String endereco, String infoComplementar) {
-        
-        Cliente c = new Cliente(clienteId, nome, cpf, telefone, codFidelidade, email, endereco, infoComplementar);
+    public boolean salvar( String nome, String dataNascimento, String cpf,
+            String telefone, String email,
+            String rua, String endereco, int numero, String cep, String complemento, String cidade, String estado) {
+
+        Cliente c = new Cliente( nome, dataNascimento, cpf, telefone, email, rua, endereco, numero, cep, complemento, cidade, estado);
         return ClienteDAO.salvar(c);
-        
+
     }
 //    // A partir deste a complexidade para salvar um cliente diminui
 //    public static boolean salvar(String nome, int cpf, int telefone, int codFidelidade, String email, String endereco){
@@ -62,12 +62,18 @@ public class ClienteController {
         for (int i = 0; i < clientes.size(); i++) {
             listaClientes.add(new String[]{String.valueOf(clientes.get(i).getClienteId()),
                 clientes.get(i).getNome(),
+                String.valueOf(clientes.get(i).getDataNascimento()),
                 String.valueOf(clientes.get(i).getCpf()),
                 String.valueOf(clientes.get(i).getTelefone()),
-                String.valueOf(clientes.get(i).getCodFidelidade()),
                 clientes.get(i).getEmail(),
+                String.valueOf(clientes.get(i).getRua()),
                 clientes.get(i).getEndereco(),
-                clientes.get(i).getInfoComplementar()});
+                String.valueOf(clientes.get(i).getNumero()),
+                String.valueOf(clientes.get(i).getCep()),
+                clientes.get(i).getComplemento(),
+                clientes.get(i).getCidade(),
+                clientes.get(i).getEstado()
+                });
 
         }
 

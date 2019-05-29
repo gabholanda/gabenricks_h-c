@@ -9,12 +9,12 @@ package Views;
  *
  * @author marcus.hmoraes
  */
-public class Produto extends javax.swing.JInternalFrame {
+public class ProdutosView extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form Produto
      */
-    public Produto() {
+    public ProdutosView() {
         initComponents();
     }
 
@@ -234,6 +234,8 @@ public class Produto extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+        jPanel1.getAccessibleContext().setAccessibleName("Cadastro de Produtos");
 
         setBounds(0, 0, 924, 531);
     }// </editor-fold>//GEN-END:initComponents

@@ -20,7 +20,7 @@ public class ModuloConexao {
         // A linha abaixo "chama" o driver
         //String driver = "com.mysql.jdbc.Driver";
         String driver = "com.mysql.cj.jdbc.Driver";    //Driver do MySQL 8.0 em diante - Se mudar o SGBD mude o Driver
-        String url = "jdbc:mysql://192.168.1.222:3306/gabenricks?useTimezone=true&serverTimezone=UTC"; //alterar para caminho do banco de dados
+        String url = "jdbc:mysql://192.168.1.222:3306/lojagabenricks?useTimezone=true&serverTimezone=UTC"; //alterar para caminho do banco de dados
         String user = "PI";
         String password = "gabenricks";
         // Estabelecendo a conexão com o banco de dados

@@ -11,27 +11,64 @@ package Models;
  */
 public class Produto {
 
-    private int produtoId;
+private int CodProduto;
     private String nome;
     private int qntEstoque;
     private double preco;
-
-    public Produto(double preco, int qntEstoque, String nome) {
+    private String fornecedor;
+    private double peso;
+    private int qntCaixa;
+    private String categoria;
+    
+    public Produto(){
+        
+    }
+    public Produto(int CodProduto,String nome,int qntEstoque, double preco, String fornecedor, double peso, int qntCaixa, String categoria) {
+        this.CodProduto=CodProduto;
         this.preco = preco;
         this.qntEstoque = qntEstoque;
         this.nome = nome;
+        this.fornecedor=fornecedor;
+        this.peso=peso;
+        this.qntCaixa=qntCaixa;
+        this.categoria=categoria;
     }
+     public Produto(String nome,int qntEstoque, double preco, String fornecedor, double peso, int qntCaixa, String categoria) {
+        this.CodProduto=CodProduto;
+        this.preco = preco;
+        this.qntEstoque = qntEstoque;
+        this.nome = nome;
+        this.fornecedor=fornecedor;
+        this.peso=peso;
+        this.qntCaixa=qntCaixa;
+        this.categoria=categoria;
+    }
+    
 
-    public Produto(int produtoId, String nome, int qntEstoque, double preco) {
-        this.produtoId = produtoId;
+    public Produto(int CodProduto, String nome, int qntEstoque, double preco) {
+        this.CodProduto = CodProduto;
         this.nome = nome;
         this.qntEstoque = qntEstoque;
         this.preco = preco;
     }
 
-    public int getProdutoId() {
-        return produtoId;
+    public Produto(String nome,int qntEstoque, double preco, String fornecedor, double peso, int qntCaixa) {
+        this.qntEstoque = qntEstoque;
+        this.nome = nome;
+        this.preco = preco;
+        this.fornecedor=fornecedor;
+        this.peso=peso;
+        this.qntCaixa=qntCaixa;
+        
     }
+    public int getCodProduto() {
+        return CodProduto;
+    }
+
+    public void setCodProduto(int CodProduto) {
+        this.CodProduto = CodProduto;
+    }
+    
 
     public double getPreco() {
         return preco;
@@ -57,4 +94,38 @@ public class Produto {
         this.nome = nome;
     }
 
+    public String getFornecedor() {
+        return fornecedor;
+    }
+
+    public void setFornecedor(String fornecedor) {
+        this.fornecedor = fornecedor;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public int getQntCaixa() {
+        return qntCaixa;
+    }
+
+    public void setQntCaixa(int qntCaixa) {
+        this.qntCaixa = qntCaixa;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
 }
+
+

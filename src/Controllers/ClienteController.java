@@ -16,11 +16,11 @@ import java.util.ArrayList;
 public class ClienteController {
 
     //Salva com todas as informações preenchidas
-    public boolean salvar( String nome, String dataNascimento, String cpf,
+    public static boolean salvar(String nome, String dataNascimento, String cpf,
             String telefone, String email,
             String rua, String endereco, int numero, String cep, String complemento, String cidade, String estado) {
 
-        Cliente c = new Cliente( nome, dataNascimento, cpf, telefone, email, rua, endereco, numero, cep, complemento, cidade, estado);
+        Cliente c = new Cliente(nome, dataNascimento, cpf, telefone, email, rua, endereco, numero, cep, complemento, cidade, estado);
         return ClienteDAO.salvar(c);
 
     }
@@ -43,13 +43,17 @@ public class ClienteController {
 //        return ClienteDAO.salvar(c);
 //    }
 
+    public static boolean atualizar(String nome, String dataNascimento, String cpf,
+            String telefone, String email,
+            String rua, String endereco, int numero, String cep, String complemento, String cidade, String estado) {
+        Cliente c = new Cliente(nome, dataNascimento, cpf, telefone, email, rua, endereco, numero, cep, complemento, cidade, estado);
+        return ClienteDAO.atualizar(c);
+    }
+
     public static boolean excluir(int clienteId) {
         return ClienteDAO.excluir(clienteId);
     }
 
-    public static ArrayList<Cliente> consultar(int cpf) {
-        return ClienteDAO.consultar(cpf);
-    }
 
     public static ArrayList<Cliente> consultar(String nome) {
         return ClienteDAO.consultar(nome);
@@ -73,7 +77,7 @@ public class ClienteController {
                 clientes.get(i).getComplemento(),
                 clientes.get(i).getCidade(),
                 clientes.get(i).getEstado()
-                });
+            });
 
         }
 

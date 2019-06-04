@@ -10,6 +10,8 @@ package Models;
  * @author patrick.chagas
  */
 public class Login {
+    private static int qtdLoginCriados;
+    
     private int idLogin;
     private String nome;
     private String usuario;
@@ -17,6 +19,7 @@ public class Login {
     
     
     public Login(int id, String nome, String usuario, String senha){
+        qtdLoginCriados++;
         this.idLogin = id;
         this.nome = nome;
         this.usuario = usuario;
@@ -26,6 +29,14 @@ public class Login {
     public Login(String usuario, String senha){
         this.usuario = usuario;
         this.senha = senha;
+    }
+
+    public Login() {
+
+         //TODO:Ao conectar-se ao banco, remover incremento pelo código
+         qtdLoginCriados++;
+         this.idLogin =  qtdLoginCriados;
+
     }
     
 

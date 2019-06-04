@@ -11,56 +11,44 @@ package Models;
  */
 public class Produto {
 
-private int CodProduto;
+    private int CodProduto;
     private String nome;
     private int qntEstoque;
     private double preco;
     private String fornecedor;
-    private double peso;
-    private int qntCaixa;
-    private String categoria;
-    
-    public Produto(){
-        
+    private static int qtdProdutosCriados;
+
+    public Produto() {
+        qtdProdutosCriados++;
+        this.CodProduto = qtdProdutosCriados;
     }
-    public Produto(int CodProduto,String nome,int qntEstoque, double preco, String fornecedor, double peso, int qntCaixa, String categoria) {
-        this.CodProduto=CodProduto;
+
+    public Produto(int CodProduto, String nome, int qntEstoque, double preco, String fornecedor) {
+        this.CodProduto = CodProduto;
         this.preco = preco;
         this.qntEstoque = qntEstoque;
         this.nome = nome;
-        this.fornecedor=fornecedor;
-        this.peso=peso;
-        this.qntCaixa=qntCaixa;
-        this.categoria=categoria;
+        this.fornecedor = fornecedor;
+        qtdProdutosCriados++;
     }
-     public Produto(String nome,int qntEstoque, double preco, String fornecedor, double peso, int qntCaixa, String categoria) {
-        this.CodProduto=CodProduto;
+
+    public Produto(String nome, int qntEstoque, double preco, String fornecedor) {
+        this.CodProduto = CodProduto;
         this.preco = preco;
         this.qntEstoque = qntEstoque;
         this.nome = nome;
-        this.fornecedor=fornecedor;
-        this.peso=peso;
-        this.qntCaixa=qntCaixa;
-        this.categoria=categoria;
+        this.fornecedor = fornecedor;
+        qtdProdutosCriados++;
     }
-    
 
     public Produto(int CodProduto, String nome, int qntEstoque, double preco) {
         this.CodProduto = CodProduto;
         this.nome = nome;
         this.qntEstoque = qntEstoque;
         this.preco = preco;
+        qtdProdutosCriados++;
     }
 
-    public Produto(String nome,int qntEstoque, double preco, String fornecedor, double peso, int qntCaixa) {
-        this.qntEstoque = qntEstoque;
-        this.nome = nome;
-        this.preco = preco;
-        this.fornecedor=fornecedor;
-        this.peso=peso;
-        this.qntCaixa=qntCaixa;
-        
-    }
     public int getCodProduto() {
         return CodProduto;
     }
@@ -68,7 +56,6 @@ private int CodProduto;
     public void setCodProduto(int CodProduto) {
         this.CodProduto = CodProduto;
     }
-    
 
     public double getPreco() {
         return preco;
@@ -102,30 +89,4 @@ private int CodProduto;
         this.fornecedor = fornecedor;
     }
 
-    public double getPeso() {
-        return peso;
-    }
-
-    public void setPeso(double peso) {
-        this.peso = peso;
-    }
-
-    public int getQntCaixa() {
-        return qntCaixa;
-    }
-
-    public void setQntCaixa(int qntCaixa) {
-        this.qntCaixa = qntCaixa;
-    }
-
-    public String getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
-
 }
-
-

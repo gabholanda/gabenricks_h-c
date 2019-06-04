@@ -5,15 +5,13 @@
  */
 package DAO;
 
+import java.util.ArrayList;
+import Models.Produto;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import Models.Produto;
 
 /**
  *
@@ -35,8 +33,7 @@ public class ProdutoDAO {
                 Statement comando = conexao.createStatement();
                 int linhasAfetadas= comando.executeUpdate("INSERT INTO Produto" +
                         "(Nome,qntEstoque, preco, fornecedor, peso, qntCaixa) VALUES("
-                        + "'"+p.getNome()+"',"+p.getQntEstoque()+","+p.getPreco()+",'"+p.getFornecedor()+"',"
-                               +p.getPeso()+","+p.getQntCaixa()+"'"+p.getCategoria()+"');");
+                        + "'"+p.getNome()+"',"+p.getQntEstoque()+","+p.getPreco()+",'"+p.getFornecedor()+"');");
         if (linhasAfetadas > 0) {
                 retorno = true;
             } else {
@@ -56,7 +53,7 @@ public class ProdutoDAO {
         return retorno;
     }
    
- public static boolean adicionar(Produto c) {
+ public static boolean atualizar(Produto c) {
         //Simulo um  UPDATE no banco de dados (UPDATE TabelaXYZ SET...)
         boolean retorno = false;
 
@@ -66,14 +63,12 @@ public class ProdutoDAO {
             Class.forName(DRIVER);
             conexao = DriverManager.getConnection(URL, LOGIN, SENHA);
             Statement comando = conexao.createStatement();
-            int linhasAfetadas = comando.executeUpdate("UPDATE carro SET "
+            int linhasAfetadas = comando.executeUpdate("UPDATE produto SET "
                     + " nome =" + "'" + c.getNome()+ "'" + ","
                     + " qntEstoque ="  + c.getQntEstoque()+ ","
                     + " preço =" + c.getPreco()+ ","
                     + "fornecedor="+"'"+c.getFornecedor()+"'"+ ","
-                    + "peso=" + c.getPeso()+ ","
-                    + "qntCaixas="+c.getQntCaixa()+","
-                    + "categoria="+c.getCategoria()
+                    
                     + " WHERE CodProduto =" + c.getCodProduto()+";"
             );
 
@@ -160,10 +155,7 @@ public class ProdutoDAO {
                     c.setNome(rs.getString("Nome"));
                     c.setQntEstoque(rs.getInt("qntEstoque"));
                     c.setPreco(rs.getDouble("Preco"));
-                    c.setPeso(rs.getDouble("Peso"));
-                    c.setQntCaixa(rs.getInt("qntCaixa"));
                     c.setFornecedor(rs.getString("Fornecedor"));
-                    c.setCategoria(rs.getString("categoria"));
                     listaRetorno.add(c);
                 }
             } else {

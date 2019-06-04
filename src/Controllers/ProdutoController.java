@@ -7,7 +7,6 @@ package Controllers;
 
 import DAO.ProdutoDAO;
 import Models.Produto;
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -15,46 +14,53 @@ import java.util.ArrayList;
  * @author henrique.csousa
  */
 public class ProdutoController {
-    public static boolean salvar(String nome,int qntEstoque, double preco, String fornecedor, double peso, int qntCaixa, String categoria)
-    {
+
+    public static boolean salvar(String nome, int qntEstoque, double preco, String fornecedor) {
         //Salvo na memória
-            Produto p =  new Produto(qntEstoque, nome, qntEstoque, preco, fornecedor, peso, qntCaixa, categoria);
+        Produto p = new Produto(nome, qntEstoque, preco, fornecedor);
         return ProdutoDAO.salvar(p);
     }
-           
 
-    public static boolean excluir(int pIdProduto)
-    {
+    public static boolean excluir(int pIdProduto) {
         return ProdutoDAO.excluir(pIdProduto);
     }
-    
-    public static boolean adicionar(String nome,int qntEstoque, double preco, String fornecedor, double peso, int qntCaixa,String categoria)
-    {
-    	Produto p =  new Produto( );
-        return ProdutoDAO.adicionar(p);
-        
+
+    public static boolean atualizar(String nome, int qntEstoque, double preco, String fornecedor) {
+        Produto p = new Produto();
+        return ProdutoDAO.atualizar(p);
+
     }
-    
+
     /**
      * Transformo uma lista de objetos Cliente em uma lista de Strings
+     *
      * @return lista de string
      */
-    public static ArrayList<String[]> getProduto() throws SQLException
-    {
+    public static ArrayList<String[]> getProduto() {
         ArrayList<Produto> produtos = ProdutoDAO.getProdutos();
         ArrayList<String[]> listaProdutos = new ArrayList<>();
-        
-        for(int i=0;i<produtos.size();i++)
-        {
-        	listaProdutos.add(new String[]{String.valueOf(produtos.get(i).getCodProduto()),produtos.get(i).getNome(),
-                produtos.get(i).getFornecedor(),String.valueOf(produtos.get(i).getQntEstoque()), 
-                String.valueOf(produtos.get(i).getQntCaixa()),String.valueOf(produtos.get(i).getPeso()),
-                String.valueOf(produtos.get(i).getPreco()),produtos.get(i).getCategoria()});
-        
-        }
-        
-        return listaProdutos;
-        
-    }
-}
 
+        for (int i = 0; i < produtos.size(); i++) {
+            listaProdutos.add(new String[]{produtos.get(i).getNome(),
+                String.valueOf(produtos.get(i).getPreco()),
+                String.valueOf(produtos.get(i).getQntEstoque()),
+                String.valueOf(produtos.get(i).getCodProduto()),
+                produtos.get(i).getFornecedor()
+            });
+        }
+
+        return listaProdutos;
+
+    }
+
+    public static ArrayList<Produto> getConsultaProduto() {
+        ArrayList<Produto> produtos = ProdutoDAO.getProdutos();
+
+        return produtos;
+
+    }
+//Incompleto
+//    public static ArrayList<Produto> consultar(String nome) {
+//        return ProdutoDAO.consultar(nome);
+//    }
+}

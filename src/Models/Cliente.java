@@ -11,6 +11,7 @@ package Models;
  */
 public class Cliente {
 
+    private static int qtdClientesCriados;
     private int clienteId;
     private String nome;
     private String cpf;
@@ -26,43 +27,11 @@ public class Cliente {
     private String estado;
 
     public Cliente() {
-
+        qtdClientesCriados++;
+        this.clienteId = qtdClientesCriados;
     }
 
-//    public Cliente(String nome, int cpf, int codFidelidade) {
-//
-//        this.nome = nome;
-//        this.cpf = cpf;
-//        this.codFidelidade = codFidelidade;
-//    }
-//
-//    public Cliente(String nome, int cpf, int telefone, int codFidelidade) {
-//
-//        this.nome = nome;
-//        this.cpf = cpf;
-//        this.telefone = telefone;
-//        this.codFidelidade = codFidelidade;
-//    }
-//
-//    public Cliente(String nome, int cpf, int telefone, int codFidelidade, String email) {
-//
-//        this.nome = nome;
-//        this.cpf = cpf;
-//        this.telefone = telefone;
-//        this.codFidelidade = codFidelidade;
-//        this.email = email;
-//    }
-//
-//    public Cliente(String nome, int cpf, int telefone, int codFidelidade, String email, String endereco) {
-//
-//        this.nome = nome;
-//        this.cpf = cpf;
-//        this.telefone = telefone;
-//        this.codFidelidade = codFidelidade;
-//        this.email = email;
-//        this.endereco = endereco;
-//    }
-    public Cliente( String nome, String dataNascimento, String cpf, String telefone,
+    public Cliente(String nome, String dataNascimento, String cpf, String telefone,
             String email,
             String rua, String endereco, int numero, String cep, String complemento, String cidade, String estado) {
         //this.clienteId = clienteId;
@@ -78,6 +47,7 @@ public class Cliente {
         this.complemento = complemento;
         this.cidade = cidade;
         this.estado = estado;
+        qtdClientesCriados++;
     }
 
     public int getClienteId() {

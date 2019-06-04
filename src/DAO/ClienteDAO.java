@@ -210,16 +210,13 @@ public class ClienteDAO {
 
         return listaClientes;
     }
-//Consultar via Nome
     public static ArrayList<Cliente> consultar(String pNome) {
         ArrayList<Cliente> listaClientes = new ArrayList<>();
 
         try {
-            //return SimulaDB.getInstance().getClientes();
             Class.forName(DRIVER);
             conexao = DriverManager.getConnection(URL, LOGIN, SENHA);
-//            Statement comando = conexao.createStatement();
-//            ResultSet rs = comando.executeQuery("SELECT * FROM cliente;");
+
             PreparedStatement comando = conexao.prepareStatement("SELECT * FROM cliente WHERE nome LIKE ? ");
             comando.setString(1, pNome + "%");
 

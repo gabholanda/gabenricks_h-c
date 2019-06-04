@@ -12,8 +12,7 @@ import Models.ItemPedido;
 import java.util.ArrayList;
 
 /**
- *
- * @author fernando.fernandes Padrão Singleton
+ * @author gabriel.hsantos21
  */
 public class SimulaDB {
 
@@ -21,15 +20,19 @@ public class SimulaDB {
 
     private ArrayList<Cliente> listaClientes; //Simulo a tabela clientes
     private ArrayList<Produto> listaProdutos; //Simulo a tabela Produtos
+
     private ArrayList<Pedido> listaPedidos; //Simulo a tabela Pedidos
     private ArrayList<ItemPedido> listaItemPedido; //Simulo a tabela ItemPedido
+
 
     private SimulaDB() {
 
         listaClientes = new ArrayList<Cliente>();
         listaProdutos = new ArrayList<Produto>();
+
         listaPedidos = new ArrayList<Pedido>();
         listaItemPedido = new ArrayList<ItemPedido>();
+
     }
 
     public static synchronized SimulaDB getInstance() {
@@ -39,6 +42,7 @@ public class SimulaDB {
 
         return mockdb;
     }
+
 
     //===========================================================  Tabela de Clientes - Inicio =================================================
     public boolean SalvarCliente(Cliente c) {
@@ -67,6 +71,8 @@ public class SimulaDB {
                 item.setEstado(p.getEstado());
                 item.setCep(p.getCep());
 
+
+                item.setCpf(p.getCpf());
             }
         }
 
@@ -90,6 +96,7 @@ public class SimulaDB {
 
         return true;
     }
+
     //===========================================================  Tabela de Clientes - Final =================================================
 
     //===========================================================  Tabela de Produtos - Incio =================================================
@@ -105,16 +112,16 @@ public class SimulaDB {
 
     public boolean AtualizarProduto(Produto p) {
         for (Produto item : listaProdutos) {
+
             if (item.getCodProduto() == p.getCodProduto()) {
                 item.setNome(p.getNome());
                 item.setPreco(p.getPreco());
                 item.setQntEstoque(p.getQntEstoque());
                 item.setFornecedor(p.getFornecedor());
 
-            }
         }
-
-        return true;
+        }
+           return true;
     }
 
     public boolean ExcluirProduto(int i) {
@@ -122,7 +129,11 @@ public class SimulaDB {
         boolean existeNaLista = false;
         for (Produto c : listaProdutos) {
 
+
             if (c.getCodProduto() == i) {
+
+            if (c.getCodProduto()== i) {
+
                 produtoExcluir = c;
                 existeNaLista = true;
             }
@@ -132,6 +143,8 @@ public class SimulaDB {
             listaProdutos.remove(produtoExcluir);
         }
 
+        
+    }
         return true;
     }
 
@@ -222,3 +235,5 @@ public class SimulaDB {
 
     //===========================================================  Tabela de ItemPedido - Final =================================================
 }
+
+

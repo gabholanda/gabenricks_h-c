@@ -5,7 +5,8 @@
  */
 package Application;
 
-import Views.PrincipalView;
+import Views.TelaLoginView;
+import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -20,10 +21,11 @@ import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 public class App {
 
     public static void main(String[] args) throws SQLException {
+
         try {
-            PrincipalView principal = new PrincipalView();
-            principal.setVisible(true);
             UIManager.setLookAndFeel(new NimbusLookAndFeel());
+            TelaLoginView Login = new TelaLoginView();
+            Login.setVisible(true);
         } catch (UnsupportedLookAndFeelException ex) {
             Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -16,19 +16,19 @@ import java.util.ArrayList;
 public class ClienteController {
 
     //Salva com todas as informações preenchidas
-    public static boolean salvar(String nome, String dataNascimento, String cpf,
+    public static boolean salvar(String nome, String sexo, String dataNascimento, String cpf,
             String telefone, String email,
             String rua, String endereco, int numero, String cep, String complemento, String cidade, String estado) {
 
-        Cliente c = new Cliente(nome, dataNascimento, cpf, telefone, email, rua, endereco, numero, cep, complemento, cidade, estado);
+        Cliente c = new Cliente(nome, sexo, dataNascimento, cpf, telefone, email, rua, endereco, numero, cep, complemento, cidade, estado);
         return ClienteDAO.salvar(c);
 
     }
 
-    public static boolean atualizar(String nome, String dataNascimento, String cpf,
+    public static boolean atualizar(String nome, String sexo,  String dataNascimento, String cpf,
             String telefone, String email,
             String rua, String endereco, int numero, String cep, String complemento, String cidade, String estado) {
-        Cliente c = new Cliente(nome, dataNascimento, cpf, telefone, email, rua, endereco, numero, cep, complemento, cidade, estado);
+        Cliente c = new Cliente(nome, sexo, dataNascimento, cpf, telefone, email, rua, endereco, numero, cep, complemento, cidade, estado);
         return ClienteDAO.atualizar(c);
     }
 
@@ -48,14 +48,15 @@ public class ClienteController {
         for (int i = 0; i < clientes.size(); i++) {
             listaClientes.add(new String[]{String.valueOf(clientes.get(i).getClienteId()),
                 clientes.get(i).getNome(),
-                String.valueOf(clientes.get(i).getDataNascimento()),
-                String.valueOf(clientes.get(i).getCpf()),
-                String.valueOf(clientes.get(i).getTelefone()),
+                clientes.get(i).getSexo(),
+                clientes.get(i).getDataNascimento(),
+                clientes.get(i).getCpf(),
+                clientes.get(i).getTelefone(),
                 clientes.get(i).getEmail(),
-                String.valueOf(clientes.get(i).getRua()),
+                clientes.get(i).getRua(),
                 clientes.get(i).getEndereco(),
                 String.valueOf(clientes.get(i).getNumero()),
-                String.valueOf(clientes.get(i).getCep()),
+                clientes.get(i).getCep(),
                 clientes.get(i).getComplemento(),
                 clientes.get(i).getCidade(),
                 clientes.get(i).getEstado()
@@ -73,11 +74,12 @@ public class ClienteController {
         for (int i = 0; i < clientes.size(); i++) {
             listaClientes.add(new String[]{String.valueOf(clientes.get(i).getClienteId()),
                 clientes.get(i).getNome(),
-                String.valueOf(clientes.get(i).getDataNascimento()),
-                String.valueOf(clientes.get(i).getCpf()),
-                String.valueOf(clientes.get(i).getTelefone()),
+                clientes.get(i).getSexo(),
+                clientes.get(i).getDataNascimento(),
+                clientes.get(i).getCpf(),
+                clientes.get(i).getTelefone(),
                 clientes.get(i).getEmail(),
-                String.valueOf(clientes.get(i).getRua()),
+                clientes.get(i).getRua(),
                 clientes.get(i).getEndereco(),
                 String.valueOf(clientes.get(i).getNumero()),
                 String.valueOf(clientes.get(i).getCep()),

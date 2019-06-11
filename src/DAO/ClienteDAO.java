@@ -35,11 +35,11 @@ public class ClienteDAO {
 
             PreparedStatement comando = conexao.prepareStatement("INSERT INTO cliente "
                     + "(nome,dataNascimento,CPF,telefone,email,rua,endereco,numero,cep,complemento,cidade,estado)"
-                    + " VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                    + " VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
             comando.setString(1, c.getNome()); //Posição 1 = nome
-            comando.setString(2,c.getDataNascimento()); //Posição 3 = Data de nascimento
-            comando.setString(3, c.getCpf()); //Posição 2 = CPF
+            comando.setString(2,c.getDataNascimento()); //Posição 2 = Data de nascimento
+            comando.setString(3, c.getCpf()); //Posição 3 = CPF
             comando.setString(4, c.getTelefone()); // Posição 4 = telefone
             comando.setString(5, c.getEmail()); // Posição 5 = email
             comando.setString(6,c.getRua()); // Posição 6 = Tipo rua / avenida e afins
@@ -47,8 +47,9 @@ public class ClienteDAO {
             comando.setInt(8,c.getNumero());// Posição 8 = Numero da casa
             comando.setString(9,c.getCep());// Posição 9 = CEP
             comando.setString(10,c.getComplemento());// Posição 10 = Complemento
-            comando.setString(11,c.getCidade());// Posição 6 = Cidade
-            comando.setString(12,c.getEstado());// Posição 6 = Estado
+            comando.setString(11,c.getCidade());// Posição 11 = Cidade
+            comando.setString(12,c.getEstado());// Posição 12 = Estado
+            comando.setString(13, c.getSexo());
             int linhasAfetadas = comando.executeUpdate(); 
 
             if (linhasAfetadas > 0) {
@@ -57,9 +58,7 @@ public class ClienteDAO {
                 retorno = false;
             }
 
-        } catch (ClassNotFoundException ex) {
-            retorno = false;
-        } catch (SQLException ex) {
+        } catch (ClassNotFoundException | SQLException ex) {
             retorno = false;
         } finally {
             try {
@@ -85,12 +84,12 @@ public class ClienteDAO {
 
             PreparedStatement comando = conexao.prepareStatement("UPDATE cliente SET "
                     + "nome=?, dataNascimento=?, CPF=?, telefone=?, "
-                    + "email=?, rua=?, endereco = ?, numero=?, cep=?, complemento=?, cidade=?, estado=?"
+                    + "email=?, rua=?, endereco = ?, numero=?, cep=?, complemento=?, cidade=?, estado=?, sexo=?"
                     + " WHERE idcliente= ?");
 
             comando.setString(1, c.getNome()); //Posição 1 = nome
-            comando.setString(2,c.getDataNascimento()); //Posição 3 = Data de nascimento
-            comando.setString(3, c.getCpf()); //Posição 2 = CPF
+            comando.setString(2,c.getDataNascimento()); //Posição 2 = Data de nascimento
+            comando.setString(3, c.getCpf()); //Posição 3 = CPF
             comando.setString(4, c.getTelefone()); // Posição 4 = telefone
             comando.setString(5, c.getEmail()); // Posição 5 = email
             comando.setString(6,c.getRua()); // Posição 6 = Tipo rua / avenida e afins
@@ -98,9 +97,10 @@ public class ClienteDAO {
             comando.setInt(8,c.getNumero());// Posição 8 = Numero da casa
             comando.setString(9,c.getCep());// Posição 9 = CEP
             comando.setString(10,c.getComplemento());// Posição 10 = Complemento
-            comando.setString(11,c.getCidade());// Posição 6 = Cidade
-            comando.setString(12,c.getEstado());// Posição 6 = Estado
-            comando.setInt(13, c.getClienteId());
+            comando.setString(11,c.getCidade());// Posição 11 = Cidade
+            comando.setString(12,c.getEstado());// Posição 12 = Estado
+            comando.setString(13,c.getSexo());// Posição 13 = Sexo
+            comando.setInt(14, c.getClienteId());
             int linhasAfetadas = comando.executeUpdate();
 
             if (linhasAfetadas > 0) {
@@ -109,9 +109,7 @@ public class ClienteDAO {
                 retorno = false;
             }
 
-        } catch (ClassNotFoundException ex) {
-            retorno = false;
-        } catch (SQLException ex) {
+        } catch (ClassNotFoundException | SQLException ex) {
             retorno = false;
         } finally {
             try {
@@ -147,9 +145,7 @@ public class ClienteDAO {
                 retorno = false;
             }
 
-        } catch (ClassNotFoundException ex) {
-            retorno = false;
-        } catch (SQLException ex) {
+        } catch (ClassNotFoundException | SQLException ex) {
             retorno = false;
         } finally {
             try {
@@ -180,7 +176,8 @@ public class ClienteDAO {
 
             while (rs.next()) {
                 Cliente c = new Cliente();
-                c.setClienteId(rs.getInt("clienteId"));
+                c.setClienteId(rs.getInt("idCliente"));
+                c.setSexo(rs.getString("sexo"));
                 c.setNome(rs.getString("nome"));
                 c.setDataNascimento(rs.getString("dataNascimento"));
                 c.setCpf(rs.getString("CPF"));
@@ -196,9 +193,7 @@ public class ClienteDAO {
                 listaClientes.add(c);
             }
 
-        } catch (ClassNotFoundException ex) {
-            listaClientes = null;
-        } catch (SQLException ex) {
+        } catch (ClassNotFoundException | SQLException ex) {
             listaClientes = null;
         } finally {
             try {
@@ -224,7 +219,8 @@ public class ClienteDAO {
 
             while (rs.next()) {
                 Cliente c = new Cliente();
-                c.setClienteId(rs.getInt("clienteId"));
+                c.setClienteId(rs.getInt("idCliente"));
+                c.setSexo(rs.getString("sexo"));
                 c.setNome(rs.getString("nome"));
                 c.setDataNascimento(rs.getString("dataNascimento"));
                 c.setCpf(rs.getString("CPF"));
@@ -240,9 +236,7 @@ public class ClienteDAO {
                 listaClientes.add(c);
             }
 
-        } catch (ClassNotFoundException ex) {
-            listaClientes = null;
-        } catch (SQLException ex) {
+        } catch (ClassNotFoundException | SQLException ex) {
             listaClientes = null;
         } finally {
             try {
@@ -269,7 +263,8 @@ public class ClienteDAO {
 
             while (rs.next()) {
                 Cliente c = new Cliente();
-                c.setClienteId(rs.getInt("clienteId"));
+                c.setClienteId(rs.getInt("idCliente"));
+                c.setSexo(rs.getString("sexo"));
                 c.setNome(rs.getString("nome"));
                 c.setDataNascimento(rs.getString("dataNascimento"));
                 c.setCpf(rs.getString("CPF"));
@@ -285,9 +280,7 @@ public class ClienteDAO {
                 listaClientes.add(c);
             }
 
-        } catch (ClassNotFoundException ex) {
-            listaClientes = null;
-        } catch (SQLException ex) {
+        } catch (ClassNotFoundException | SQLException ex) {
             listaClientes = null;
         } finally {
             try {

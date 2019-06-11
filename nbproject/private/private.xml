@@ -3,7 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/gabriel.hsantos21/Desktop/gabenricks_h-c/src/DAO/ClienteDAO.java</file>
+            <file>file:/home/gabriel/java/Projects/gabenricks_h-c/src/Application/App.java</file>
+            <file>file:/home/gabriel/java/Projects/gabenricks_h-c/src/DAO/ClienteDAO.java</file>
+            <file>file:/home/gabriel/java/Projects/gabenricks_h-c/src/Views/ClientesView.java</file>
+            <file>file:/home/gabriel/java/Projects/gabenricks_h-c/src/Models/Cliente.java</file>
+            <file>file:/home/gabriel/java/Projects/gabenricks_h-c/src/Controllers/ClienteController.java</file>
         </group>
     </open-files>
 </project-private>

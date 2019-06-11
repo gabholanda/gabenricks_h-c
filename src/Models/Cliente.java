@@ -11,9 +11,9 @@ package Models;
  */
 public class Cliente {
 
-    private static int qtdClientesCriados;
     private int clienteId;
     private String nome;
+    private String sexo;
     private String cpf;
     private String dataNascimento;
     private String telefone;
@@ -27,15 +27,14 @@ public class Cliente {
     private String estado;
 
     public Cliente() {
-        qtdClientesCriados++;
-        this.clienteId = qtdClientesCriados;
     }
 
-    public Cliente(String nome, String dataNascimento, String cpf, String telefone,
+    public Cliente(String nome, String sexo, String dataNascimento, String cpf, String telefone,
             String email,
             String rua, String endereco, int numero, String cep, String complemento, String cidade, String estado) {
         //this.clienteId = clienteId;
         this.nome = nome;
+        this.sexo = sexo;
         this.dataNascimento = dataNascimento;
         this.cpf = cpf;
         this.telefone = telefone;
@@ -47,7 +46,6 @@ public class Cliente {
         this.complemento = complemento;
         this.cidade = cidade;
         this.estado = estado;
-        qtdClientesCriados++;
     }
 
     public int getClienteId() {
@@ -58,6 +56,15 @@ public class Cliente {
         this.clienteId = clienteId;
     }
 
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+    
+    
     public String getNome() {
         return nome;
     }

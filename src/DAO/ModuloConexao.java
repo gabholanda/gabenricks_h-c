@@ -29,7 +29,7 @@ public class ModuloConexao {
             conexao = DriverManager.getConnection(url, user, password);
 
             return conexao;
-        } catch (com.mysql.cj.jdbc.exceptions.CommunicationsException ErroConexao) {
+        } catch (SQLException ErroConexao) {
             JOptionPane.showMessageDialog(null, "Erro de conexão com o Banco de dados.\n\nFavor verificar sua conexão com a internet e tentar novamente.", "Problema de conexão", JOptionPane.ERROR_MESSAGE);
             return null;
 

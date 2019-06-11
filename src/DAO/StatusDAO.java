@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  *
  * @author tavar
  */
-public class ModuloConexao {
+public class StatusDAO {
 //Método responsavel por estabelecer a conexao com o banco de dados
 
     public static Connection conector() {
@@ -20,16 +20,16 @@ public class ModuloConexao {
         // A linha abaixo "chama" o driver
         //String driver = "com.mysql.jdbc.Driver";
         String driver = "com.mysql.cj.jdbc.Driver";    //Driver do MySQL 8.0 em diante - Se mudar o SGBD mude o Driver
-        String url = "jdbc:mysql://192.168.1.222:3306/lojagabenricks?useTimezone=true&serverTimezone=UTC"; //alterar para caminho do banco de dados
-        String user = "PI";
-        String password = "gabenricks";
+        String url = "jdbc:mysql://localhost:3306/lojagabenricks?useTimezone=true&serverTimezone=UTC"; //alterar para caminho do banco de dados
+        String user = "root";
+        String password = "adminadmin";
         // Estabelecendo a conexão com o banco de dados
         try {
             Class.forName(driver);
             conexao = DriverManager.getConnection(url, user, password);
 
             return conexao;
-        } catch (SQLException ErroConexao) {
+        } catch (com.mysql.cj.jdbc.exceptions.CommunicationsException ErroConexao) {
             JOptionPane.showMessageDialog(null, "Erro de conexão com o Banco de dados.\n\nFavor verificar sua conexão com a internet e tentar novamente.", "Problema de conexão", JOptionPane.ERROR_MESSAGE);
             return null;
 

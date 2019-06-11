@@ -13,11 +13,12 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author marcus.hmoraes & Gabriel Holanda
+ * @author marcus.hmoraes & Patrick Chagas
  */
 public class ProdutosView extends javax.swing.JInternalFrame {
 
     private String modoTela;
+    //Criar/Alterar/Excluir
 
     /**
      * Creates new form Produto
@@ -29,11 +30,11 @@ public class ProdutosView extends javax.swing.JInternalFrame {
     }
 
     public void LimparFormulario() {
+       txtCodItem.setText("");
         txtNome.setText("");
         txtPreco.setText("");
         txtEstoque.setText("");
         txtFornecedor.setText("");
-        txtCodItem.setText("");
     }
 
     private boolean ValidarFormulario() {
@@ -44,13 +45,12 @@ public class ProdutosView extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this, "Defina um nome para o produto!");
             return false;
         }
-
-//        if (this.txtPreco.getText().equalsIgnoreCase("")) {
-//            JOptionPane.showMessageDialog(this, "Defina um preco para o produto!");
-//            return false;
-//        }
         if (this.txtEstoque.getText().equalsIgnoreCase("")) {
             JOptionPane.showMessageDialog(this, "Defina uma quantidade em estoque!");
+            return false;
+        }
+        if(this.txtPreco.getText().equalsIgnoreCase("")){
+            JOptionPane.showMessageDialog(this, "Defina um preço para o produto!");
             return false;
         }
         return true;
@@ -107,10 +107,10 @@ public class ProdutosView extends javax.swing.JInternalFrame {
         });
 
         //Defino o tamanho para cada coluna
-        tblProduto.getColumnModel().getColumn(0).setPreferredWidth(300); //Nome
-        tblProduto.getColumnModel().getColumn(1).setPreferredWidth(250); // Preco
-        tblProduto.getColumnModel().getColumn(2).setPreferredWidth(200); // Quantidade
-        tblProduto.getColumnModel().getColumn(3).setPreferredWidth(300); // Codigo do item
+        tblProduto.getColumnModel().getColumn(0).setPreferredWidth(300); //Codigo do item
+        tblProduto.getColumnModel().getColumn(1).setPreferredWidth(250); // Nome
+        tblProduto.getColumnModel().getColumn(2).setPreferredWidth(200); // Preco
+        tblProduto.getColumnModel().getColumn(3).setPreferredWidth(300); // Quantidade
     }
 
     public void ConsultaLoadTable() {
@@ -167,8 +167,9 @@ public class ProdutosView extends javax.swing.JInternalFrame {
         btnCancelar = new javax.swing.JToggleButton();
 
         setBorder(null);
-        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setClosable(true);
         setForeground(java.awt.Color.white);
+        setIconifiable(true);
         setMaximizable(true);
         setTitle("Cadastro de Produto");
         setEnabled(false);
@@ -208,7 +209,7 @@ public class ProdutosView extends javax.swing.JInternalFrame {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Double.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
                 false, false, false, false, false
@@ -282,8 +283,8 @@ public class ProdutosView extends javax.swing.JInternalFrame {
                 .addGap(40, 40, 40)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnCancelar)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -345,7 +346,7 @@ public class ProdutosView extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSalvar)
                     .addComponent(btnCancelar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
+                .addGap(86, 86, 86)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -375,39 +376,29 @@ public class ProdutosView extends javax.swing.JInternalFrame {
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
         modoTela = "Criar";
         HabilitarFormulario();
+        
         LimparFormulario();
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     private void btnConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarActionPerformed
+        btnSalvar.setText("Consultar");
         HabilitarFormularioParaConsulta();
         modoTela = "Consultar";
     }//GEN-LAST:event_btnConsultarActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-//        if (modoTela.equals("Consultar")) {
-//            if (!txtNome.getText().equalsIgnoreCase("") && !txtFornecedor.getText().equalsIgnoreCase("")) {
-//                ProdutoController.consultar(txtNome.getText());
-//                this.ConsultaLoadTable();
-//            } else if (!txtNome.getText().equalsIgnoreCase("")) {
-//                ProdutoController.consultar(txtNome.getText());
-//                this.ConsultaLoadTable();
-//            } else if (!txtFornecedor.getText().equalsIgnoreCase("")) {
-//                ProdutoController.consultar(txtFornecedor.getText());
-//                this.ConsultaLoadTable();
-//            }
-//            LimparFormulario();
-//            DesabilitarFormulario();
-//        }
+        
         if (ValidarFormulario()) {
             if (modoTela.equals("Criar")) {
                 //Passo ao controller a entrada do usuário e peço para salvar no banco de dados
                 if (ProdutoController.salvar(
                         txtNome.getText(),
                         Integer.parseInt(txtEstoque.getText()),
-                        Double.parseDouble(String.format("%.2f",txtPreco.getText())),
+                     //============================ARRUMAR CONVERSÃO=======================================================
+                        Double.parseDouble(txtPreco.getText()),
+                     //====================================================================================================   
                         txtFornecedor.getText())) {
-
-                    JOptionPane.showMessageDialog(null, "Produto cadastrado com sucesso!");
+                     JOptionPane.showMessageDialog(null, "Produto cadastrado com sucesso!");
                     //Recarrego a tabela com os dados resgatados do banco de dados
                     this.LoadTable();
                 } else {
@@ -419,8 +410,8 @@ public class ProdutosView extends javax.swing.JInternalFrame {
                 //Passo ao controller a entrada do usuário e peço para atualizar o banco de dados
                 if (ProdutoController.atualizar(
                         txtNome.getText(),
+                         Double.parseDouble(txtPreco.getText()),
                         Integer.parseInt(txtEstoque.getText()),
-                        Double.parseDouble(txtPreco.getText()),
                         txtFornecedor.getText())) {
                     //Recarrego a tabela com os dados resgatados do banco de dados
                     this.LoadTable();
@@ -440,6 +431,7 @@ public class ProdutosView extends javax.swing.JInternalFrame {
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         DesabilitarFormulario();
         LimparFormulario();
+        
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
@@ -467,10 +459,10 @@ public class ProdutosView extends javax.swing.JInternalFrame {
                 //Variável acessória para identifcar se o formulário está em modo de edição ou alteração
                 modoTela = "Editar";
                 //Atribuo os valores que estão na linha selecionada para a tabela
-                txtNome.setText(tblProduto.getModel().getValueAt(tblProduto.getSelectedRow(), 1).toString());
-                txtPreco.setText(tblProduto.getModel().getValueAt(tblProduto.getSelectedRow(), 2).toString());
-                txtEstoque.setText(tblProduto.getModel().getValueAt(tblProduto.getSelectedRow(), 3).toString());
-                txtCodItem.setName(tblProduto.getModel().getValueAt(tblProduto.getSelectedRow(), 4).toString());
+                txtCodItem.setText(tblProduto.getModel().getValueAt(tblProduto.getSelectedRow(), 1).toString());
+                txtNome.setText(tblProduto.getModel().getValueAt(tblProduto.getSelectedRow(), 2).toString());
+                txtPreco.setText(tblProduto.getModel().getValueAt(tblProduto.getSelectedRow(), 3).toString());
+                txtEstoque.setName(tblProduto.getModel().getValueAt(tblProduto.getSelectedRow(), 4).toString());
                 txtFornecedor.setName(tblProduto.getModel().getValueAt(tblProduto.getSelectedRow(),5).toString());
 
             } else {

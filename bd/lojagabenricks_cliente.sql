@@ -2,9 +2,9 @@ CREATE DATABASE  IF NOT EXISTS `lojagabenricks` /*!40100 DEFAULT CHARACTER SET l
 USE `lojagabenricks`;
 -- MySQL dump 10.13  Distrib 5.6.17, for Win32 (x86)
 --
--- Host: 192.168.1.222    Database: lojagabenricks
+-- Host: localhost    Database: lojagabenricks
 -- ------------------------------------------------------
--- Server version	5.7.23-log
+-- Server version	5.5.5-10.1.40-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -29,7 +29,7 @@ CREATE TABLE `cliente` (
   `nome` varchar(100) NOT NULL,
   `dataNascimento` date NOT NULL,
   `CPF` varchar(15) NOT NULL,
-  `sexo` enum('MASC','FEM','OUTROS') NOT NULL,
+  `sexo` enum('Masculino','Feminino') NOT NULL,
   `telefone` varchar(15) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `rua` enum('Rua','Avenida','Travessa','Aeroporto') DEFAULT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE `cliente` (
   `estado` enum('AC','AL','AM','AP','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO') DEFAULT NULL,
   PRIMARY KEY (`idcliente`),
   UNIQUE KEY `CPF` (`CPF`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -50,6 +50,7 @@ CREATE TABLE `cliente` (
 
 LOCK TABLES `cliente` WRITE;
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
+INSERT INTO `cliente` VALUES (1,'PATRICK CHAGAS TAVARES','1997-07-04','472.658.498-76','','(11) 942224514',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(2,'lUCAS NASCIMENTO PAIVA','1997-07-04','111-111-111-22','','(11) 942224514',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(3,'MASCUS HENRIQUE','1997-07-04','222.222.222-33','','(11) 942224514',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(4,'HENRIQUE','1997-07-04','333.333.333-44','','(11) 942224514',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(6,'PATRICK CHAGAS TAVARES','2011-06-19','010.110.101-01','Feminino','(011)9422-2451','patrick@pesqueiracontabilidade.com.br','Rua','Manoel Pires de Moraes',179,'069000-000','Inicio da ciclo via','EMBU-GUAÇU','SP');
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -62,4 +63,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-06 13:13:24
+-- Dump completed on 2019-06-11 14:45:20

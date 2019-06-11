@@ -7,6 +7,7 @@ package Controllers;
 
 import DAO.ProdutoDAO;
 import Models.Produto;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -25,11 +26,16 @@ public class ProdutoController {
         return ProdutoDAO.excluir(pIdProduto);
     }
 
-    public static boolean atualizar(String nome, int qntEstoque, double preco, String fornecedor) {
+    public static boolean atualizar(String nome,  double preco, int qntEstoque, String fornecedor) {
         Produto p = new Produto();
         return ProdutoDAO.atualizar(p);
-
     }
+    
+    
+       public static ArrayList<Produto> consultar(String nome) {
+        return ProdutoDAO.consultar(nome);
+    } 
+    
 
     /**
      * Transformo uma lista de objetos Cliente em uma lista de Strings
@@ -41,10 +47,10 @@ public class ProdutoController {
         ArrayList<String[]> listaProdutos = new ArrayList<>();
 
         for (int i = 0; i < produtos.size(); i++) {
-            listaProdutos.add(new String[]{produtos.get(i).getNome(),
+            listaProdutos.add(new String[]{ String.valueOf(produtos.get(i).getIdProduto()),
+                String.valueOf(produtos.get(i).getNome()),
                 String.valueOf(produtos.get(i).getPreco()),
                 String.valueOf(produtos.get(i).getQntEstoque()),
-                String.valueOf(produtos.get(i).getCodProduto()),
                 produtos.get(i).getFornecedor()
             });
         }

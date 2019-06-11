@@ -5,20 +5,26 @@
  */
 package Models;
 
-
 /**
  *
- * @author lucas.paiva
+ * @author lucas.paiva & patrick Chagas
  */
 public class Pedido {
-private static int qtdPedidosCriados;
+
+    private static int qtdPedidosCriados;
     private int pedidoId;
     private double Total;
-    private Cliente cliente;
-    
-    
+    private int codCli;
+    private String nomeCli;
+    private String CPFcli;
+    private int codProd;
+    private String nomeProd;
+    private double valorProd;
+    private int qtdProd;
+    private String formPagamento;
+
     public Pedido() {
-      qtdPedidosCriados++;
+        qtdPedidosCriados++;
         this.pedidoId = qtdPedidosCriados;
     }
 
@@ -26,6 +32,17 @@ private static int qtdPedidosCriados;
         this.Total = Total;
         this.pedidoId = pedidoId;
         qtdPedidosCriados++;
+    }
+
+    public Pedido(int idCliente, double total, String FormPagamento) {
+        this.codCli = idCliente;
+        this.Total = total;
+        this.formPagamento = FormPagamento;
+    }
+
+    public Pedido(String nome) {
+        this.nomeCli = nome;
+
     }
 
     public int getPedidoId() {
@@ -44,13 +61,68 @@ private static int qtdPedidosCriados;
         this.Total = Total;
     }
 
-    public Cliente getCliente() {
-        return cliente;
+    public int getCodCli() {
+        return codCli;
     }
 
-    public void setCliente(Cliente Cliente) {
-        this.cliente = cliente;
+    public void setCodCli(int codCli) {
+        this.codCli = codCli;
     }
 
-    
+    public String getNomeCli() {
+        return nomeCli;
+    }
+
+    public void setNomeCli(String nomeCli) {
+        this.nomeCli = nomeCli;
+    }
+
+    public String getCPFcli() {
+        return CPFcli;
+    }
+
+    public void setCPFcli(String CPFcli) {
+        this.CPFcli = CPFcli;
+    }
+
+    public String getNomeProd() {
+        return nomeProd;
+    }
+
+    public void setNomeProd(String nomeProd) {
+        this.nomeProd = nomeProd;
+    }
+
+    public int getCodProd() {
+        return codProd;
+    }
+
+    public void setCodProd(int codProd) {
+        this.codProd = codProd;
+    }
+
+    public double getValorProd() {
+        return valorProd;
+    }
+
+    public void setValorProd(double valorProd) {
+        this.valorProd = valorProd;
+    }
+
+    public int getQtdProd() {
+        return qtdProd;
+    }
+
+    public void setQtdProd(int qtdProd) {
+        this.qtdProd = qtdProd;
+    }
+
+    public String getFormPagamento() {
+        return formPagamento;
+    }
+
+    public void setFormPagamento(String formPagamento) {
+        this.formPagamento = formPagamento;
+    }
+
 }

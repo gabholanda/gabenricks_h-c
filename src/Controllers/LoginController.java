@@ -5,7 +5,7 @@
  */
 package Controllers;
 
-import DAO.ModuloConexao;
+import DAO.StatusDAO;
 import Views.PrincipalView;
 import Views.TelaLoginView;
 import java.sql.Connection;
@@ -24,7 +24,7 @@ public class LoginController {
     Connection conexao = null;
 
     public boolean login(String login, String senha) throws SQLException {
-        conexao = ModuloConexao.conector();
+        conexao = StatusDAO.conector();
         // criando variáveis especiais para conexão com o banco
         //Prepared Statement e ResultSet são frameworks do pacote java.sql
         // e servem para preparar e executar as instruções SQL
@@ -52,7 +52,6 @@ public class LoginController {
 
                 return true;
             } else {
-                JOptionPane.showMessageDialog(null, "usuário e/ou senha inválido(s)");
                 return false;
             }
 

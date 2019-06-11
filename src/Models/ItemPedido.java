@@ -13,15 +13,16 @@ public class ItemPedido {
 
     private int idProduto, idPedido, qtdItem;
     private double valorItem;
-    
+    private String NomeCli;
+
     public ItemPedido() {
     }
 
-    public ItemPedido(int CodProduto, int codPedido,int quantidade, double valor) {
+    public ItemPedido(int CodProduto, int codPedido, int quantidade, double valor) {
         this.idProduto = CodProduto;
-        this.idPedido=codPedido;
-        this.qtdItem=quantidade;
-        this.valorItem=valor;
+        this.idPedido = codPedido;
+        this.qtdItem = quantidade;
+        this.valorItem = valor;
     }
 
     public int getIdProduto() {
@@ -54,6 +55,14 @@ public class ItemPedido {
 
     public void setValorItem(double valorItem) {
         this.valorItem = valorItem;
+    }
+
+    public String getNomeCli() {
+        return NomeCli;
+    }
+
+    public void setNomeCli(String NomeCli) {
+        this.NomeCli = NomeCli;
     }
 
 }

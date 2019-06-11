@@ -5,6 +5,7 @@
  */
 package DAO;
 
+import Models.ItemPedido;
 import Models.Pedido;
 import Models.Relatorio;
 import java.sql.Connection;
@@ -39,8 +40,8 @@ public class RelatorioDAO {
             conexao = DriverManager.getConnection(URL, LOGIN, SENHA);
 
             PreparedStatement comando = conexao.prepareStatement("select idpedido, idcliente, datapedido, total from pedido where datapedido BETWEEN ? and ?");
-            comando.setString(1, dataInicio );
-            comando.setString(2, dataFinal );
+            comando.setString(1, dataInicio);
+            comando.setString(2, dataFinal);
 
             ResultSet rs = comando.executeQuery();
 
@@ -51,6 +52,58 @@ public class RelatorioDAO {
                     c.setCodCli(rs.getInt("idcliente"));
                     c.setData(rs.getString("datapedido"));
                     c.setTotal(rs.getDouble("total"));
+                    listaRetorno.add(c);
+                }
+            } else {
+                throw new SQLException();
+            }
+        } catch (SQLException e) {
+            System.out.println(e);
+            listaRetorno = null;
+        } catch (ClassNotFoundException ex) {
+            System.out.println(ex);
+            listaRetorno = null;
+        } finally {
+            try {
+                conexao.close();
+            } catch (SQLException ex) {
+                System.out.println(ex);
+                listaRetorno = null;
+            }
+        }
+
+        return listaRetorno;
+
+    }
+
+    public static ArrayList<ItemPedido> getitemPedido(int idPedido) {
+        ArrayList<ItemPedido> listaRetorno = new ArrayList<>();
+
+        try {
+
+            //Carrego o driver para acesso ao banco
+            Class.forName(DRIVER);
+
+            //Monto a URL
+            conexao = DriverManager.getConnection(URL, LOGIN, SENHA);
+
+            PreparedStatement comando = conexao.prepareStatement("select a.idPedido, a.idProduto, b.nome, a.qtdItem, a.valor "
+                    + "from itempedido a "
+                    + "inner join produto b "
+                    + "on b.idproduto = a.idProduto "
+                    + "where a.idPedido=?");
+            comando.setInt(1, idPedido);
+
+            ResultSet rs = comando.executeQuery();
+
+            if (rs != null) {
+                while (rs.next()) {
+                    ItemPedido c = new ItemPedido();
+                    c.setIdPedido(rs.getInt("idpedido"));
+                    c.setIdProduto(rs.getInt("idProduto"));
+                    c.setNomeCli(rs.getString("nome"));
+                    c.setQtdItem(rs.getInt("qtdItem"));
+                    c.setValorItem(rs.getDouble("valor"));
                     listaRetorno.add(c);
                 }
             } else {

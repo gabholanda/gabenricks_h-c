@@ -70,6 +70,23 @@ public class RelatorioView extends javax.swing.JInternalFrame {
 
     }
 
+    private void pesquisarItens() throws ParseException {
+        int setar = tblPedidos.getSelectedRow();
+        if (setar >= 0) {
+            int idPedido = Integer.parseInt(tblPedidos.getModel().getValueAt(setar, 0).toString());
+            ArrayList<String[]> linhasItensPedidos = RelatorioController.getitemPedido(idPedido);
+
+            DefaultTableModel tmItemPedido = (DefaultTableModel) this.tblInfoPedidos.getModel();
+            //Limpo a tabela, excluindo todas as linhas
+            tmItemPedido.setRowCount(0);
+
+            //Para cada produto resgatado do banco de dados, atualizo a tabela
+            for (int i = 0; i < linhasItensPedidos.size(); i++) {
+                tmItemPedido.addRow(linhasItensPedidos.get(i));
+            }
+        }
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -127,6 +144,11 @@ public class RelatorioView extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblPedidos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblPedidosMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tblPedidos);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -150,15 +172,22 @@ public class RelatorioView extends javax.swing.JInternalFrame {
 
             },
             new String [] {
-                "Pedido ID", "Produto ID", "Nome", "Valor Unitário", "Quantidade Comprada"
+                "Pedido ID", "Produto ID", "Nome", "Quantidade Comprada", "Valor Total"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.Double.class, java.lang.Integer.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
         jScrollPane2.setViewportView(tblInfoPedidos);
@@ -276,6 +305,14 @@ public class RelatorioView extends javax.swing.JInternalFrame {
             Logger.getLogger(RelatorioView.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnPesquisaActionPerformed
+
+    private void tblPedidosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblPedidosMouseClicked
+        try {
+            pesquisarItens();
+        } catch (ParseException ex) {
+            Logger.getLogger(RelatorioView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_tblPedidosMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

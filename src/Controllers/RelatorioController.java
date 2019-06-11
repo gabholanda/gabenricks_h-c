@@ -6,6 +6,7 @@
 package Controllers;
 
 import DAO.RelatorioDAO;
+import Models.ItemPedido;
 import Models.Pedido;
 import Models.Relatorio;
 import java.text.DateFormat;
@@ -34,6 +35,25 @@ public class RelatorioController {
                 String.valueOf(Pedidos.get(i).getCodCli()),
                 String.valueOf(Pedidos.get(i).getData()),
                 String.valueOf(Pedidos.get(i).getTotal()),
+            });
+        }
+
+        return listaProdutos;
+
+    }
+        
+        
+        public static ArrayList<String[]> getitemPedido(int idPedido) throws ParseException {
+        ArrayList<ItemPedido> itemPedido = RelatorioDAO.getitemPedido(idPedido);
+        ArrayList<String[]> listaProdutos = new ArrayList<>();
+        
+   
+        for (int i = 0; i < itemPedido.size(); i++) {
+            listaProdutos.add(new String[]{ String.valueOf(itemPedido.get(i).getIdPedido()),
+                String.valueOf(itemPedido.get(i).getIdProduto()),
+                String.valueOf(itemPedido.get(i).getNomeCli()),
+                String.valueOf(itemPedido.get(i).getQtdItem()),
+                String.valueOf(itemPedido.get(i).getValorItem()).replaceAll("\\.", ","),
             });
         }
 

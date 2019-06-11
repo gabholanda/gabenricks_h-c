@@ -35,7 +35,10 @@ public class RelatorioView extends javax.swing.JInternalFrame {
         cboDateInicio.setCalendarPreferredSize(size);
         cboDateFinal.setCalendarPreferredSize(size1);
     }
-
+/**
+ * Pesquisa o pedido
+ * @throws ParseException 
+ */
     private void PesquisarPedido() throws ParseException {
 //        //Formatar a data no padrão dd/MM/yyyy - 01/12/1900
 //        SimpleDateFormat formatadorDatas = new SimpleDateFormat("yyyy-MM-dd");

@@ -9,12 +9,12 @@ package Views;
  *
  * @author tavar
  */
-public class Sobre extends javax.swing.JInternalFrame {
+public class SobreView extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form Sobre
      */
-    public Sobre() {
+    public SobreView() {
         initComponents();
     }
 

@@ -72,10 +72,11 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnClientes" linkSize="1" min="-2" pref="117" max="-2" attributes="0"/>
-                  <Component id="btnProduto" linkSize="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnPedidos" linkSize="1" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="btnClientes" linkSize="1" pref="117" max="32767" attributes="0"/>
+                  <Component id="btnProduto" linkSize="1" max="32767" attributes="0"/>
+                  <Component id="btnPedidos" linkSize="1" max="32767" attributes="0"/>
+                  <Component id="btnRelatorio" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="Desktop" pref="885" max="32767" attributes="0"/>
@@ -91,7 +92,9 @@
               <Component id="btnProduto" linkSize="2" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnPedidos" linkSize="2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="271" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnRelatorio" min="-2" pref="32" max="-2" attributes="0"/>
+              <EmptySpace pref="221" max="32767" attributes="0"/>
           </Group>
           <Component id="Desktop" alignment="1" pref="517" max="32767" attributes="0"/>
       </Group>
@@ -118,6 +121,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Pedido"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPedidosActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JDesktopPane" name="Desktop">
       <Properties>
@@ -146,5 +152,13 @@
         </DimensionLayout>
       </Layout>
     </Container>
+    <Component class="javax.swing.JButton" name="btnRelatorio">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Relat&#xf3;rio"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRelatorioActionPerformed"/>
+      </Events>
+    </Component>
   </SubComponents>
 </Form>

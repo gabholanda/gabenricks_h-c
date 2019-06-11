@@ -11,64 +11,43 @@ package Models;
  */
 public class Cliente {
 
+    private static int qtdClientesCriados;
     private int clienteId;
     private String nome;
-    private int cpf;
-    private int telefone;
-    private int codFidelidade;
+    private String cpf;
+    private String dataNascimento;
+    private String telefone;
     private String email;
+    private String rua;
     private String endereco;
-    private String infoComplementar;
+    private int numero;
+    private String cep;
+    private String complemento;
+    private String cidade;
+    private String estado;
 
     public Cliente() {
-
+        qtdClientesCriados++;
+        this.clienteId = qtdClientesCriados;
     }
 
-//    public Cliente(String nome, int cpf, int codFidelidade) {
-//
-//        this.nome = nome;
-//        this.cpf = cpf;
-//        this.codFidelidade = codFidelidade;
-//    }
-//
-//    public Cliente(String nome, int cpf, int telefone, int codFidelidade) {
-//
-//        this.nome = nome;
-//        this.cpf = cpf;
-//        this.telefone = telefone;
-//        this.codFidelidade = codFidelidade;
-//    }
-//
-//    public Cliente(String nome, int cpf, int telefone, int codFidelidade, String email) {
-//
-//        this.nome = nome;
-//        this.cpf = cpf;
-//        this.telefone = telefone;
-//        this.codFidelidade = codFidelidade;
-//        this.email = email;
-//    }
-//
-//    public Cliente(String nome, int cpf, int telefone, int codFidelidade, String email, String endereco) {
-//
-//        this.nome = nome;
-//        this.cpf = cpf;
-//        this.telefone = telefone;
-//        this.codFidelidade = codFidelidade;
-//        this.email = email;
-//        this.endereco = endereco;
-//    }
-
-    public Cliente(int clienteId, String nome, int cpf, int telefone
-            , int codFidelidade, String email
-            , String endereco, String infoComplementar) {
-        this.clienteId = clienteId;
+    public Cliente(String nome, String dataNascimento, String cpf, String telefone,
+            String email,
+            String rua, String endereco, int numero, String cep, String complemento, String cidade, String estado) {
+        //this.clienteId = clienteId;
         this.nome = nome;
+        this.dataNascimento = dataNascimento;
         this.cpf = cpf;
         this.telefone = telefone;
-        this.codFidelidade = codFidelidade;
         this.email = email;
+        this.rua = rua;
         this.endereco = endereco;
-        this.infoComplementar = infoComplementar;
+        this.numero = numero;
+        this.cep = cep;
+        this.complemento = complemento;
+        this.cidade = cidade;
+        this.estado = estado;
+        qtdClientesCriados++;
     }
 
     public int getClienteId() {
@@ -103,36 +82,76 @@ public class Cliente {
         this.endereco = endereco;
     }
 
-    public String getInfoComplementar() {
-        return infoComplementar;
-    }
-
-    public void setInfoComplementar(String infoComplementar) {
-        this.infoComplementar = infoComplementar;
-    }
-
-    public Integer getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
-    public Integer getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
-    public Integer getCodFidelidade() {
-        return codFidelidade;
+    public String getDataNascimento() {
+        return dataNascimento;
     }
 
-    public void setCodFidelidade(int codFidelidade) {
-        this.codFidelidade = codFidelidade;
+    public void setDataNascimento(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    public String getRua() {
+        return rua;
+    }
+
+    public void setRua(String rua) {
+        this.rua = rua;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
 }

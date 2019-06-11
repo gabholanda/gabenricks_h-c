@@ -11,26 +11,50 @@ package Models;
  */
 public class Produto {
 
-    private int produtoId;
+    private int CodProduto;
     private String nome;
     private int qntEstoque;
     private double preco;
+    private String fornecedor;
+    private static int qtdProdutosCriados;
 
-    public Produto(double preco, int qntEstoque, String nome) {
+    public Produto() {
+        qtdProdutosCriados++;
+        this.CodProduto = qtdProdutosCriados;
+    }
+
+    public Produto(int CodProduto, String nome, int qntEstoque, double preco, String fornecedor) {
+        this.CodProduto = CodProduto;
         this.preco = preco;
         this.qntEstoque = qntEstoque;
         this.nome = nome;
+        this.fornecedor = fornecedor;
+        qtdProdutosCriados++;
     }
 
-    public Produto(int produtoId, String nome, int qntEstoque, double preco) {
-        this.produtoId = produtoId;
+    public Produto(String nome, int qntEstoque, double preco, String fornecedor) {
+        this.CodProduto = CodProduto;
+        this.preco = preco;
+        this.qntEstoque = qntEstoque;
+        this.nome = nome;
+        this.fornecedor = fornecedor;
+        qtdProdutosCriados++;
+    }
+
+    public Produto(int CodProduto, String nome, int qntEstoque, double preco) {
+        this.CodProduto = CodProduto;
         this.nome = nome;
         this.qntEstoque = qntEstoque;
         this.preco = preco;
+        qtdProdutosCriados++;
     }
 
-    public int getProdutoId() {
-        return produtoId;
+    public int getCodProduto() {
+        return CodProduto;
+    }
+
+    public void setCodProduto(int CodProduto) {
+        this.CodProduto = CodProduto;
     }
 
     public double getPreco() {
@@ -55,6 +79,14 @@ public class Produto {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getFornecedor() {
+        return fornecedor;
+    }
+
+    public void setFornecedor(String fornecedor) {
+        this.fornecedor = fornecedor;
     }
 
 }

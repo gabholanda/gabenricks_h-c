@@ -14,12 +14,12 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  *
  * @author marcus.hmoraes
  */
-public class Principal extends javax.swing.JFrame {
+public class PrincipalView extends javax.swing.JFrame {
 
     /**
      * Creates new form Principal
      */
-    public Principal() {
+    public PrincipalView() {
         initComponents();
 
     }
@@ -37,6 +37,7 @@ public class Principal extends javax.swing.JFrame {
         btnProduto = new javax.swing.JButton();
         btnPedidos = new javax.swing.JButton();
         Desktop = new javax.swing.JDesktopPane();
+        btnRelatorio = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -64,6 +65,11 @@ public class Principal extends javax.swing.JFrame {
         });
 
         btnPedidos.setText("Pedido");
+        btnPedidos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPedidosActionPerformed(evt);
+            }
+        });
 
         Desktop.setBackground(new java.awt.Color(240, 240, 240));
         Desktop.setForeground(new java.awt.Color(240, 240, 240));
@@ -80,6 +86,13 @@ public class Principal extends javax.swing.JFrame {
             DesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
+
+        btnRelatorio.setText("Relatório");
+        btnRelatorio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRelatorioActionPerformed(evt);
+            }
+        });
 
         jMenu1.setText("Clientes");
         jMenuBar1.add(jMenu1);
@@ -110,10 +123,11 @@ public class Principal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnProduto)
-                    .addComponent(btnPedidos))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnClientes, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+                    .addComponent(btnProduto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnPedidos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnRelatorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Desktop, javax.swing.GroupLayout.DEFAULT_SIZE, 885, Short.MAX_VALUE))
         );
@@ -129,7 +143,9 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(btnProduto)
                 .addGap(18, 18, 18)
                 .addComponent(btnPedidos)
-                .addContainerGap(271, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(221, Short.MAX_VALUE))
             .addComponent(Desktop, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 517, Short.MAX_VALUE)
         );
 
@@ -146,18 +162,16 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void btnClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesActionPerformed
-
-        try {
+       try {
             Desktop.removeAll();
-            Cliente_Cadastro Cadastro = new Cliente_Cadastro();
+            ClientesView Cadastro = new ClientesView();
             ((BasicInternalFrameUI) Cadastro.getUI()).setNorthPane(null);
             Cadastro.setVisible(true);
-            //adiciona tela de cadastro 
             Desktop.add(Cadastro);
             //comando para maximizar a tela JInternalFrame
             Cadastro.setMaximum(true);
         } catch (PropertyVetoException ex) {
-            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PrincipalView.class.getName()).log(Level.SEVERE, null, ex);
         }
         // repaint para dar um refresh na tela
         this.repaint();
@@ -170,14 +184,14 @@ public class Principal extends javax.swing.JFrame {
 
         try {
             Desktop.removeAll();
-            Produto Produto = new Produto();
+            ProdutosView Produto = new ProdutosView();
             ((BasicInternalFrameUI) Produto.getUI()).setNorthPane(null);
             Produto.setVisible(true);
             Desktop.add(Produto);
             //comando para maximizar a tela JInternalFrame
             Produto.setMaximum(true);
         } catch (PropertyVetoException ex) {
-            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PrincipalView.class.getName()).log(Level.SEVERE, null, ex);
         }
         // repaint para dar um refresh na tela
         this.repaint();
@@ -185,46 +199,46 @@ public class Principal extends javax.swing.JFrame {
 // TODO add your handling code here:
     }//GEN-LAST:event_btnProdutoActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    private void btnPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPedidosActionPerformed
+       try {
+            Desktop.removeAll();
+            PedidosView Pedido = new PedidosView();
+            ((BasicInternalFrameUI) Pedido.getUI()).setNorthPane(null);
+            Pedido.setVisible(true);
+            Desktop.add(Pedido);
+            //comando para maximizar a tela JInternalFrame
+            Pedido.setMaximum(true);
+        } catch (PropertyVetoException ex) {
+            Logger.getLogger(PrincipalView.class.getName()).log(Level.SEVERE, null, ex);
         }
-        //</editor-fold>
+        // repaint para dar um refresh na tela
+        this.repaint();
+    }//GEN-LAST:event_btnPedidosActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Principal().setVisible(true);
-            }
-        });
-    }
+    private void btnRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRelatorioActionPerformed
+       try {
+            Desktop.removeAll();
+            RelatorioView relatorio = new RelatorioView();
+            ((BasicInternalFrameUI) relatorio.getUI()).setNorthPane(null);
+            relatorio.setVisible(true);
+            Desktop.add(relatorio);
+            //comando para maximizar a tela JInternalFrame
+            relatorio.setMaximum(true);
+        } catch (PropertyVetoException ex) {
+            Logger.getLogger(PrincipalView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        // repaint para dar um refresh na tela
+        this.repaint();
+    }//GEN-LAST:event_btnRelatorioActionPerformed
+
+ 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane Desktop;
     private javax.swing.JButton btnClientes;
     private javax.swing.JButton btnPedidos;
     private javax.swing.JButton btnProduto;
+    private javax.swing.JButton btnRelatorio;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;

@@ -22,7 +22,7 @@ public class ClienteDAO {
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";    //Driver do MySQL 8.0 em diante - Se mudar o SGBD mude o Driver
     private static final String LOGIN = "root";                         //nome de um usuário do banco de dados
     private static final String SENHA = "";                             //sua senha de acesso
-    private static final String URL = "jdbc:mysql://localhost:3306/lojagabenricks?useTimezone=true&serverTimezone=UTC";  //URL do banco de dados
+    private static final String URL = "jdbc:mysql://192.168.1.222:3306/lojagabenricks?useTimezone=true&serverTimezone=UTC";  //URL do banco de dados
     private static Connection conexao;
 
     public static boolean salvar(Cliente c) {
@@ -34,17 +34,22 @@ public class ClienteDAO {
             conexao = DriverManager.getConnection(URL, LOGIN, SENHA);
 
             PreparedStatement comando = conexao.prepareStatement("INSERT INTO cliente "
-                    + "(nome,CPF,telefone,codFidelidade,email,endereco,infoComplementar)"
-                    + " VALUES(?, ?, ?, ?, ?, ?, ?)");
+                    + "(nome,dataNascimento,CPF,telefone,email,rua,endereco,numero,cep,complemento,cidade,estado)"
+                    + " VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
             comando.setString(1, c.getNome()); //Posição 1 = nome
-            comando.setInt(2, c.getCpf()); //Posição 2 = CPF
-            comando.setInt(3, c.getTelefone()); // Posição 3 = telefone
-            comando.setInt(4, c.getCodFidelidade()); // Posição 4 = codFidelidade
+            comando.setString(2,c.getDataNascimento()); //Posição 3 = Data de nascimento
+            comando.setString(3, c.getCpf()); //Posição 2 = CPF
+            comando.setString(4, c.getTelefone()); // Posição 4 = telefone
             comando.setString(5, c.getEmail()); // Posição 5 = email
-            comando.setString(6, c.getEndereco()); // Posição 6 = endereco
-            comando.setString(7, c.getInfoComplementar()); // Posição 7 = informações complementares
-            int linhasAfetadas = comando.executeUpdate();
+            comando.setString(6,c.getRua()); // Posição 6 = Tipo rua / avenida e afins
+            comando.setString(7,c.getEndereco());// Posição 7 = endereco
+            comando.setInt(8,c.getNumero());// Posição 8 = Numero da casa
+            comando.setString(9,c.getCep());// Posição 9 = CEP
+            comando.setString(10,c.getComplemento());// Posição 10 = Complemento
+            comando.setString(11,c.getCidade());// Posição 6 = Cidade
+            comando.setString(12,c.getEstado());// Posição 6 = Estado
+            int linhasAfetadas = comando.executeUpdate(); 
 
             if (linhasAfetadas > 0) {
                 retorno = true;
@@ -79,17 +84,23 @@ public class ClienteDAO {
             conexao = DriverManager.getConnection(URL, LOGIN, SENHA);
 
             PreparedStatement comando = conexao.prepareStatement("UPDATE cliente SET "
-                    + "nome=?, CPF=?, telefone=?, "
-                    + "email=?, endereco = ?, infoComplementar = ?"
+                    + "nome=?, dataNascimento=?, CPF=?, telefone=?, "
+                    + "email=?, rua=?, endereco = ?, numero=?, cep=?, complemento=?, cidade=?, estado=?"
                     + " WHERE idcliente= ?");
 
-            comando.setString(1, c.getNome());
-            comando.setInt(2, c.getCpf());
-            comando.setInt(3, c.getTelefone());
-            comando.setString(4, c.getEmail());
-            comando.setString(5, c.getEndereco());
-            comando.setString(6, c.getInfoComplementar());
-            comando.setInt(7, c.getClienteId());
+            comando.setString(1, c.getNome()); //Posição 1 = nome
+            comando.setString(2,c.getDataNascimento()); //Posição 3 = Data de nascimento
+            comando.setString(3, c.getCpf()); //Posição 2 = CPF
+            comando.setString(4, c.getTelefone()); // Posição 4 = telefone
+            comando.setString(5, c.getEmail()); // Posição 5 = email
+            comando.setString(6,c.getRua()); // Posição 6 = Tipo rua / avenida e afins
+            comando.setString(7,c.getEndereco());// Posição 7 = endereco
+            comando.setInt(8,c.getNumero());// Posição 8 = Numero da casa
+            comando.setString(9,c.getCep());// Posição 9 = CEP
+            comando.setString(10,c.getComplemento());// Posição 10 = Complemento
+            comando.setString(11,c.getCidade());// Posição 6 = Cidade
+            comando.setString(12,c.getEstado());// Posição 6 = Estado
+            comando.setInt(13, c.getClienteId());
             int linhasAfetadas = comando.executeUpdate();
 
             if (linhasAfetadas > 0) {
@@ -171,11 +182,17 @@ public class ClienteDAO {
                 Cliente c = new Cliente();
                 c.setClienteId(rs.getInt("clienteId"));
                 c.setNome(rs.getString("nome"));
-                c.setCpf(rs.getInt("CPF"));
+                c.setDataNascimento(rs.getString("dataNascimento"));
+                c.setCpf(rs.getString("CPF"));
+                c.setTelefone(rs.getString("telefone"));
                 c.setEmail(rs.getString("Email"));
+                c.setRua(rs.getString("rua"));
                 c.setEndereco(rs.getString("Endereco"));
-                c.setTelefone(rs.getInt("telefone"));
-                c.setInfoComplementar("InfoComplementar");
+                c.setNumero(rs.getInt("numero"));
+                c.setCep(rs.getString("cep"));
+                c.setComplemento(rs.getString("complemento"));
+                c.setCidade(rs.getString("cidade"));
+                c.setEstado(rs.getString("estado"));
                 listaClientes.add(c);
             }
 
@@ -193,16 +210,13 @@ public class ClienteDAO {
 
         return listaClientes;
     }
-//Consultar via Nome
     public static ArrayList<Cliente> consultar(String pNome) {
         ArrayList<Cliente> listaClientes = new ArrayList<>();
 
         try {
-            //return SimulaDB.getInstance().getClientes();
             Class.forName(DRIVER);
             conexao = DriverManager.getConnection(URL, LOGIN, SENHA);
-//            Statement comando = conexao.createStatement();
-//            ResultSet rs = comando.executeQuery("SELECT * FROM cliente;");
+
             PreparedStatement comando = conexao.prepareStatement("SELECT * FROM cliente WHERE nome LIKE ? ");
             comando.setString(1, pNome + "%");
 
@@ -212,11 +226,17 @@ public class ClienteDAO {
                 Cliente c = new Cliente();
                 c.setClienteId(rs.getInt("clienteId"));
                 c.setNome(rs.getString("nome"));
-                c.setCpf(rs.getInt("CPF"));
+                c.setDataNascimento(rs.getString("dataNascimento"));
+                c.setCpf(rs.getString("CPF"));
+                c.setTelefone(rs.getString("telefone"));
                 c.setEmail(rs.getString("Email"));
+                c.setRua(rs.getString("rua"));
                 c.setEndereco(rs.getString("Endereco"));
-                c.setTelefone(rs.getInt("telefone"));
-                c.setInfoComplementar("InfoComplementar");
+                c.setNumero(rs.getInt("numero"));
+                c.setCep(rs.getString("cep"));
+                c.setComplemento(rs.getString("complemento"));
+                c.setCidade(rs.getString("cidade"));
+                c.setEstado(rs.getString("estado"));
                 listaClientes.add(c);
             }
 
@@ -251,11 +271,17 @@ public class ClienteDAO {
                 Cliente c = new Cliente();
                 c.setClienteId(rs.getInt("clienteId"));
                 c.setNome(rs.getString("nome"));
-                c.setCpf(rs.getInt("CPF"));
+                c.setDataNascimento(rs.getString("dataNascimento"));
+                c.setCpf(rs.getString("CPF"));
+                c.setTelefone(rs.getString("telefone"));
                 c.setEmail(rs.getString("Email"));
+                c.setRua(rs.getString("rua"));
                 c.setEndereco(rs.getString("Endereco"));
-                c.setTelefone(rs.getInt("telefone"));
-                c.setInfoComplementar("InfoComplementar");
+                c.setNumero(rs.getInt("numero"));
+                c.setCep(rs.getString("cep"));
+                c.setComplemento(rs.getString("complemento"));
+                c.setCidade(rs.getString("cidade"));
+                c.setEstado(rs.getString("estado"));
                 listaClientes.add(c);
             }
 

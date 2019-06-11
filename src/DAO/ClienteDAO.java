@@ -34,7 +34,7 @@ public class ClienteDAO {
             conexao = DriverManager.getConnection(URL, LOGIN, SENHA);
 
             PreparedStatement comando = conexao.prepareStatement("INSERT INTO cliente "
-                    + "(nome,dataNascimento,CPF,telefone,email,rua,endereco,numero,cep,complemento,cidade,estado)"
+                    + "(nome,dataNascimento,CPF,telefone,email,rua,endereco,numero,cep,complemento,cidade,estado,sexo)"
                     + " VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
             comando.setString(1, c.getNome()); //Posição 1 = nome

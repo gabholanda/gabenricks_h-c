@@ -254,6 +254,7 @@ public class PedidosView extends javax.swing.JInternalFrame {
                             Double.parseDouble(String.valueOf(tbl_Pedido.getModel().getValueAt(i, 5)).replaceAll("\\,", ".")))) {
 
                     } else if (i == itensPedido) {
+                        limparCampos();
                         JOptionPane.showMessageDialog(null, "Pedido Realizado com sucesso");
                     } else {
                         JOptionPane.showMessageDialog(null, "Falha ao cadastrar iten ou itens");
@@ -266,6 +267,23 @@ public class PedidosView extends javax.swing.JInternalFrame {
             }
         }
     }
+
+    private void limparCampos() {
+        DefaultTableModel tmCliente = (DefaultTableModel) this.tbl_Cliente.getModel();
+        DefaultTableModel tmItemPedido = (DefaultTableModel) this.tbl_Produto.getModel();
+        DefaultTableModel tmPedido = (DefaultTableModel) this.tbl_Pedido.getModel();
+
+        tmCliente.setNumRows(0);
+        tmItemPedido.setNumRows(0);
+        tmPedido.setNumRows(0);
+        txt_Nome_Prod.setText(null);
+        txt_Cod_Prod.setText(null);
+        txt_TotalPedido.setText("0,00");
+        
+        habilitarCliente();
+        
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.

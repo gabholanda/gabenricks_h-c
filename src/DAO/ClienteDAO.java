@@ -21,8 +21,8 @@ public class ClienteDAO {
 
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";    //Driver do MySQL 8.0 em diante - Se mudar o SGBD mude o Driver
     private static final String LOGIN = "root";                         //nome de um usuário do banco de dados
-    private static final String SENHA = "";                             //sua senha de acesso
-    private static final String URL = "jdbc:mysql://192.168.1.222:3306/lojagabenricks?useTimezone=true&serverTimezone=UTC";  //URL do banco de dados
+    private static final String SENHA = "adminadmin";                             //sua senha de acesso
+    private static final String URL = "jdbc:mysql://localhost:3306/lojagabenricks?useTimezone=true&serverTimezone=UTC";  //URL do banco de dados
     private static Connection conexao;
 
     public static boolean salvar(Cliente c) {
@@ -38,19 +38,19 @@ public class ClienteDAO {
                     + " VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
             comando.setString(1, c.getNome()); //Posição 1 = nome
-            comando.setString(2,c.getDataNascimento()); //Posição 2 = Data de nascimento
+            comando.setString(2, c.getDataNascimento()); //Posição 2 = Data de nascimento
             comando.setString(3, c.getCpf()); //Posição 3 = CPF
             comando.setString(4, c.getTelefone()); // Posição 4 = telefone
             comando.setString(5, c.getEmail()); // Posição 5 = email
-            comando.setString(6,c.getRua()); // Posição 6 = Tipo rua / avenida e afins
-            comando.setString(7,c.getEndereco());// Posição 7 = endereco
-            comando.setInt(8,c.getNumero());// Posição 8 = Numero da casa
-            comando.setString(9,c.getCep());// Posição 9 = CEP
-            comando.setString(10,c.getComplemento());// Posição 10 = Complemento
-            comando.setString(11,c.getCidade());// Posição 11 = Cidade
-            comando.setString(12,c.getEstado());// Posição 12 = Estado
+            comando.setString(6, c.getRua()); // Posição 6 = Tipo rua / avenida e afins
+            comando.setString(7, c.getEndereco());// Posição 7 = endereco
+            comando.setInt(8, c.getNumero());// Posição 8 = Numero da casa
+            comando.setString(9, c.getCep());// Posição 9 = CEP
+            comando.setString(10, c.getComplemento());// Posição 10 = Complemento
+            comando.setString(11, c.getCidade());// Posição 11 = Cidade
+            comando.setString(12, c.getEstado());// Posição 12 = Estado
             comando.setString(13, c.getSexo());
-            int linhasAfetadas = comando.executeUpdate(); 
+            int linhasAfetadas = comando.executeUpdate();
 
             if (linhasAfetadas > 0) {
                 retorno = true;
@@ -88,18 +88,18 @@ public class ClienteDAO {
                     + " WHERE idcliente= ?");
 
             comando.setString(1, c.getNome()); //Posição 1 = nome
-            comando.setString(2,c.getDataNascimento()); //Posição 2 = Data de nascimento
+            comando.setString(2, c.getDataNascimento()); //Posição 2 = Data de nascimento
             comando.setString(3, c.getCpf()); //Posição 3 = CPF
             comando.setString(4, c.getTelefone()); // Posição 4 = telefone
             comando.setString(5, c.getEmail()); // Posição 5 = email
-            comando.setString(6,c.getRua()); // Posição 6 = Tipo rua / avenida e afins
-            comando.setString(7,c.getEndereco());// Posição 7 = endereco
-            comando.setInt(8,c.getNumero());// Posição 8 = Numero da casa
-            comando.setString(9,c.getCep());// Posição 9 = CEP
-            comando.setString(10,c.getComplemento());// Posição 10 = Complemento
-            comando.setString(11,c.getCidade());// Posição 11 = Cidade
-            comando.setString(12,c.getEstado());// Posição 12 = Estado
-            comando.setString(13,c.getSexo());// Posição 13 = Sexo
+            comando.setString(6, c.getRua()); // Posição 6 = Tipo rua / avenida e afins
+            comando.setString(7, c.getEndereco());// Posição 7 = endereco
+            comando.setInt(8, c.getNumero());// Posição 8 = Numero da casa
+            comando.setString(9, c.getCep());// Posição 9 = CEP
+            comando.setString(10, c.getComplemento());// Posição 10 = Complemento
+            comando.setString(11, c.getCidade());// Posição 11 = Cidade
+            comando.setString(12, c.getEstado());// Posição 12 = Estado
+            comando.setString(13, c.getSexo());// Posição 13 = Sexo
             comando.setInt(14, c.getClienteId());
             int linhasAfetadas = comando.executeUpdate();
 
@@ -160,6 +160,7 @@ public class ClienteDAO {
 
     }
 // Consultar via CPF
+
     public static ArrayList<Cliente> consultar(int cpf) {
 
         ArrayList<Cliente> listaClientes = new ArrayList<>();
@@ -205,6 +206,7 @@ public class ClienteDAO {
 
         return listaClientes;
     }
+
     public static ArrayList<Cliente> consultar(String pNome) {
         ArrayList<Cliente> listaClientes = new ArrayList<>();
 
@@ -220,10 +222,10 @@ public class ClienteDAO {
             while (rs.next()) {
                 Cliente c = new Cliente();
                 c.setClienteId(rs.getInt("idCliente"));
-                c.setSexo(rs.getString("sexo"));
                 c.setNome(rs.getString("nome"));
                 c.setDataNascimento(rs.getString("dataNascimento"));
                 c.setCpf(rs.getString("CPF"));
+                c.setSexo(rs.getString("sexo"));
                 c.setTelefone(rs.getString("telefone"));
                 c.setEmail(rs.getString("Email"));
                 c.setRua(rs.getString("rua"));
@@ -249,6 +251,7 @@ public class ClienteDAO {
         return listaClientes;
     }
 //Retorna a lista de clientes
+
     public static ArrayList<Cliente> getClientes() {
         ArrayList<Cliente> listaClientes = new ArrayList<>();
 

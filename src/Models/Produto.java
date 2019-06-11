@@ -11,7 +11,7 @@ package Models;
  */
 public class Produto {
 
-    private int CodProduto;
+    private int idProduto;
     private String nome;
     private int qntEstoque;
     private double preco;
@@ -20,11 +20,11 @@ public class Produto {
 
     public Produto() {
         qtdProdutosCriados++;
-        this.CodProduto = qtdProdutosCriados;
+        this.idProduto = qtdProdutosCriados;
     }
 
     public Produto(int CodProduto, String nome, int qntEstoque, double preco, String fornecedor) {
-        this.CodProduto = CodProduto;
+        this.idProduto = CodProduto;
         this.preco = preco;
         this.qntEstoque = qntEstoque;
         this.nome = nome;
@@ -33,7 +33,7 @@ public class Produto {
     }
 
     public Produto(String nome, int qntEstoque, double preco, String fornecedor) {
-        this.CodProduto = CodProduto;
+        this.idProduto = idProduto;
         this.preco = preco;
         this.qntEstoque = qntEstoque;
         this.nome = nome;
@@ -42,19 +42,19 @@ public class Produto {
     }
 
     public Produto(int CodProduto, String nome, int qntEstoque, double preco) {
-        this.CodProduto = CodProduto;
+        this.idProduto = idProduto;
         this.nome = nome;
         this.qntEstoque = qntEstoque;
         this.preco = preco;
         qtdProdutosCriados++;
     }
 
-    public int getCodProduto() {
-        return CodProduto;
+    public int getIdProduto() {
+        return idProduto;
     }
 
-    public void setCodProduto(int CodProduto) {
-        this.CodProduto = CodProduto;
+    public void setIdProduto(int idProduto) {
+        this.idProduto = idProduto;
     }
 
     public double getPreco() {

@@ -5,10 +5,12 @@
  */
 package DAO;
 
+import Models.Cliente;
 import java.util.ArrayList;
 import Models.Produto;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -18,12 +20,12 @@ import java.sql.Statement;
  * @author henrique.csousa
  */
 public class ProdutoDAO {
-     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";       //Driver do MySQL - Se mudar o SGBD mude o Driver
+     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";   //Driver do MySQL - Se mudar o SGBD mude o Driver
     private static final String SERVIDOR = "localhost";                 //servidor de banco de dados
-    private static final String BASEDADOS = "lojacarro";                  //nome da base de dados
+    private static final String BASEDADOS = "lojagabenricks_produto";   //nome da base de dados
     private static final String LOGIN = "root";                         //nome de um usuário do banco de dados
-    private static final String SENHA = "adminadmin";                             //sua senha de acesso
-    private static String URL = "jdbc:mysql://localhost:3306/lojacarro?useTimezone=true&serverTimezone=UTC";  //URL do banco de dados
+    private static final String SENHA = "adminadmin";                   //sua senha de acesso
+    private static String URL = "jdbc:mysql://localhost:3306/lojagabenricks?useTimezone=true&serverTimezone=UTC";  //URL do banco de dados
     private static Connection conexao;
     public static boolean salvar(Produto p) {
            boolean retorno = false;
@@ -32,7 +34,7 @@ public class ProdutoDAO {
                conexao=DriverManager.getConnection(URL, LOGIN, SENHA);
                 Statement comando = conexao.createStatement();
                 int linhasAfetadas= comando.executeUpdate("INSERT INTO Produto" +
-                        "(Nome,qntEstoque, preco, fornecedor, peso, qntCaixa) VALUES("
+                        "(Nome,qtdEstoque, preco, fornecedor ) VALUES("
                         + "'"+p.getNome()+"',"+p.getQntEstoque()+","+p.getPreco()+",'"+p.getFornecedor()+"');");
         if (linhasAfetadas > 0) {
                 retorno = true;
@@ -65,11 +67,11 @@ public class ProdutoDAO {
             Statement comando = conexao.createStatement();
             int linhasAfetadas = comando.executeUpdate("UPDATE produto SET "
                     + " nome =" + "'" + c.getNome()+ "'" + ","
-                    + " qntEstoque ="  + c.getQntEstoque()+ ","
+                    + " qtdEstoque ="  + c.getQntEstoque()+ ","
                     + " preço =" + c.getPreco()+ ","
                     + "fornecedor="+"'"+c.getFornecedor()+"'"+ ","
                     
-                    + " WHERE CodProduto =" + c.getCodProduto()+";"
+                    + " WHERE CodProduto =" + c.getIdProduto()+";"
             );
 
             if (linhasAfetadas > 0) {
@@ -132,6 +134,43 @@ public class ProdutoDAO {
         return retorno;
 
     }
+ 
+  public static ArrayList<Produto> consultar(String pNome) {
+        ArrayList<Produto> listaClientes = new ArrayList<>();
+
+        try {
+            Class.forName(DRIVER);
+            conexao = DriverManager.getConnection(URL, LOGIN, SENHA);
+
+            PreparedStatement comando = conexao.prepareStatement("SELECT * FROM produto WHERE nome LIKE ? ");
+            comando.setString(1, pNome + "%");
+
+            ResultSet rs = comando.executeQuery();
+
+            while (rs.next()) {
+                Produto p = new Produto();
+                p.setIdProduto(rs.getInt("clienteId"));
+                p.setNome(rs.getString("nome"));
+                p.setPreco(rs.getDouble("Preco"));
+                p.setQntEstoque(rs.getInt("qtdEstoque"));
+                p.setFornecedor(rs.getString("telefone"));
+                listaClientes.add(p);
+            }
+
+        } catch (ClassNotFoundException ex) {
+            listaClientes = null;
+        } catch (SQLException ex) {
+            listaClientes = null;
+        } finally {
+            try {
+                conexao.close();
+            } catch (SQLException ex) {
+                listaClientes = null;
+            }
+        }
+
+        return listaClientes;
+  }
 
     public static ArrayList<Produto> getProdutos() {
         ArrayList<Produto> listaRetorno = new ArrayList<>();
@@ -146,14 +185,14 @@ public class ProdutoDAO {
             conexao = DriverManager.getConnection(URL, LOGIN, SENHA);
             Statement comando = conexao.createStatement();
 
-            ResultSet rs = comando.executeQuery("SELECT * FROM carro;");
+            ResultSet rs = comando.executeQuery("SELECT * FROM produto;");
 
             if (rs != null) {
                 while (rs.next()) {
                     Produto c = new Produto();
-                    c.setCodProduto(rs.getInt("CodProduto"));
+                    c.setIdProduto(rs.getInt("idProduto"));
                     c.setNome(rs.getString("Nome"));
-                    c.setQntEstoque(rs.getInt("qntEstoque"));
+                    c.setQntEstoque(rs.getInt("qtdEstoque"));
                     c.setPreco(rs.getDouble("Preco"));
                     c.setFornecedor(rs.getString("Fornecedor"));
                     listaRetorno.add(c);

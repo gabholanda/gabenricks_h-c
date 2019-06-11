@@ -11,70 +11,49 @@ package Models;
  */
 public class ItemPedido {
 
-    private int quantidade,valor, produtoId, pedidoId, itempedidoId;
-    private Produto produto;
-
+    private int idProduto, idPedido, qtdItem;
+    private double valorItem;
+    
     public ItemPedido() {
     }
 
-    public ItemPedido(int produtoId, int quantidade) {
-        this.produtoId = produtoId;
-        this.quantidade = quantidade;
+    public ItemPedido(int CodProduto, int codPedido,int quantidade, double valor) {
+        this.idProduto = CodProduto;
+        this.idPedido=codPedido;
+        this.qtdItem=quantidade;
+        this.valorItem=valor;
     }
 
-    public ItemPedido(int itemPedidoId, int produtoId, int pedidoId, int quantidade) {
-        this.produtoId = produtoId;
-        this.pedidoId = pedidoId;
-        this.quantidade = quantidade;
-
+    public int getIdProduto() {
+        return idProduto;
     }
 
-    public int getProdutoId() {
-        return produtoId;
+    public void setIdProduto(int idProduto) {
+        this.idProduto = idProduto;
     }
 
-    public void setProdutoId(int produtoId) {
-        this.produtoId = produtoId;
+    public int getIdPedido() {
+        return idPedido;
     }
 
-    public int getPedidoId() {
-        return pedidoId;
+    public void setIdPedido(int idPedido) {
+        this.idPedido = idPedido;
     }
 
-    public void setPedidoId(int pedidoId) {
-        this.pedidoId = pedidoId;
+    public int getQtdItem() {
+        return qtdItem;
     }
 
-    public int getQuantidade() {
-        return quantidade;
+    public void setQtdItem(int qtdItem) {
+        this.qtdItem = qtdItem;
     }
 
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
+    public double getValorItem() {
+        return valorItem;
     }
 
-    public int getItempedidoId() {
-        return itempedidoId;
-    }
-
-    public void setItempedidoId(int itempedidoId) {
-        this.itempedidoId = itempedidoId;
-    }
-
-    public Produto getProduto() {
-        return produto;
-    }
-
-    public void setProduto(Produto produto) {
-        this.produto = produto;
-    }
-
-    public int getValor() {
-        return valor;
-    }
-
-    public void setValor(int valor) {
-        this.valor = valor;
+    public void setValorItem(double valorItem) {
+        this.valorItem = valorItem;
     }
 
 }

@@ -8,6 +8,7 @@ package Views;
 import java.beans.PropertyVetoException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 /**
@@ -45,10 +46,10 @@ public class PrincipalView extends javax.swing.JFrame {
         jMenu4 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Loja Gabenrick's H&C");
-        setAlwaysOnTop(true);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setPreferredSize(new java.awt.Dimension(1123, 711));
 
         btnClientes.setText("Clientes");
         btnClientes.addActionListener(new java.awt.event.ActionListener() {
@@ -74,13 +75,13 @@ public class PrincipalView extends javax.swing.JFrame {
         Desktop.setBackground(new java.awt.Color(240, 240, 240));
         Desktop.setForeground(new java.awt.Color(240, 240, 240));
         Desktop.setEnabled(false);
-        Desktop.setPreferredSize(new java.awt.Dimension(882, 552));
+        Desktop.setPreferredSize(new java.awt.Dimension(939, 573));
 
         javax.swing.GroupLayout DesktopLayout = new javax.swing.GroupLayout(Desktop);
         Desktop.setLayout(DesktopLayout);
         DesktopLayout.setHorizontalGroup(
             DesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 885, Short.MAX_VALUE)
+            .addGap(0, 970, Short.MAX_VALUE)
         );
         DesktopLayout.setVerticalGroup(
             DesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,7 +130,7 @@ public class PrincipalView extends javax.swing.JFrame {
                     .addComponent(btnPedidos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnRelatorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Desktop, javax.swing.GroupLayout.DEFAULT_SIZE, 885, Short.MAX_VALUE))
+                .addComponent(Desktop, javax.swing.GroupLayout.DEFAULT_SIZE, 970, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnClientes, btnPedidos, btnProduto});
@@ -145,15 +146,15 @@ public class PrincipalView extends javax.swing.JFrame {
                 .addComponent(btnPedidos)
                 .addGap(18, 18, 18)
                 .addComponent(btnRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(221, Short.MAX_VALUE))
-            .addComponent(Desktop, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 517, Short.MAX_VALUE)
+                .addContainerGap(355, Short.MAX_VALUE))
+            .addComponent(Desktop, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 651, Short.MAX_VALUE)
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnClientes, btnPedidos, btnProduto});
 
         getAccessibleContext().setAccessibleDescription("Tela Principal da Loja Gabenrick's H&C");
 
-        setSize(new java.awt.Dimension(1038, 577));
+        setSize(new java.awt.Dimension(1123, 711));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -162,17 +163,14 @@ public class PrincipalView extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void btnClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesActionPerformed
-       try {
-            Desktop.removeAll();
-            ClientesView Cadastro = new ClientesView();
-            ((BasicInternalFrameUI) Cadastro.getUI()).setNorthPane(null);
-            Cadastro.setVisible(true);
-            Desktop.add(Cadastro);
-            //comando para maximizar a tela JInternalFrame
-            Cadastro.setMaximum(true);
-        } catch (PropertyVetoException ex) {
-            Logger.getLogger(PrincipalView.class.getName()).log(Level.SEVERE, null, ex);
-        }
+         //JOptionPane.showMessageDialog(null, "teste!");
+        Desktop.removeAll();
+        ClientesView Cadastro = new ClientesView();
+        //((BasicInternalFrameUI) Cadastro.getUI()).setNorthPane(null);
+        Cadastro.setVisible(true);
+        Desktop.add(Cadastro);
+        //comando para maximizar a tela JInternalFrame
+        //Cadastro.setMaximum(true);
         // repaint para dar um refresh na tela
         this.repaint();
 
@@ -181,13 +179,12 @@ public class PrincipalView extends javax.swing.JFrame {
     private void btnProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProdutoActionPerformed
         //Cliente_Cadastro Cadastro = new Cliente_Cadastro();
         //Cadastro.setVisible(false);
-
+        Desktop.removeAll();
+        ProdutosView Produto = new ProdutosView();
+        //((BasicInternalFrameUI) Produto.getUI()).setNorthPane(null);
+        Produto.setVisible(true);
+        Desktop.add(Produto);
         try {
-            Desktop.removeAll();
-            ProdutosView Produto = new ProdutosView();
-            ((BasicInternalFrameUI) Produto.getUI()).setNorthPane(null);
-            Produto.setVisible(true);
-            Desktop.add(Produto);
             //comando para maximizar a tela JInternalFrame
             Produto.setMaximum(true);
         } catch (PropertyVetoException ex) {
@@ -200,12 +197,12 @@ public class PrincipalView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnProdutoActionPerformed
 
     private void btnPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPedidosActionPerformed
-       try {
-            Desktop.removeAll();
-            PedidosView Pedido = new PedidosView();
-            ((BasicInternalFrameUI) Pedido.getUI()).setNorthPane(null);
-            Pedido.setVisible(true);
-            Desktop.add(Pedido);
+        //Desktop.removeAll();
+        PedidosView Pedido = new PedidosView();
+        //((BasicInternalFrameUI) Pedido.getUI()).setNorthPane(null);
+        Pedido.setVisible(true);
+        Desktop.add(Pedido);
+        try {
             //comando para maximizar a tela JInternalFrame
             Pedido.setMaximum(true);
         } catch (PropertyVetoException ex) {
@@ -216,17 +213,13 @@ public class PrincipalView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPedidosActionPerformed
 
     private void btnRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRelatorioActionPerformed
-       try {
-            Desktop.removeAll();
-            RelatorioView relatorio = new RelatorioView();
-            ((BasicInternalFrameUI) relatorio.getUI()).setNorthPane(null);
-            relatorio.setVisible(true);
-            Desktop.add(relatorio);
-            //comando para maximizar a tela JInternalFrame
-            relatorio.setMaximum(true);
-        } catch (PropertyVetoException ex) {
-            Logger.getLogger(PrincipalView.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        Desktop.removeAll();
+        RelatorioView relatorio = new RelatorioView();
+        //((BasicInternalFrameUI) relatorio.getUI()).setNorthPane(null);
+        relatorio.setVisible(true);
+        Desktop.add(relatorio);
+        //comando para maximizar a tela JInternalFrame
+        //relatorio.setMaximum(true);
         // repaint para dar um refresh na tela
         this.repaint();
     }//GEN-LAST:event_btnRelatorioActionPerformed

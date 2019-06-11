@@ -2,9 +2,9 @@ CREATE DATABASE  IF NOT EXISTS `lojagabenricks` /*!40100 DEFAULT CHARACTER SET l
 USE `lojagabenricks`;
 -- MySQL dump 10.13  Distrib 5.6.17, for Win32 (x86)
 --
--- Host: 192.168.1.222    Database: lojagabenricks
+-- Host: localhost    Database: lojagabenricks
 -- ------------------------------------------------------
--- Server version	5.7.23-log
+-- Server version	5.5.5-10.1.40-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -27,12 +27,13 @@ DROP TABLE IF EXISTS `pedido`;
 CREATE TABLE `pedido` (
   `idpedido` int(11) NOT NULL AUTO_INCREMENT,
   `idcliente` int(11) NOT NULL,
-  `datapedido` date DEFAULT NULL,
+  `datapedido` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `total` double DEFAULT NULL,
+  `formPagamento` enum('Dinheiro','Cartão de Débito','Cartão de Crédito') DEFAULT NULL,
   PRIMARY KEY (`idpedido`,`idcliente`),
   KEY `idcliente` (`idcliente`),
   CONSTRAINT `pedido_ibfk_1` FOREIGN KEY (`idcliente`) REFERENCES `cliente` (`idcliente`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,6 +42,7 @@ CREATE TABLE `pedido` (
 
 LOCK TABLES `pedido` WRITE;
 /*!40000 ALTER TABLE `pedido` DISABLE KEYS */;
+INSERT INTO `pedido` VALUES (1,1,'2019-06-11 12:18:40',100.55,''),(2,1,'2019-06-11 12:18:50',100.55,'Dinheiro'),(3,1,'2019-06-11 14:44:43',1250,'Dinheiro'),(4,1,'2019-06-11 14:57:58',100.55,'Dinheiro'),(5,1,'2019-06-11 14:59:02',1250,'Dinheiro'),(6,1,'2019-06-11 15:01:47',1250,'Dinheiro'),(7,1,'2019-06-11 15:13:59',1250,'Dinheiro');
 /*!40000 ALTER TABLE `pedido` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-06 13:13:24
+-- Dump completed on 2019-06-11 14:45:21

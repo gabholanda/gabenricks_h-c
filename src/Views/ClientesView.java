@@ -79,7 +79,7 @@ public class ClientesView extends javax.swing.JInternalFrame {
         CboEnderecoCli.setEditable(false);
         rdoBtnFem.setEnabled(false);
         rdoBtnMasc.setEnabled(false);
-        
+
         btnSalvar.setEnabled(false);
         btnCancelar.setEnabled(false);
     }
@@ -100,7 +100,7 @@ public class ClientesView extends javax.swing.JInternalFrame {
         CboEnderecoCli.setEditable(true);
         rdoBtnFem.setEnabled(true);
         rdoBtnMasc.setEnabled(true);
-        
+
         btnSalvar.setEnabled(true);
         btnCancelar.setEnabled(true);
     }
@@ -115,32 +115,33 @@ public class ClientesView extends javax.swing.JInternalFrame {
 
     public void LoadTable() {
 
-//        //Peço ao controller resgatar os clientes do banco de dados
-//        ArrayList<String[]> linhasClientes = ClienteController.getClientes();
-//
-//        DefaultTableModel tmClientes = (DefaultTableModel) this.tblClientes.getModel();
-//        //Limpo a tabela, excluindo todas as linhas
-//        tmClientes.setRowCount(0);
-//
-//        //Para cada cliente resgatado do banco de dados, atualizo a tabela
-//        linhasClientes.forEach((c) -> {
-//            tmClientes.addRow(c);
-//        });
-//
-//        //Defino o tamanho para cada coluna
-//        tblClientes.getColumnModel().getColumn(0).setPreferredWidth(50); //ID
+        //Peço ao controller resgatar os clientes do banco de dados
+        ArrayList<String[]> linhasClientes = ClienteController.getClientes();
+
+        DefaultTableModel tmClientes = (DefaultTableModel) this.tblClientes.getModel();
+        //Limpo a tabela, excluindo todas as linhas
+        tmClientes.setRowCount(0);
+
+        //Para cada cliente resgatado do banco de dados, atualizo a tabela
+        linhasClientes.forEach((c) -> {
+            tmClientes.addRow(c);
+        });
+
+        //Defino o tamanho para cada coluna
+        tblClientes.getColumnModel().getColumn(0).setPreferredWidth(40); //ID
 //        tblClientes.getColumnModel().getColumn(1).setPreferredWidth(250); // Nome
-//        tblClientes.getColumnModel().getColumn(2).setPreferredWidth(200); // Data Nascimento
-//        tblClientes.getColumnModel().getColumn(3).setPreferredWidth(300); // CPF
-//        tblClientes.getColumnModel().getColumn(4).setPreferredWidth(200); // Telefone
-//        tblClientes.getColumnModel().getColumn(5).setPreferredWidth(250); // Email
-//        tblClientes.getColumnModel().getColumn(6).setPreferredWidth(100); // Rua
-//        tblClientes.getColumnModel().getColumn(7).setPreferredWidth(400);  // Endereco
-//        tblClientes.getColumnModel().getColumn(8).setPreferredWidth(100);  // Numero
-//        tblClientes.getColumnModel().getColumn(9).setPreferredWidth(150); // CEP
-//        tblClientes.getColumnModel().getColumn(10).setPreferredWidth(150); // Complemento
-//        tblClientes.getColumnModel().getColumn(11).setPreferredWidth(200); // Cidade
-//        tblClientes.getColumnModel().getColumn(12).setPreferredWidth(100);// Estado
+//        tblClientes.getColumnModel().getColumn(3).setPreferredWidth(200); // Sexo
+//        tblClientes.getColumnModel().getColumn(4).setPreferredWidth(200); // Data Nascimento
+//        tblClientes.getColumnModel().getColumn(5).setPreferredWidth(300); // CPF
+//        tblClientes.getColumnModel().getColumn(6).setPreferredWidth(200); // Telefone
+//        tblClientes.getColumnModel().getColumn(7).setPreferredWidth(250); // Email
+//        tblClientes.getColumnModel().getColumn(8).setPreferredWidth(100); // Rua
+//        tblClientes.getColumnModel().getColumn(9).setPreferredWidth(400);  // Endereco
+//        tblClientes.getColumnModel().getColumn(10).setPreferredWidth(40);  // Numero
+//        tblClientes.getColumnModel().getColumn(11).setPreferredWidth(150); // CEP
+//        tblClientes.getColumnModel().getColumn(12).setPreferredWidth(150); // Complemento
+//        tblClientes.getColumnModel().getColumn(13).setPreferredWidth(200); // Cidade
+//        tblClientes.getColumnModel().getColumn(14).setPreferredWidth(100);// Estado
     }
 
     public void ConsultaLoadTable() {
@@ -156,20 +157,19 @@ public class ClientesView extends javax.swing.JInternalFrame {
         });
 
         //Defino o tamanho para cada coluna
-        tblClientes.getColumnModel().getColumn(0).setPreferredWidth(50); //ID
-        tblClientes.getColumnModel().getColumn(1).setPreferredWidth(250);
-        tblClientes.getColumnModel().getColumn(2).setPreferredWidth(150);
-        tblClientes.getColumnModel().getColumn(3).setPreferredWidth(300);
-        tblClientes.getColumnModel().getColumn(4).setPreferredWidth(200);
-        tblClientes.getColumnModel().getColumn(5).setPreferredWidth(400);
-        tblClientes.getColumnModel().getColumn(6).setPreferredWidth(100);
-        tblClientes.getColumnModel().getColumn(7).setPreferredWidth(400);
-        tblClientes.getColumnModel().getColumn(8).setPreferredWidth(50);
-        tblClientes.getColumnModel().getColumn(9).setPreferredWidth(150);
-        tblClientes.getColumnModel().getColumn(10).setPreferredWidth(150);
-        tblClientes.getColumnModel().getColumn(11).setPreferredWidth(200);
-        tblClientes.getColumnModel().getColumn(12).setPreferredWidth(50);
-
+        tblClientes.getColumnModel().getColumn(0).setPreferredWidth(40); //ID
+//        tblClientes.getColumnModel().getColumn(1).setPreferredWidth(250);
+//        tblClientes.getColumnModel().getColumn(2).setPreferredWidth(150);
+//        tblClientes.getColumnModel().getColumn(3).setPreferredWidth(300);
+//        tblClientes.getColumnModel().getColumn(4).setPreferredWidth(200);
+//        tblClientes.getColumnModel().getColumn(5).setPreferredWidth(400);
+//        tblClientes.getColumnModel().getColumn(6).setPreferredWidth(100);
+//        tblClientes.getColumnModel().getColumn(7).setPreferredWidth(400);
+//        tblClientes.getColumnModel().getColumn(8).setPreferredWidth(50);
+//        tblClientes.getColumnModel().getColumn(9).setPreferredWidth(150);
+//        tblClientes.getColumnModel().getColumn(10).setPreferredWidth(150);
+//        tblClientes.getColumnModel().getColumn(11).setPreferredWidth(200);
+//        tblClientes.getColumnModel().getColumn(12).setPreferredWidth(50);
     }
 
     /**
@@ -242,14 +242,14 @@ public class ClientesView extends javax.swing.JInternalFrame {
 
             },
             new String [] {
-                "ID", "Nome", "Data de Nascimento", "CPF", "Telefone", "Email", "Rua", "Endereço", "Numero", "CEP", "Complemento", "Cidade", "Estado"
+                "ID", "Nome", "Sexo", "Data Nasc.", "CPF", "Telefone", "Email", "Rua", "Endereço", "Nº", "CEP", "Complemento", "Cidade", "Estado"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -358,7 +358,7 @@ public class ClientesView extends javax.swing.JInternalFrame {
         lblCPF.setText("CPF");
 
         try {
-            txtFoneCli.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(###)####-####")));
+            txtFoneCli.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##)#####-####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
@@ -650,7 +650,7 @@ public class ClientesView extends javax.swing.JInternalFrame {
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         if (tblClientes.getRowCount() > 0) {
             int numeroLinha = tblClientes.getSelectedRow();
-            try{
+            try {
                 ClienteController.excluir(Integer.parseInt(tblClientes.getValueAt(numeroLinha, 0).toString()));
                 this.LoadTable();
                 JOptionPane.showMessageDialog(this, "Cliente excluído da base de dados");
@@ -686,30 +686,29 @@ public class ClientesView extends javax.swing.JInternalFrame {
         }
         if (ValidarFormulario()) {
             String sexo;
-            if(rdoBtnMasc.isSelected()){
-                    sexo = "masculino";
-                }
-                else {
-                   sexo = "feminino";
-                }
+            if (rdoBtnMasc.isSelected()) {
+                sexo = "masculino";
+            } else {
+                sexo = "feminino";
+            }
             if (modoTela.equals("Criar")) {
-                
+
                 //Passo ao controller a entrada do usuário e peço para salvar no banco de dados
-                try  {
+                try {
                     ClienteController.salvar(
-                        txtNomeCli.getText(),
-                        sexo,
-                        txtDataCli.getText(),
-                        txtCPFCli.getText(),
-                        txtFoneCli.getText(),
-                        txtEmailCli.getText(),
-                        CboEnderecoCli.getSelectedItem().toString(),
-                        txtEnderecoCli.getText(),
-                        Integer.parseInt(txtNumeroCli.getText()),
-                        txtCEPCli.getText(),
-                        txtComplementoCli.getText(),
-                        txtCidadeCli.getText(),
-                        CboEstadoCli.getSelectedItem().toString());
+                            txtNomeCli.getText(),
+                            sexo,
+                            txtDataCli.getText(),
+                            txtCPFCli.getText(),
+                            txtFoneCli.getText(),
+                            txtEmailCli.getText(),
+                            CboEnderecoCli.getSelectedItem().toString(),
+                            txtEnderecoCli.getText(),
+                            Integer.parseInt(txtNumeroCli.getText()),
+                            txtCEPCli.getText(),
+                            txtComplementoCli.getText(),
+                            txtCidadeCli.getText(),
+                            CboEstadoCli.getSelectedItem().toString());
                     JOptionPane.showMessageDialog(null, "Cliente cadastrado com sucesso!");
                     //Recarrego a tabela com os dados resgatados do banco de dados
                     this.LoadTable();
@@ -719,23 +718,23 @@ public class ClientesView extends javax.swing.JInternalFrame {
                 }
 
             } else if (modoTela.equals("Editar")) {
-                
+
                 //Passo ao controller a entrada do usuário e peço para atualizar o banco de dados
                 try {
                     ClienteController.atualizar(
-                        txtNomeCli.getText(),
-                        sexo,
-                        txtDataCli.getText(),
-                        txtCPFCli.getText(),
-                        txtFoneCli.getText(),
-                        txtEmailCli.getText(),
-                        CboEnderecoCli.getSelectedItem().toString(),
-                        txtEnderecoCli.getText(),
-                        Integer.parseInt(txtNumeroCli.getText()),
-                        txtCEPCli.getText(),
-                        txtComplementoCli.getText(),
-                        txtCidadeCli.getText(),
-                        CboEstadoCli.getSelectedItem().toString());
+                            txtNomeCli.getText(),
+                            sexo,
+                            txtDataCli.getText(),
+                            txtCPFCli.getText(),
+                            txtFoneCli.getText(),
+                            txtEmailCli.getText(),
+                            CboEnderecoCli.getSelectedItem().toString(),
+                            txtEnderecoCli.getText(),
+                            Integer.parseInt(txtNumeroCli.getText()),
+                            txtCEPCli.getText(),
+                            txtComplementoCli.getText(),
+                            txtCidadeCli.getText(),
+                            CboEstadoCli.getSelectedItem().toString());
                     //Recarrego a tabela com os dados resgatados do banco de dados
                     this.LoadTable();
                     JOptionPane.showMessageDialog(this, "Cliente atualizado com sucesso!");
@@ -834,4 +833,3 @@ public class ClientesView extends javax.swing.JInternalFrame {
     // End of variables declaration//GEN-END:variables
 
 }
-

@@ -27,6 +27,9 @@ public class SobreView extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        setClosable(true);
+        setIconifiable(true);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -38,7 +41,7 @@ public class SobreView extends javax.swing.JInternalFrame {
             .addGap(0, 339, Short.MAX_VALUE)
         );
 
-        pack();
+        setBounds(0, 0, 564, 373);
     }// </editor-fold>//GEN-END:initComponents
 
 

@@ -2,9 +2,9 @@ CREATE DATABASE  IF NOT EXISTS `lojagabenricks` /*!40100 DEFAULT CHARACTER SET l
 USE `lojagabenricks`;
 -- MySQL dump 10.13  Distrib 5.6.17, for Win32 (x86)
 --
--- Host: 192.168.1.222    Database: lojagabenricks
+-- Host: localhost    Database: lojagabenricks
 -- ------------------------------------------------------
--- Server version	5.7.23-log
+-- Server version	5.5.5-10.1.40-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -31,7 +31,7 @@ CREATE TABLE `produto` (
   `qtdEstoque` int(11) NOT NULL,
   `fornecedor` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`idproduto`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,6 +40,7 @@ CREATE TABLE `produto` (
 
 LOCK TABLES `produto` WRITE;
 /*!40000 ALTER TABLE `produto` DISABLE KEYS */;
+INSERT INTO `produto` VALUES (1,'CIMENTO',50,75,'PATRICK CHAGAS TAVARES'),(2,'VEDACITE',50,100,'HENRIQUE'),(3,'CAIXA DE AGUA',30,50,'GABRIEL'),(4,'TELHA',50,100,'PATRICK'),(5,'BLOCO',1,5000,'PATRICK CHAGAS');
 /*!40000 ALTER TABLE `produto` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-06 13:13:24
+-- Dump completed on 2019-06-11 14:45:20

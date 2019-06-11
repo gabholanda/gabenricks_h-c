@@ -22,6 +22,7 @@ public class Pedido {
     private double valorProd;
     private int qtdProd;
     private String formPagamento;
+    private String data;
 
     public Pedido() {
         qtdPedidosCriados++;
@@ -123,6 +124,14 @@ public class Pedido {
 
     public void setFormPagamento(String formPagamento) {
         this.formPagamento = formPagamento;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
     }
 
 }

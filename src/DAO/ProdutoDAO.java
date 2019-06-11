@@ -27,6 +27,12 @@ public class ProdutoDAO {
     private static final String SENHA = "adminadmin";                   //sua senha de acesso
     private static String URL = "jdbc:mysql://localhost:3306/lojagabenricks?useTimezone=true&serverTimezone=UTC";  //URL do banco de dados
     private static Connection conexao;
+    
+    /**
+     * @see DAO.ProdutoDAO, Views.ProdutosView
+     * @param p
+     * @return boolean - true: Salvo com sucesso, false: falha ao salvar
+     */
     public static boolean salvar(Produto p) {
            boolean retorno = false;
            try {
@@ -54,7 +60,11 @@ public class ProdutoDAO {
         }
         return retorno;
     }
-   
+   /**
+    * @see DAO.ProdutoDAO, Views.ProdutosView
+    * @param c
+    * @return boolean - true: Salvo com sucesso, false: falha ao salvar
+    */
  public static boolean atualizar(Produto c) {
         //Simulo um  UPDATE no banco de dados (UPDATE TabelaXYZ SET...)
         boolean retorno = false;
@@ -96,7 +106,11 @@ public class ProdutoDAO {
         return retorno;
     }
  
-
+/**
+ * @see DAO.ProdutoDAO, Views.ProdutosView
+ * @param CodProduto
+ * @return boolean - true: Salvo com sucesso, false: falha ao salvar
+ */
  public static boolean excluir(int CodProduto) {
         // exclusão no banco de dados (DELETE FROM TabelaXYZ WHERE...)
         
@@ -134,7 +148,11 @@ public class ProdutoDAO {
         return retorno;
 
     }
- 
+  /**
+   * @see DAO.ProdutoDAO, Views.ProdutosView
+   * @param pNome
+   * @return lista de cliente, null se houver erros
+   */
   public static ArrayList<Produto> consultar(String pNome) {
         ArrayList<Produto> listaClientes = new ArrayList<>();
 
@@ -171,7 +189,11 @@ public class ProdutoDAO {
 
         return listaClientes;
   }
-
+  /**
+   * @see DAO.ProdutoDAO, Views.ProdutosView
+   * @return lista de produtos
+   */
+  
     public static ArrayList<Produto> getProdutos() {
         ArrayList<Produto> listaRetorno = new ArrayList<>();
 

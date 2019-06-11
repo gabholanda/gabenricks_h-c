@@ -22,34 +22,62 @@ public class PedidoController {
     public PedidoController() {
 
     }
-
+    /**
+     * Consulta os clientes no Banco de Dados
+     * @param Nome
+     * @param tipo
+     * @return uma lista de pedido
+     * @throws ClassNotFoundException 
+     */
     public static ArrayList<Pedido> getConsultaCliente(String Nome, byte tipo) throws ClassNotFoundException {
         ArrayList<Pedido> Pedido = PedidoDAO.consultaCliente(Nome, tipo);
 
         return Pedido;
 
     }
-
+    /**
+     *  Consulta os produtos no Banco de dados
+     * @see Views.Pedido
+     * @see DAO.PedidoDAO
+     * @param produto
+     * @param tipo
+     * @return uma lista de produtos
+     * @throws ClassNotFoundException 
+     */
     public static ArrayList<Pedido> getConsultaProduto(String produto, byte tipo) throws ClassNotFoundException {
         ArrayList<Pedido> Produto = PedidoDAO.consultaPedido(produto, tipo);
 
         return Produto;
     }
-
+    /** 
+     * @see DAO.PedidoDAO
+     * @see Views.PedidosView
+     * @param Nome
+     * @param tipo
+     * @return Uma lista de clientes para a tabela
+     * @throws ClassNotFoundException 
+     */
     public static ArrayList<String[]> getCliente(String Nome, byte tipo) throws ClassNotFoundException {
         ArrayList<Pedido> Pedido = PedidoDAO.consultaCliente(Nome, tipo);
-        ArrayList<String[]> listaProdutos = new ArrayList<>();
+        ArrayList<String[]> listaClientes = new ArrayList<>();
 
         for (int i = 0; i < Pedido.size(); i++) {
-            listaProdutos.add(new String[]{String.valueOf(Pedido.get(i).getCodCli()),
+            listaClientes.add(new String[]{String.valueOf(Pedido.get(i).getCodCli()),
                 String.valueOf(Pedido.get(i).getNomeCli()),
                 String.valueOf(Pedido.get(i).getCPFcli()),});
         }
 
-        return listaProdutos;
+        return listaClientes;
 
     }
-
+/** 
+     * @see DAO.PedidoDAO
+     * @see Views.PedidosView
+     * @param produto
+     * @param tipo
+     * @return Uma lista de produtos para a tabela
+     * @throws ClassNotFoundException 
+     */
     public static ArrayList<String[]> getProduto(String produto, byte tipo) throws ClassNotFoundException {
         ArrayList<Pedido> Produto = PedidoDAO.consultaPedido(produto, tipo);
         ArrayList<String[]> listaProdutos = new ArrayList<>();
@@ -63,13 +91,28 @@ public class PedidoController {
 
         return listaProdutos;
     }
-
+    /**
+     * Método para salvar o pedido
+     * @see DAO.PedidoDAO
+     * @see Views.PedidosView
+     * @param idCliente
+     * @param total
+     * @param FormPagamento
+     * @return boolean true: sucesso , false: falha
+     */
     public static int salvarPedido(int idCliente, double total, String FormPagamento) {
         //Salvo na memória
         Pedido p = new Pedido(idCliente, total,FormPagamento);
         return PedidoDAO.salvar(p);
     }
-    
+    /**
+     * Método para salvar item de pedido
+     * @param idPoduto
+     * @param idPedido
+     * @param qtdItem
+     * @param valor
+     * @return boolean true: sucesso, false: falha
+     */
     public static boolean SalvarItemPedido(int idPoduto, int idPedido, int qtdItem, double valor){
         ItemPedido Item = new ItemPedido(idPoduto,idPedido,qtdItem,valor);
         return ItemPedidoDAO.salvar(Item);

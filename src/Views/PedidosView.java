@@ -31,7 +31,9 @@ public class PedidosView extends javax.swing.JInternalFrame {
         OcultarColunas_TblProduto();
         habilitarCliente();
     }
-
+/**
+ * Método auxiliar que habilita os campos para cadastro
+ */
     private void habilitarCliente() {
         Rb_Nome_Cli.setEnabled(true);
         Rb_CPF_Cli.setEnabled(true);
@@ -50,7 +52,9 @@ public class PedidosView extends javax.swing.JInternalFrame {
         tbl_Pedido.setEnabled(false);
 
     }
-
+/**
+ * Método auxiliar que habilita os campos para cadastro
+ */
     private void habilitarProduto_Pedido() {
         Rb_Nome_Cli.setEnabled(false);
         Rb_CPF_Cli.setEnabled(false);
@@ -68,7 +72,9 @@ public class PedidosView extends javax.swing.JInternalFrame {
         txt_Nome_Prod.setEditable(true);
         tbl_Pedido.setEnabled(true);
     }
-
+ /**
+  * Método auxiliar que oculta as colunas da tabela referente ao Id do Cliente
+  */
     private void OcultarColunas_TblCliente() {
         //Oculta colunas da tabela referente ao Id do cliente
         if (tbl_Cliente.getColumnName(0).equalsIgnoreCase("id")) {
@@ -76,7 +82,9 @@ public class PedidosView extends javax.swing.JInternalFrame {
             tbl_Cliente.getColumnModel().getColumn(0).setMaxWidth(0);
         }
     }
-
+/** @author Patrick
+  * Método auxiliar que oculta as colunas da tabela referente ao valor e quantidade em estoque
+  */
     private void OcultarColunas_TblProduto() {
         if (tbl_Produto.getColumnName(2).equalsIgnoreCase("Valor (R$)") && tbl_Produto.getColumnName(3).equalsIgnoreCase("Qtd. Estoque")) {
             //Oculta coluna referente ao valor
@@ -87,7 +95,10 @@ public class PedidosView extends javax.swing.JInternalFrame {
             tbl_Produto.getColumnModel().getColumn(3).setMaxWidth(0);
         }
     }
-
+/**
+ * @author Patrick
+ * Método auxiliar que mostra valor e quantidade em estoque
+ */
     private void Mostrar_Detalhes_TblProduto() {
         if (tbl_Produto.getColumnName(2).equalsIgnoreCase("Valor (R$)") && tbl_Produto.getColumnName(3).equalsIgnoreCase("Qtd. Estoque")) {
             //Oculta coluna referente ao valor
@@ -98,7 +109,12 @@ public class PedidosView extends javax.swing.JInternalFrame {
             tbl_Produto.getColumnModel().getColumn(3).setMaxWidth(90);
         }
     }
-
+/**
+ * Método para consultar produtos
+ * @see Controllers.PedidoController
+ * @param tipo
+ * @throws ClassNotFoundException 
+ */
     private void consultarProduto(byte tipo) throws ClassNotFoundException {
         //Peço ao controller resgatar os Produtos do banco de dados
         if (tipo == 1) {
@@ -134,7 +150,12 @@ public class PedidosView extends javax.swing.JInternalFrame {
 
         //table.removeColumn(table.getColumnModel().getColumn(4));
     }
-
+    /** Método para consultar os clientes
+     * @see Controllers.PedidoController
+     * @param tipo
+     * @throws ClassNotFoundException 
+     */
+    
     private void consultarCliente(byte tipo) throws ClassNotFoundException {
         //Peço ao controller resgatar os clientes do banco de dados
         if (tipo == 1) {
@@ -163,7 +184,10 @@ public class PedidosView extends javax.swing.JInternalFrame {
         OcultarColunas_TblCliente();
 
     }
-
+    /**
+     * Método para adicionar item na tabela
+     * @param linha 
+     */
     private void adicionarItem(int linha) {
         //Instanciando tabelas de Pedido e produto
         DefaultTableModel tmPedido = (DefaultTableModel) this.tbl_Pedido.getModel();
@@ -189,7 +213,9 @@ public class PedidosView extends javax.swing.JInternalFrame {
         }
 
     }
-
+    /**
+     * Totais de itens em $
+     */
     private void totaisItens() {
         double valor = 0;
         int somaLinhas = tbl_Pedido.getRowCount();
@@ -201,7 +227,9 @@ public class PedidosView extends javax.swing.JInternalFrame {
         }
         txt_TotalPedido.setText(String.valueOf(formato.format(valor)).replaceAll("\\.", ","));
     }
-
+    /** @see Controllers.PedidoController
+     * Método para salvar o pedido
+     */
     private void salvar() {
         int itensPedido = tbl_Pedido.getRowCount();
         if (itensPedido <= 0 || txt_Id_Cli.getText().equalsIgnoreCase("Vazio") || txt_TotalPedido.getText().equalsIgnoreCase("0,00")) {

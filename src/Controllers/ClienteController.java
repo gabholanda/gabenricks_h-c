@@ -16,6 +16,23 @@ import java.util.ArrayList;
 public class ClienteController {
 
     //Salva com todas as informações preenchidas
+   /**
+    * @see DAO.ClienteDAO, Views.ClientesView
+    * @param nome
+    * @param sexo
+    * @param dataNascimento
+    * @param cpf
+    * @param telefone
+    * @param email
+    * @param rua
+    * @param endereco
+    * @param numero
+    * @param cep
+    * @param complemento
+    * @param cidade
+    * @param estado
+    * @return boolean - true: Sucesso ao cadastrar cliente, false: falha ao cadastrar cliente
+    */
     public static boolean salvar(String nome, String sexo, String dataNascimento, String cpf,
             String telefone, String email,
             String rua, String endereco, int numero, String cep, String complemento, String cidade, String estado) {
@@ -24,23 +41,50 @@ public class ClienteController {
         return ClienteDAO.salvar(c);
 
     }
-
+ /**
+    * @see DAO.ClienteDAO, Views.ClientesView
+    * @param nome
+    * @param sexo
+    * @param dataNascimento
+    * @param cpf
+    * @param telefone
+    * @param email
+    * @param rua
+    * @param endereco
+    * @param numero
+    * @param cep
+    * @param complemento
+    * @param cidade
+    * @param estado
+    * @return boolean - true: Sucesso ao atualizar cliente, false: falha ao atualizar cliente
+    */
     public static boolean atualizar(String nome, String sexo,  String dataNascimento, String cpf,
             String telefone, String email,
             String rua, String endereco, int numero, String cep, String complemento, String cidade, String estado) {
         Cliente c = new Cliente(nome, sexo, dataNascimento, cpf, telefone, email, rua, endereco, numero, cep, complemento, cidade, estado);
         return ClienteDAO.atualizar(c);
     }
-
+/**
+ * @see DAO.ClienteDAO, Views.ClientesView
+ * @param clienteId
+ * @return boolean - true: Sucesso ao excluir cliente, false: falha ao atualizar cliente
+ */
     public static boolean excluir(int clienteId) {
         return ClienteDAO.excluir(clienteId);
     }
 
-
+    /**
+     * @see DAO.ClienteDAO, Views.ClientesView
+     * @param nome
+     * @return Lista de clientes consultada.
+     */
     public static ArrayList<Cliente> consultar(String nome) {
         return ClienteDAO.consultar(nome);
     }
-
+     /**
+      * @see DAO.ClienteDAO, Views.ClientesView
+      * @return Lista de clientes do BD
+      */
     public static ArrayList<String[]> getClientes() {
         ArrayList<Cliente> clientes = ClienteDAO.getClientes();
         ArrayList<String[]> listaClientes = new ArrayList<>();
@@ -67,6 +111,11 @@ public class ClienteController {
         return listaClientes;
 
     }
+     /**
+      * @see DAO.ClienteDAO, Views.ClientesView
+      * @param info
+      * @return Retorna a lista consultada de clientes.
+      */
  public static ArrayList<String[]> getConsultaClientes(String info) {
         ArrayList<Cliente> clientes = ClienteDAO.getClientes();
         ArrayList<String[]> listaClientes = new ArrayList<>();

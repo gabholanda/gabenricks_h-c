@@ -25,14 +25,15 @@ public class ClientesView extends javax.swing.JInternalFrame {
     public ClientesView() {
 
         initComponents();
-
         Dimension size = txtDataCli.getCalendarPreferredSize();
         size.width += 90;
         txtDataCli.setCalendarPreferredSize(size);
         DesabilitarFormulario();
         LoadTable();
     }
-
+    /**
+    *   Método auxiliar para limpar formulário
+    */
     public void LimparFormulario() {
         txtNomeCli.setText("");
         txtCPFCli.setText("");
@@ -45,7 +46,11 @@ public class ClientesView extends javax.swing.JInternalFrame {
         txtCidadeCli.setText("");
 
     }
-
+  /**
+    *
+    * @return Sempre verdadeiro no modo Consultar
+    *  e Retorna falso se o Nome ou CPF estiverem vazios, se não retorna true
+    */
     private boolean ValidarFormulario() {
         if (modoTela.equals("Consultar")) {
             return true;
@@ -104,7 +109,9 @@ public class ClientesView extends javax.swing.JInternalFrame {
         btnSalvar.setEnabled(true);
         btnCancelar.setEnabled(true);
     }
-
+    /**
+     * Habilita os campos necessários para consulta
+     */
     public void HabilitarFormularioParaConsulta() {
         txtNomeCli.setEditable(true);
         txtCPFCli.setEditable(true);
@@ -112,7 +119,10 @@ public class ClientesView extends javax.swing.JInternalFrame {
         btnSalvar.setEnabled(true);
         btnCancelar.setEnabled(true);
     }
-
+     /**
+      * Método que carrega a tabela do banco de dados para a tabela local do Software
+      * @see Controllers.ClienteController
+      */
     public void LoadTable() {
 
         //Peço ao controller resgatar os clientes do banco de dados
@@ -129,21 +139,23 @@ public class ClientesView extends javax.swing.JInternalFrame {
 
         //Defino o tamanho para cada coluna
         tblClientes.getColumnModel().getColumn(0).setPreferredWidth(40); //ID
-//        tblClientes.getColumnModel().getColumn(1).setPreferredWidth(250); // Nome
-//        tblClientes.getColumnModel().getColumn(3).setPreferredWidth(200); // Sexo
-//        tblClientes.getColumnModel().getColumn(4).setPreferredWidth(200); // Data Nascimento
-//        tblClientes.getColumnModel().getColumn(5).setPreferredWidth(300); // CPF
-//        tblClientes.getColumnModel().getColumn(6).setPreferredWidth(200); // Telefone
-//        tblClientes.getColumnModel().getColumn(7).setPreferredWidth(250); // Email
-//        tblClientes.getColumnModel().getColumn(8).setPreferredWidth(100); // Rua
-//        tblClientes.getColumnModel().getColumn(9).setPreferredWidth(400);  // Endereco
-//        tblClientes.getColumnModel().getColumn(10).setPreferredWidth(40);  // Numero
-//        tblClientes.getColumnModel().getColumn(11).setPreferredWidth(150); // CEP
-//        tblClientes.getColumnModel().getColumn(12).setPreferredWidth(150); // Complemento
-//        tblClientes.getColumnModel().getColumn(13).setPreferredWidth(200); // Cidade
-//        tblClientes.getColumnModel().getColumn(14).setPreferredWidth(100);// Estado
+        tblClientes.getColumnModel().getColumn(1).setPreferredWidth(250); // Nome
+        tblClientes.getColumnModel().getColumn(3).setPreferredWidth(200); // Sexo
+        tblClientes.getColumnModel().getColumn(4).setPreferredWidth(200); // Data Nascimento
+        tblClientes.getColumnModel().getColumn(5).setPreferredWidth(300); // CPF
+        tblClientes.getColumnModel().getColumn(6).setPreferredWidth(200); // Telefone
+        tblClientes.getColumnModel().getColumn(7).setPreferredWidth(250); // Email
+        tblClientes.getColumnModel().getColumn(8).setPreferredWidth(100); // Rua
+        tblClientes.getColumnModel().getColumn(9).setPreferredWidth(400);  // Endereco
+        tblClientes.getColumnModel().getColumn(10).setPreferredWidth(40);  // Numero
+        tblClientes.getColumnModel().getColumn(11).setPreferredWidth(150); // CEP
+        tblClientes.getColumnModel().getColumn(12).setPreferredWidth(150); // Complemento
+        tblClientes.getColumnModel().getColumn(13).setPreferredWidth(200); // Cidade
+        tblClientes.getColumnModel().getColumn(14).setPreferredWidth(100);// Estado
     }
-
+    /**
+    * Método auxiliar para mudar a tabela para consulta. 
+    */
     public void ConsultaLoadTable() {
 
         //Peço ao controller resgatar os clientes do banco de dados
@@ -158,18 +170,18 @@ public class ClientesView extends javax.swing.JInternalFrame {
 
         //Defino o tamanho para cada coluna
         tblClientes.getColumnModel().getColumn(0).setPreferredWidth(40); //ID
-//        tblClientes.getColumnModel().getColumn(1).setPreferredWidth(250);
-//        tblClientes.getColumnModel().getColumn(2).setPreferredWidth(150);
-//        tblClientes.getColumnModel().getColumn(3).setPreferredWidth(300);
-//        tblClientes.getColumnModel().getColumn(4).setPreferredWidth(200);
-//        tblClientes.getColumnModel().getColumn(5).setPreferredWidth(400);
-//        tblClientes.getColumnModel().getColumn(6).setPreferredWidth(100);
-//        tblClientes.getColumnModel().getColumn(7).setPreferredWidth(400);
-//        tblClientes.getColumnModel().getColumn(8).setPreferredWidth(50);
-//        tblClientes.getColumnModel().getColumn(9).setPreferredWidth(150);
-//        tblClientes.getColumnModel().getColumn(10).setPreferredWidth(150);
-//        tblClientes.getColumnModel().getColumn(11).setPreferredWidth(200);
-//        tblClientes.getColumnModel().getColumn(12).setPreferredWidth(50);
+        tblClientes.getColumnModel().getColumn(1).setPreferredWidth(250);
+        tblClientes.getColumnModel().getColumn(2).setPreferredWidth(150);
+        tblClientes.getColumnModel().getColumn(3).setPreferredWidth(300);
+        tblClientes.getColumnModel().getColumn(4).setPreferredWidth(200);
+        tblClientes.getColumnModel().getColumn(5).setPreferredWidth(400);
+        tblClientes.getColumnModel().getColumn(6).setPreferredWidth(100);
+        tblClientes.getColumnModel().getColumn(7).setPreferredWidth(400);
+        tblClientes.getColumnModel().getColumn(8).setPreferredWidth(50);
+        tblClientes.getColumnModel().getColumn(9).setPreferredWidth(150);
+        tblClientes.getColumnModel().getColumn(10).setPreferredWidth(150);
+        tblClientes.getColumnModel().getColumn(11).setPreferredWidth(200);
+        tblClientes.getColumnModel().getColumn(12).setPreferredWidth(50);
     }
 
     /**

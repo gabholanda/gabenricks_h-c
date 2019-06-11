@@ -6,7 +6,6 @@
 package Application;
 
 import Views.TelaLoginView;
-import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;

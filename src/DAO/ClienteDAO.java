@@ -24,7 +24,12 @@ public class ClienteDAO {
     private static final String SENHA = "adminadmin";                             //sua senha de acesso
     private static final String URL = "jdbc:mysql://localhost:3306/lojagabenricks?useTimezone=true&serverTimezone=UTC";  //URL do banco de dados
     private static Connection conexao;
-
+    
+    /**
+     * @see Controllers.ClienteController
+     * @param c
+     * @return boolean - true: Sucesso em salvar cliente , false: Falha ao salvar cliente
+     */
     public static boolean salvar(Cliente c) {
         boolean retorno = false;
 
@@ -72,7 +77,12 @@ public class ClienteDAO {
         return retorno;
 
     }
-
+    /**
+     * Método para atualizar um cliente no Banco de Dados
+     * @see Controllers.ClienteController
+     * @param c
+     * @return boolean - true: Sucesso em atualizar cliente , false: Falha ao atualizar cliente
+     */
     public static boolean atualizar(Cliente c) {
 
         boolean retorno = false;
@@ -123,7 +133,11 @@ public class ClienteDAO {
         return retorno;
 
     }
-
+    /**
+     * @see Controllers.ClienteController
+     * @param clienteId
+     * @return boolean - true: Sucesso em excluir cliente , false: Falha ao excluir cliente
+     */
     public static boolean excluir(int clienteId) {
 
         boolean retorno = false;
@@ -160,7 +174,11 @@ public class ClienteDAO {
 
     }
 // Consultar via CPF
-
+/**
+     * @see Controllers.ClienteController
+     * @param cpf
+     * @return Retorna null em caso de alguma exceção se não retorna a lista consultada de clientes
+     */
     public static ArrayList<Cliente> consultar(int cpf) {
 
         ArrayList<Cliente> listaClientes = new ArrayList<>();
@@ -206,7 +224,11 @@ public class ClienteDAO {
 
         return listaClientes;
     }
-
+    /**
+     * @see Controllers.ClienteController
+     * @param pNome
+     * @return Retorna null em caso de alguma exceção se não retorna a lista consultada de clientes
+     */
     public static ArrayList<Cliente> consultar(String pNome) {
         ArrayList<Cliente> listaClientes = new ArrayList<>();
 
@@ -251,7 +273,10 @@ public class ClienteDAO {
         return listaClientes;
     }
 //Retorna a lista de clientes
-
+    /**
+     * @see Controllers.ClienteController
+     * @return uma lista contendo os clientes cadastrados
+     */
     public static ArrayList<Cliente> getClientes() {
         ArrayList<Cliente> listaClientes = new ArrayList<>();
 
